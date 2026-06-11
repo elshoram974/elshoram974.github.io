@@ -1,0 +1,109 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MRE Cashbook - Home & Privacy Policy</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
+        h2 { color: #2980b9; margin-top: 30px; }
+        .highlight-box {
+            background-color: #e8f4f8;
+            border-left: 5px solid #3498db;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 0.9em;
+            color: #7f8c8d;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>MRE Cashbook</h1>
+    
+    <!-- القسم الأهم الذي يبحث عنه موظف جوجل (وصف التطبيق) -->
+    <h2>About the App (Application Purpose)</h2>
+    <p>
+        <strong>MRE Cashbook</strong> is a secure, offline-first personal finance tracker and small business ledger application. 
+        It helps individuals and small business owners manage their daily cash flow, track debts (creditors/debtors), and monitor product inventory—all directly from their mobile devices without requiring an active internet connection.
+    </p>
+
+    <h3>Core Features:</h3>
+    <ul>
+        <li>Manage daily income and expenses.</li>
+        <li>Track debts and client accounts securely.</li>
+        <li>Generate professional PDF reports and receipts.</li>
+        <li>Complete offline privacy (data never leaves the phone by default).</li>
+    </ul>
+
+    <!-- القسم الثاني الأهم (لماذا نطلب صلاحية جوجل درايف) -->
+    <div class="highlight-box">
+        <h2>Why we need Google Drive Access (OAuth Scopes)</h2>
+        <p>
+            MRE Cashbook offers an optional Cloud Backup & Sync feature. To provide this, we request access to the <strong>Google Drive AppData folder</strong> (<code>https://www.googleapis.com/auth/drive.appdata</code>).
+        </p>
+        <p>
+            <strong>How we use it:</strong> We use this highly restricted scope to securely upload an encrypted backup of your local financial database to a hidden, dedicated folder in your personal Google Drive. 
+            This ensures you never lose your financial records if your device is lost or broken.
+        </p>
+        <p>
+            <strong>Data Privacy:</strong> We (the developers) do not have any servers. We cannot access your Google Drive, we cannot read your financial data, and we cannot access any other personal files in your Google account. The data syncs directly between your device and your personal Google Drive account.
+        </p>
+    </div>
+
+    <hr>
+
+    <!-- سياسة الخصوصية -->
+    <h2>Privacy Policy</h2>
+    <p><strong>Last Updated:</strong> June 2026</p>
+
+    <h3>1. Data Collection and Usage</h3>
+    <p>MRE Cashbook is designed as an offline-first application. All financial records, transactions, and client data you enter are stored locally on your device. We do not collect, transmit, or store your personal financial data on any external servers owned by MRE Code.</p>
+
+    <h3>2. Cloud Backup & Sync (Google Drive integration)</h3>
+    <p>If you choose to enable the Cloud Backup feature, you must authenticate using your Google Account. The app will request access to the restricted Google Drive "App Data" folder.</p>
+    <ul>
+        <li><strong>Limited Use Disclosure:</strong> MRE Cashbook's use and transfer of information received from Google APIs to any other app will adhere to <a href="https://developers.google.com/terms/api-services-user-data-policy#additional_requirements_for_specific_api_scopes" target="_blank">Google API Services User Data Policy</a>, including the Limited Use requirements.</li>
+        <li>The data uploaded to your Google Drive is entirely under your control and is used exclusively for restoring your data across your devices.</li>
+        <li>We do not share, sell, or distribute your Google user data to any third parties.</li>
+    </ul>
+
+    <h3>3. Security</h3>
+    <p>We take your privacy seriously. By utilizing the <code>drive.appdata</code> scope, your backup files are hidden from the user's standard Drive view and are inaccessible to other third-party applications, providing an isolated and secure backup environment.</p>
+
+    <h3>4. Contact Us</h3>
+    <p>If you have any questions or concerns regarding this Privacy Policy or the app's functionality, please contact us at: <strong>mrecode.net@gmail.com</strong> (or your support email).</p>
+
+</div>
+
+<div class="footer">
+    &copy; 2026 MRE Code. All rights reserved.
+</div>
+
+</body>
+</html>
+```
