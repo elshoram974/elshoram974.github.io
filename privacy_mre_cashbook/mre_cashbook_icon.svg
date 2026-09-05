@@ -1,0 +1,55 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+	<defs>
+		<linearGradient id="g1" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1024,1024,-1024,1024,0,0)">
+			<stop offset="0" stop-color="#0a7a80"/>
+			<stop offset="1" stop-color="#005f6b"/>
+		</linearGradient>
+		<radialGradient id="g2" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(61440,0,0,61440,51200,40960)">
+			<stop offset="0" stop-color="#0d9ea4" stop-opacity=".4"/>
+			<stop offset="1" stop-color="#004d55" stop-opacity="0"/>
+		</radialGradient>
+		<linearGradient id="g3" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0,520,-128,0,148,240)">
+			<stop offset="0" stop-color="#3ed9c8"/>
+			<stop offset="1" stop-color="#2ab8a8"/>
+		</linearGradient>
+		<linearGradient id="g4" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0,320,-128,0,318,440)">
+			<stop offset="0" stop-color="#f07a5a"/>
+			<stop offset="1" stop-color="#d85f40"/>
+		</linearGradient>
+		<linearGradient id="g5" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0,270,-128,0,448,490)">
+			<stop offset="0" stop-color="#f07a5a"/>
+			<stop offset="1" stop-color="#d85f40"/>
+		</linearGradient>
+		<linearGradient id="g6" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0,320,-128,0,578,440)">
+			<stop offset="0" stop-color="#f07a5a"/>
+			<stop offset="1" stop-color="#d85f40"/>
+		</linearGradient>
+		<linearGradient id="g7" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0,520,-128,0,748,240)">
+			<stop offset="0" stop-color="#3ed9c8"/>
+			<stop offset="1" stop-color="#2ab8a8"/>
+		</linearGradient>
+	</defs>
+	<style>
+		.s0 { fill: url(#g1) } 
+		.s1 { fill: url(#g2) } 
+		.s2 { fill: url(#g3) } 
+		.s3 { fill: url(#g4) } 
+		.s4 { fill: url(#g5) } 
+		.s5 { fill: url(#g6) } 
+		.s6 { fill: url(#g7) } 
+		.s7 { fill: #000000;stroke: #ffffff;stroke-linecap: round;stroke-width: 28 } 
+		.s8 { opacity: .2;fill: #ffffff } 
+	</style>
+	<path fill-rule="evenodd" class="s0" d="m230 0h564c127.03 0 230 102.97 230 230v564c0 127.03-102.97 230-230 230h-564c-127.03 0-230-102.97-230-230v-564c0-127.03 102.97-230 230-230z"/>
+	<path fill-rule="evenodd" class="s1" d="m230 0h564c127.03 0 230 102.97 230 230v564c0 127.03-102.97 230-230 230h-564c-127.03 0-230-102.97-230-230v-564c0-127.03 102.97-230 230-230z"/>
+	<path fill-rule="evenodd" class="s2" d="m212 240c35.35 0 64 28.65 64 64v392c0 35.35-28.65 64-64 64-35.35 0-64-28.65-64-64v-392c0-35.35 28.65-64 64-64z"/>
+	<path fill-rule="evenodd" class="s3" d="m382 440c35.35 0 64 28.65 64 64v192c0 35.35-28.65 64-64 64-35.35 0-64-28.65-64-64v-192c0-35.35 28.65-64 64-64z"/>
+	<path fill-rule="evenodd" class="s4" d="m512 490c35.35 0 64 28.65 64 64v142c0 35.35-28.65 64-64 64-35.35 0-64-28.65-64-64v-142c0-35.35 28.65-64 64-64z"/>
+	<path fill-rule="evenodd" class="s5" d="m642 440c35.35 0 64 28.65 64 64v192c0 35.35-28.65 64-64 64-35.35 0-64-28.65-64-64v-192c0-35.35 28.65-64 64-64z"/>
+	<path fill-rule="evenodd" class="s6" d="m812 240c35.35 0 64 28.65 64 64v392c0 35.35-28.65 64-64 64-35.35 0-64-28.65-64-64v-392c0-35.35 28.65-64 64-64z"/>
+	<path fill-rule="evenodd" class="s7" d="m212 272l170 200"/>
+	<path fill-rule="evenodd" class="s7" d="m382 472l130 50"/>
+	<path fill-rule="evenodd" class="s7" d="m512 522l130-50"/>
+	<path fill-rule="evenodd" class="s7" d="m642 472l170-200"/>
+	<path fill-rule="evenodd" class="s8" d="m157 790h710c4.97 0 9 4.03 9 9 0 4.97-4.03 9-9 9h-710c-4.97 0-9-4.03-9-9 0-4.97 4.03-9 9-9z"/>
+</svg>

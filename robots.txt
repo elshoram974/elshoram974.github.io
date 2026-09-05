@@ -1,0 +1,9 @@
+# Served from the domain root (https://elshoram974.github.io/robots.txt),
+# so these rules are the ones crawlers actually read for the whole site,
+# including the /privacy_mre_cashbook/ pages.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://elshoram974.github.io/sitemap.xml
+Sitemap: https://elshoram974.github.io/privacy_mre_cashbook/sitemap.xml

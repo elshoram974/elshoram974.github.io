@@ -1,0 +1,9 @@
+# Crawlers only read robots.txt from the domain root
+# (https://elshoram974.github.io/robots.txt), so this file has no effect
+# while the site is served from this sub-path. The rules that apply here
+# live in the root robots.txt of the elshoram974.github.io repository.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://elshoram974.github.io/privacy_mre_cashbook/sitemap.xml
