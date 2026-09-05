@@ -147,6 +147,33 @@
         .lang-section {
             display: none;
         }
+
+        /* روابط صفحات الموقع - تظهر على الويب فقط وتختفي داخل التطبيق */
+        .site-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .site-links a {
+            display: inline-block;
+            background-color: var(--toggle-bg);
+            color: var(--toggle-text);
+            border: 1px solid var(--border-color);
+            padding: 10px 18px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .site-links a:active {
+            transform: scale(0.95);
+        }
     </style>
     <link rel="icon" href="mre_cashbook_icon.png" type="image/png">
 </head>
@@ -649,10 +676,31 @@
         </div>
     </div>
 
+    <!-- روابط باقي صفحات الموقع. النصوص تتغير مع اللغة من خلال applyLang،
+         والقسم كله يختفي عند فتح الصفحة داخل التطبيق. -->
+    <nav class="site-links" id="site-links">
+        <a href="../mre_cashbook_home.html" id="nav-home"></a>
+        <a href="../mre_cashbook_privacy.html" id="nav-disclosure"></a>
+        <a href="../" id="nav-hub"></a>
+    </nav>
+
     <script>
         const ua = navigator.userAgent;
         const isApp = ua.includes("MRECashBookApp");
         const supportedLangs = ['ar', 'de', 'en', 'es', 'fr', 'hi', 'ru', 'tr', 'zh'];
+
+        // نصوص روابط صفحات الموقع بكل لغة
+        const navText = {
+            ar: ['الصفحة الرئيسية للتطبيق', 'إفصاح بيانات Google API', 'كل تطبيقات MRE Code'],
+            de: ['App-Startseite', 'Google-API-Datenoffenlegung', 'Alle MRE Code Apps'],
+            en: ['App home page', 'Google API data disclosure', 'All MRE Code apps'],
+            es: ['Página principal de la app', 'Divulgación de datos de la API de Google', 'Todas las apps de MRE Code'],
+            fr: ["Page d'accueil de l'app", 'Divulgation des données API Google', 'Toutes les apps MRE Code'],
+            hi: ['ऐप होम पेज', 'Google API डेटा प्रकटीकरण', 'सभी MRE Code ऐप्स'],
+            ru: ['Главная страница приложения', 'Раскрытие данных Google API', 'Все приложения MRE Code'],
+            tr: ['Uygulama ana sayfası', 'Google API veri açıklaması', 'Tüm MRE Code uygulamaları'],
+            zh: ['应用主页', 'Google API 数据披露', '所有 MRE Code 应用']
+        };
 
         let sysLang = navigator.language || navigator.userLanguage;
         let currentLang = 'en';
@@ -687,7 +735,8 @@
 
         if (isApp) {
             document.getElementById('top-controls').style.display = 'none';
-            
+            document.getElementById('site-links').style.display = 'none';
+
             const logos = document.querySelectorAll('.app-logo');
             logos.forEach(l => l.style.display = 'none');
 
@@ -717,6 +766,12 @@
                 if (section) {
                     section.style.display = (l === lang) ? 'block' : 'none';
                 }
+            });
+
+            const t = navText[lang] || navText.en;
+            ['nav-home', 'nav-disclosure', 'nav-hub'].forEach((id, i) => {
+                const a = document.getElementById(id);
+                if (a) a.textContent = t[i];
             });
 
             if (!isApp) localStorage.setItem('mre_lang', lang);
