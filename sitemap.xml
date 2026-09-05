@@ -2,41 +2,47 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://elshoram974.github.io/privacy_mre_cashbook/home.html</loc>
+    <loc>https://elshoram974.github.io/mre_cashbook_home.html</loc>
     <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://elshoram974.github.io/privacy_mre_cashbook/assets/og-mre-cashbook.png</image:loc>
+      <image:loc>https://elshoram974.github.io/assets/og-mre-cashbook.png</image:loc>
       <image:title>MRE CashBook — cashbook app and expense tracker</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://elshoram974.github.io/privacy_mre_cashbook/assets/screens/01-dashboard.jpg</image:loc>
+      <image:loc>https://elshoram974.github.io/assets/screens/01-dashboard.jpg</image:loc>
       <image:title>MRE CashBook home screen with net balance and books</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://elshoram974.github.io/privacy_mre_cashbook/assets/screens/04-debts.jpg</image:loc>
+      <image:loc>https://elshoram974.github.io/assets/screens/04-debts.jpg</image:loc>
       <image:title>Daily entries and debt tracking in MRE CashBook</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://elshoram974.github.io/privacy_mre_cashbook/assets/screens/05-products.jpg</image:loc>
+      <image:loc>https://elshoram974.github.io/assets/screens/05-products.jpg</image:loc>
       <image:title>Product stock and pricing in MRE CashBook</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://elshoram974.github.io/privacy_mre_cashbook/assets/screens/06-insights.jpg</image:loc>
+      <image:loc>https://elshoram974.github.io/assets/screens/06-insights.jpg</image:loc>
       <image:title>Analytics and cash flow insights in MRE CashBook</image:title>
     </image:image>
+  </url>
+  <url>
+    <loc>https://elshoram974.github.io/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://elshoram974.github.io/privacy_mre_cashbook/</loc>
     <lastmod>2026-09-05</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://elshoram974.github.io/</loc>
+    <loc>https://elshoram974.github.io/mre_cashbook_privacy.html</loc>
     <lastmod>2026-09-05</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.4</priority>
   </url>
 </urlset>

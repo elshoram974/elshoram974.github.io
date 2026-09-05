@@ -1,36 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-  <url>
-    <loc>https://elshoram974.github.io/privacy_mre_cashbook/home.html</loc>
-    <lastmod>2026-09-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-    <image:image>
-      <image:loc>https://elshoram974.github.io/privacy_mre_cashbook/assets/og-mre-cashbook.png</image:loc>
-      <image:title>MRE CashBook — cashbook app and expense tracker</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://elshoram974.github.io/privacy_mre_cashbook/assets/screens/01-dashboard.jpg</image:loc>
-      <image:title>MRE CashBook home screen with net balance and books</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://elshoram974.github.io/privacy_mre_cashbook/assets/screens/04-debts.jpg</image:loc>
-      <image:title>Daily entries and debt tracking in MRE CashBook</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://elshoram974.github.io/privacy_mre_cashbook/assets/screens/05-products.jpg</image:loc>
-      <image:title>Product stock and pricing in MRE CashBook</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://elshoram974.github.io/privacy_mre_cashbook/assets/screens/06-insights.jpg</image:loc>
-      <image:title>Analytics and cash flow insights in MRE CashBook</image:title>
-    </image:image>
-  </url>
+<!-- Scope note: a sitemap may only list URLs at or below its own path.
+     The MRE CashBook landing page now lives at /mre_cashbook_home.html and is
+     listed in the root sitemap: https://elshoram974.github.io/sitemap.xml -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://elshoram974.github.io/privacy_mre_cashbook/</loc>
-    <lastmod>2026-08-14</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
+    <priority>1.0</priority>
   </url>
 </urlset>

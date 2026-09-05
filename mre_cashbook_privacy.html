@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google API Data Disclosure — MRE CashBook</title>
+    <meta name="description"
+        content="How MRE CashBook uses the Google Drive appdata scope: what is stored, what is not, and the Limited Use commitment under the Google API Services User Data Policy.">
+    <link rel="canonical" href="https://elshoram974.github.io/mre_cashbook_privacy.html">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#005F73">
+    <link rel="icon" type="image/svg+xml" href="mre_cashbook_icon.svg">
+    <link rel="icon" type="image/png" href="mre_cashbook_icon.png">
+    <link rel="apple-touch-icon" href="mre_cashbook_icon.png">
+
+    <style>
+        :root {
+            --brand: #005F73;
+            --mint: #2A9D8F;
+            --mint-2: #3EC9B8;
+            --bg: #FFFFFF;
+            --bg-alt: #F4F8F8;
+            --text: #1E2528;
+            --muted: #55676C;
+            --line: #DDE7E8;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0E1618;
+                --bg-alt: #121F22;
+                --text: #EEF5F5;
+                --muted: #A6BCC0;
+                --line: #22383E;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--bg);
+            color: var(--text);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+        .wrap {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 0 20px 60px;
+        }
+
+        header {
+            background: linear-gradient(160deg, #00404E 0%, #005F73 55%, #0A7A80 100%);
+            color: #fff;
+            padding: 40px 0 34px;
+            margin-bottom: 40px;
+        }
+
+        header .wrap {
+            padding-bottom: 0;
+        }
+
+        header img {
+            width: 60px;
+            height: 60px;
+            border-radius: 15px;
+            display: block;
+            margin-bottom: 16px;
+        }
+
+        h1 {
+            font-size: clamp(1.6rem, 5vw, 2.2rem);
+            margin: 0 0 .3em;
+            line-height: 1.25;
+        }
+
+        header p {
+            color: #CFE9E7;
+            margin: 0;
+        }
+
+        h2 {
+            font-size: 1.25rem;
+            margin: 2em 0 .5em;
+            padding-bottom: .3em;
+            border-bottom: 2px solid var(--mint);
+        }
+
+        p,
+        li {
+            color: var(--muted);
+        }
+
+        strong {
+            color: var(--text);
+        }
+
+        a {
+            color: var(--brand);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            a {
+                color: var(--mint-2);
+            }
+        }
+
+        code {
+            background: var(--bg-alt);
+            border: 1px solid var(--line);
+            border-radius: 5px;
+            padding: 1px 6px;
+            font-size: .88em;
+            word-break: break-all;
+        }
+
+        .box {
+            background: var(--bg-alt);
+            border: 1px solid var(--line);
+            border-inline-start: 5px solid var(--mint);
+            border-radius: 12px;
+            padding: 18px 20px;
+            margin: 26px 0;
+        }
+
+        .box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .back {
+            display: inline-block;
+            margin-top: 34px;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        footer {
+            border-top: 1px solid var(--line);
+            margin-top: 40px;
+            padding-top: 18px;
+            font-size: .9rem;
+            color: var(--muted);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="wrap">
+            <img src="mre_cashbook_icon.png" alt="MRE CashBook app icon" width="60" height="60">
+            <h1>Google API data disclosure</h1>
+            <p>How MRE CashBook uses Google Drive · Last updated 4 September 2026</p>
+        </div>
+    </header>
+
+    <main class="wrap">
+        <p>This page covers one narrow subject: what <strong>MRE CashBook</strong> does with data it receives from
+            Google APIs. The full privacy policy for the app — permissions, notifications, the optional AI assistant,
+            and data deletion — is the
+            <a href="https://elshoram974.github.io/privacy_mre_cashbook/">MRE CashBook privacy policy</a>, available in
+            9 languages.</p>
+
+        <h2>1. What the app is</h2>
+        <p>MRE CashBook is an offline-first personal finance tracker and small-business ledger by MRE Code. It helps
+            individuals and small business owners record daily cash flow, track debts (creditors and debtors), and
+            monitor product stock, directly on their device and without an internet connection. It is a
+            record-keeping tool — not a bank, a financial institution, or a financial advisory service.</p>
+
+        <h2>2. Why the app requests Google Drive access</h2>
+        <p>Cloud backup is optional and off until you turn it on. When you do, MRE CashBook requests a single
+            restricted scope:</p>
+        <p><code>https://www.googleapis.com/auth/drive.appdata</code></p>
+        <p>This scope can only reach the hidden app-data folder that MRE CashBook creates inside your own Google
+            Drive. It cannot list, read, modify or delete any other file in your Drive, and it is not used for
+            anything except your backup.</p>
+
+        <div class="box">
+            <p><strong>What is stored there:</strong> an encrypted backup file of your local ledger database, and
+                nothing else. The file is encrypted on your device before it is uploaded, and it travels directly
+                from your device to your Google Drive.</p>
+            <p><strong>What we receive:</strong> if you sign in for backup, the app receives your Google account name,
+                email address and profile photo URL, which are used to show which account is connected and to route
+                account-related notifications. Your ledger itself is never sent to MRE Code — we operate no server
+                that stores it.</p>
+        </div>
+
+        <h2>3. Limited Use commitment</h2>
+        <p>MRE CashBook's use and transfer of information received from Google APIs to any other app will adhere to
+            the <a href="https://developers.google.com/terms/api-services-user-data-policy#additional_requirements_for_specific_api_scopes"
+                rel="noopener">Google API Services User Data Policy</a>, including the Limited Use requirements. We do
+            not sell Google user data, we do not use it for advertising, and we do not transfer it to third parties
+            except as needed to provide the backup feature you asked for, or where required by law.</p>
+
+        <h2>4. What we do not claim</h2>
+        <p>No application can promise absolute security, and this one does not. The backup file is encrypted with
+            AES-256 using a key built into the app rather than a password only you know, so treat it as protection
+            against casual access to the file, not as end-to-end encryption. Anyone who can unlock your device, or
+            who can sign in to your Google account, can reach the data. We recommend a device lock, the in-app App
+            Lock, and 2-step verification on the Google account you back up to.</p>
+
+        <h2>5. Deleting your data</h2>
+        <p>Because the backup lives in your own Drive, you control it. Delete the files from the MRE CashBook app-data
+            folder in your Google Drive, or revoke the app's access from your Google Account permissions page.
+            Uninstalling the app removes the local ledger from your device.</p>
+
+        <h2>6. Contact</h2>
+        <p>Questions about this disclosure: <a href="mailto:mrecode24@gmail.com">mrecode24@gmail.com</a> or
+            <a href="https://wa.me/201553668845">WhatsApp</a>.</p>
+
+        <a class="back" href="mre_cashbook_home.html">← Back to MRE CashBook</a>
+
+        <footer>© 2026 MRE Code. Google Drive is a trademark of Google LLC.</footer>
+    </main>
+</body>
+
+</html>

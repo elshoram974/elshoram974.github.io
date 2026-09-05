@@ -1,153 +1,312 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- ملكية الموقع مثبتة عبر الملف google8a31eb1a392dc463.html في جذر الموقع -->
-
-    <title>MRE Cashbook - Home &amp; Privacy Policy</title>
-    <meta name="description" content="MRE Cashbook by MRE Code: an offline-first cashbook and small business ledger. App overview, Google Drive backup scope justification, and privacy policy.">
+    <title>MRE Code — Apps by Mohammed El Shora</title>
+    <meta name="description"
+        content="MRE Code builds offline-first mobile apps. Home of MRE CashBook — a cashbook app, expense tracker and small business ledger. App pages, privacy policies and Google API disclosures.">
     <link rel="canonical" href="https://elshoram974.github.io/">
-    <link rel="icon" href="privacy_mre_cashbook/mre_cashbook_icon.png" type="image/png">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="MRE Code">
+    <meta name="theme-color" content="#005F73">
+    <meta name="google-site-verification" content="KlU8ZllqOiEbjvtepr2A4yY1XiAnZqVeFLklkZ0ANpI">
 
     <meta property="og:type" content="website">
-    <meta property="og:title" content="MRE Cashbook - Home &amp; Privacy Policy">
-    <meta property="og:description" content="Offline-first cashbook and small business ledger. Your financial data stays on your device.">
+    <meta property="og:site_name" content="MRE Code">
+    <meta property="og:title" content="MRE Code — Apps by Mohammed El Shora">
+    <meta property="og:description"
+        content="MRE Code builds offline-first mobile apps, including MRE CashBook: a cashbook app, expense tracker and small business ledger.">
     <meta property="og:url" content="https://elshoram974.github.io/">
-    <meta property="og:image" content="https://elshoram974.github.io/privacy_mre_cashbook/assets/og-mre-cashbook.png">
+    <meta property="og:image" content="https://elshoram974.github.io/assets/og-mre-cashbook.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://elshoram974.github.io/assets/og-mre-cashbook.png">
+
+    <link rel="icon" type="image/svg+xml" href="mre_cashbook_icon.svg">
+    <link rel="icon" type="image/png" href="mre_cashbook_icon.png">
+    <link rel="apple-touch-icon" href="mre_cashbook_icon.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://mrecode.net/#organization",
+          "name": "MRE Code",
+          "url": "https://mrecode.net",
+          "logo": "https://elshoram974.github.io/mre_cashbook_icon.png",
+          "email": "mrecode24@gmail.com"
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://elshoram974.github.io/#website",
+          "url": "https://elshoram974.github.io/",
+          "name": "MRE Code",
+          "publisher": { "@id": "https://mrecode.net/#organization" },
+          "inLanguage": "en"
+        },
+        {
+          "@type": "CollectionPage",
+          "@id": "https://elshoram974.github.io/#webpage",
+          "url": "https://elshoram974.github.io/",
+          "name": "MRE Code — Apps by Mohammed El Shora",
+          "description": "MRE Code builds offline-first mobile apps, including MRE CashBook: a cashbook app, expense tracker and small business ledger.",
+          "isPartOf": { "@id": "https://elshoram974.github.io/#website" },
+          "about": { "@id": "https://elshoram974.github.io/mre_cashbook_home.html#app" },
+          "inLanguage": "en"
+        }
+      ]
+    }
+    </script>
+
     <style>
+        :root {
+            --brand: #005F73;
+            --mint: #2A9D8F;
+            --mint-2: #3EC9B8;
+            --bg: #FFFFFF;
+            --bg-alt: #F4F8F8;
+            --text: #1E2528;
+            --muted: #55676C;
+            --line: #DDE7E9;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.65;
+            color: var(--text);
+            background: var(--bg-alt);
+            margin: 0;
+            padding: 0;
+        }
+
+        main {
+            max-width: 860px;
             margin: 0 auto;
-            padding: 20px;
-            background-color: #f9f9f9;
+            padding: 48px 20px 64px;
         }
-        .container {
-            background-color: #ffffff;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+
+        header.site {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 8px;
         }
-        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
-        h2 { color: #2980b9; margin-top: 30px; }
-        .highlight-box {
-            background-color: #e8f4f8;
-            border-left: 5px solid #3498db;
-            padding: 15px;
-            margin: 20px 0;
-            border-radius: 4px;
+
+        header.site img {
+            width: 64px;
+            height: 64px;
+            border-radius: 14px;
         }
-        .site-nav {
+
+        h1 {
+            font-size: 30px;
+            color: var(--brand);
+            margin: 0;
+            line-height: 1.25;
+        }
+
+        .tagline {
+            color: var(--muted);
+            margin: 4px 0 0;
+            font-size: 16px;
+        }
+
+        h2 {
+            font-size: 21px;
+            color: var(--brand);
+            margin: 40px 0 14px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--mint);
+        }
+
+        .card {
+            background: var(--bg);
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            padding: 24px;
+            margin: 18px 0;
+        }
+
+        .card h3 {
+            margin: 0 0 6px;
+            font-size: 20px;
+            color: var(--brand);
+        }
+
+        .card p {
+            margin: 0 0 16px;
+            color: var(--muted);
+        }
+
+        .links {
             display: flex;
             flex-wrap: wrap;
-            gap: 12px;
-            margin: 24px 0 8px;
+            gap: 10px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
         }
-        .site-nav a {
+
+        .links a {
             display: inline-block;
-            padding: 10px 18px;
+            padding: 9px 16px;
             border-radius: 8px;
-            background-color: #2980b9;
-            color: #ffffff;
+            background: var(--brand);
+            color: #fff;
             text-decoration: none;
             font-weight: 600;
+            font-size: 14.5px;
         }
-        .site-nav a.secondary {
-            background-color: #ffffff;
-            color: #2980b9;
-            border: 2px solid #2980b9;
+
+        .links a.ghost {
+            background: transparent;
+            color: var(--brand);
+            border: 1.5px solid var(--mint);
         }
-        .footer {
-            margin-top: 40px;
-            text-align: center;
-            font-size: 0.9em;
-            color: #7f8c8d;
-            border-top: 1px solid #eee;
+
+        .links a:hover {
+            background: var(--mint);
+            color: #fff;
+        }
+
+        .stores {
+            margin-top: 14px;
+            font-size: 14.5px;
+            color: var(--muted);
+        }
+
+        .stores a {
+            color: var(--brand);
+            font-weight: 600;
+        }
+
+        .note {
+            background: var(--bg);
+            border-left: 4px solid var(--mint-2);
+            border-radius: 0 10px 10px 0;
+            padding: 16px 20px;
+            margin: 18px 0;
+        }
+
+        .note p {
+            margin: 0 0 10px;
+            color: var(--muted);
+            font-size: 14.5px;
+        }
+
+        .note p:last-child {
+            margin-bottom: 0;
+        }
+
+        .note code {
+            background: var(--bg-alt);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 13px;
+            word-break: break-all;
+        }
+
+        a {
+            color: var(--brand);
+        }
+
+        footer {
+            margin-top: 48px;
             padding-top: 20px;
+            border-top: 1px solid var(--line);
+            color: var(--muted);
+            font-size: 14px;
+            text-align: center;
         }
+
         @media (max-width: 600px) {
-            .container { padding: 24px 20px; }
-            .site-nav a { flex: 1 1 100%; text-align: center; }
+            main {
+                padding: 32px 16px 48px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            header.site img {
+                width: 52px;
+                height: 52px;
+            }
+
+            .links a {
+                flex: 1 1 100%;
+                text-align: center;
+            }
         }
     </style>
 </head>
+
 <body>
+    <main>
+        <header class="site">
+            <img src="mre_cashbook_icon.png" alt="MRE Code">
+            <div>
+                <h1>MRE Code</h1>
+                <p class="tagline">Offline-first mobile apps by Mohammed El Shora.</p>
+            </div>
+        </header>
 
-<div class="container">
-    <h1>MRE Cashbook</h1>
+        <h2>Apps</h2>
 
-    <!-- روابط الصفحات الكاملة (نفس روابط الموقع القديم بالضبط) -->
-    <nav class="site-nav">
-        <a href="privacy_mre_cashbook/home.html">App home page</a>
-        <a class="secondary" href="privacy_mre_cashbook/">Full privacy policy (9 languages)</a>
-    </nav>
+        <div class="card">
+            <h3>MRE CashBook</h3>
+            <p>
+                A cashbook app, daily expense tracker and small business ledger. Record cash in and cash out,
+                track debts per contact, manage product stock, export PDF reports, and keep encrypted backups
+                in your own Google Drive or Huawei Drive. Works fully offline.
+            </p>
+            <ul class="links">
+                <li><a href="mre_cashbook_home.html">App page</a></li>
+                <li><a class="ghost" href="privacy_mre_cashbook/">Privacy policy (9 languages)</a></li>
+                <li><a class="ghost" href="mre_cashbook_privacy.html">Google API data disclosure</a></li>
+            </ul>
+            <p class="stores">
+                Download:
+                <a href="https://play.google.com/store/apps/details?id=net.mrecode.mrecashbook">Google Play</a> &middot;
+                <a href="https://apps.apple.com/app/id6760567168">App Store</a> &middot;
+                <a href="https://appgallery.huawei.com/app/C117118621">Huawei AppGallery</a>
+            </p>
+        </div>
 
-    <!-- القسم الأهم الذي يبحث عنه موظف جوجل (وصف التطبيق) -->
-    <h2>About the App (Application Purpose)</h2>
-    <p>
-        <strong>MRE Cashbook</strong> is a secure, offline-first personal finance tracker and small business ledger application. 
-        It helps individuals and small business owners manage their daily cash flow, track debts (creditors/debtors), and monitor product inventory—all directly from their mobile devices without requiring an active internet connection.
-    </p>
+        <h2>Google Drive access &amp; Limited Use</h2>
 
-    <h3>Core Features:</h3>
-    <ul>
-        <li>Manage daily income and expenses.</li>
-        <li>Track debts and client accounts securely.</li>
-        <li>Generate professional PDF reports and receipts.</li>
-        <li>Complete offline privacy (data never leaves the phone by default).</li>
-    </ul>
+        <div class="note">
+            <p>
+                MRE CashBook offers optional cloud backup. It requests only the restricted
+                <code>https://www.googleapis.com/auth/drive.appdata</code> scope, which can see nothing but the
+                hidden app-data folder the app creates inside your own Drive. It cannot list, read or touch any
+                other file in your Google account, and MRE Code operates no servers that receive your ledger.
+            </p>
+            <p>
+                <strong>Limited Use disclosure.</strong> MRE CashBook&rsquo;s use and transfer of information
+                received from Google APIs to any other app will adhere to the
+                <a href="https://developers.google.com/terms/api-services-user-data-policy#additional_requirements_for_specific_api_scopes"
+                    rel="noopener">Google API Services User Data Policy</a>, including the Limited Use
+                requirements. The full detail is in the
+                <a href="mre_cashbook_privacy.html">Google API data disclosure</a>.
+            </p>
+        </div>
 
-    <!-- القسم الثاني الأهم (لماذا نطلب صلاحية جوجل درايف) -->
-    <div class="highlight-box">
-        <h2>Why we need Google Drive Access (OAuth Scopes)</h2>
+        <h2>Contact</h2>
         <p>
-            MRE Cashbook offers an optional Cloud Backup &amp; Sync feature. To provide this, we request access to the <strong>Google Drive AppData folder</strong> (<code>https://www.googleapis.com/auth/drive.appdata</code>).
+            <a href="mailto:mrecode24@gmail.com">mrecode24@gmail.com</a>
         </p>
-        <p>
-            <strong>How we use it:</strong> We use this highly restricted scope to securely upload an encrypted backup of your local financial database to a hidden, dedicated folder in your personal Google Drive. 
-            This ensures you never lose your financial records if your device is lost or broken.
-        </p>
-        <p>
-            <strong>Data Privacy:</strong> We (the developers) do not have any servers. We cannot access your Google Drive, we cannot read your financial data, and we cannot access any other personal files in your Google account. The data syncs directly between your device and your personal Google Drive account.
-        </p>
-    </div>
 
-    <hr>
-
-    <!-- سياسة الخصوصية -->
-    <h2>Privacy Policy</h2>
-    <p><strong>Last Updated:</strong> June 2026</p>
-    <p>
-        This page is a summary. The complete, always-current policy is published in nine languages at
-        <a href="privacy_mre_cashbook/">elshoram974.github.io/privacy_mre_cashbook/</a>.
-    </p>
-
-    <h3>1. Data Collection and Usage</h3>
-    <p>MRE Cashbook is designed as an offline-first application. All financial records, transactions, and client data you enter are stored locally on your device. We do not collect, transmit, or store your personal financial data on any external servers owned by MRE Code.</p>
-
-    <h3>2. Cloud Backup &amp; Sync (Google Drive integration)</h3>
-    <p>If you choose to enable the Cloud Backup feature, you must authenticate using your Google Account. The app will request access to the restricted Google Drive "App Data" folder.</p>
-    <ul>
-        <li><strong>Limited Use Disclosure:</strong> MRE Cashbook's use and transfer of information received from Google APIs to any other app will adhere to <a href="https://developers.google.com/terms/api-services-user-data-policy#additional_requirements_for_specific_api_scopes" target="_blank">Google API Services User Data Policy</a>, including the Limited Use requirements.</li>
-        <li>The data uploaded to your Google Drive is entirely under your control and is used exclusively for restoring your data across your devices.</li>
-        <li>We do not share, sell, or distribute your Google user data to any third parties.</li>
-    </ul>
-
-    <h3>3. Security</h3>
-    <p>We take your privacy seriously. By utilizing the <code>drive.appdata</code> scope, your backup files are hidden from the user's standard Drive view and are inaccessible to other third-party applications, providing an isolated and secure backup environment.</p>
-
-    <h3>4. Contact Us</h3>
-    <p>If you have any questions or concerns regarding this Privacy Policy or the app's functionality, please contact us at: <strong>mrecode.net@gmail.com</strong>.</p>
-
-</div>
-
-<div class="footer">
-    &copy; 2026 MRE Code. All rights reserved.
-</div>
-
+        <footer>&copy; 2026 MRE Code. All rights reserved.</footer>
+    </main>
 </body>
+
 </html>
