@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Scope note: a sitemap may only list URLs at or below its own path.
-     The MRE CashBook landing page now lives at /mre_cashbook_home.html and is
+     The MRE CashBook landing page now lives at /mre_cashbook_home/ and is
      listed in the root sitemap: https://elshoram974.github.io/sitemap.xml -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
