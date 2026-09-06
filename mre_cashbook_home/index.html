@@ -1,1262 +1,1654 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" dir="ltr">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- ============ PRIMARY SEO ============ -->
-    <title>MRE CashBook — Cashbook App, Expense Tracker &amp; Business Ledger</title>
-    <meta name="description"
-        content="MRE CashBook is a free offline cashbook app and daily expense tracker for personal and small business ledgers: debts, stock, PDF reports and encrypted backups.">
-    <link rel="canonical" href="https://elshoram974.github.io/mre_cashbook_home/">
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <meta name="author" content="MRE Code">
-    <meta name="theme-color" content="#005F73">
-    <meta name="apple-itunes-app" content="app-id=6760567168">
-    <meta name="google-site-verification" content="KlU8ZllqOiEbjvtepr2A4yY1XiAnZqVeFLklkZ0ANpI">
+    <title>
+      MRE CashBook — Cashbook App, Expense Tracker &amp; Business Ledger
+    </title>
+    <meta
+      name="description"
+      content="MRE CashBook is a free offline cashbook app and daily expense tracker for personal and small business ledgers: debts, stock, PDF reports and encrypted backups."
+    />
+    <link
+      rel="canonical"
+      href="https://elshoram974.github.io/mre_cashbook_home/"
+    />
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
+    <meta name="author" content="MRE Code" />
+    <meta name="theme-color" content="#005F73" />
+    <meta name="apple-itunes-app" content="app-id=6760567168" />
+    <meta
+      name="google-site-verification"
+      content="KlU8ZllqOiEbjvtepr2A4yY1XiAnZqVeFLklkZ0ANpI"
+    />
 
     <!-- ============ OPEN GRAPH / SOCIAL ============ -->
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="MRE CashBook">
-    <meta property="og:title" content="MRE CashBook — Cashbook App &amp; Daily Expense Tracker">
-    <meta property="og:description"
-        content="An offline-first cashbook app for daily income and expenses, debts and stock. Custom fields, PDF receipts, encrypted backups to your own Google Drive or Huawei Drive.">
-    <meta property="og:url" content="https://elshoram974.github.io/mre_cashbook_home/">
-    <meta property="og:image" content="https://elshoram974.github.io/assets/og-mre-cashbook.png">
-    <meta property="og:image:width" content="1024">
-    <meta property="og:image:height" content="500">
-    <meta property="og:image:alt" content="MRE CashBook app icon beside the words MRE CashBook, a personal finance app">
-    <meta property="og:locale" content="en_US">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="MRE CashBook — Cashbook App &amp; Daily Expense Tracker">
-    <meta name="twitter:description"
-        content="Offline cashbook app for daily income, expenses, debts and stock. PDF receipts, custom fields and encrypted backups to your own Drive.">
-    <meta name="twitter:image" content="https://elshoram974.github.io/assets/og-mre-cashbook.png">
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="MRE CashBook" />
+    <meta
+      property="og:title"
+      content="MRE CashBook — Cashbook App &amp; Daily Expense Tracker"
+    />
+    <meta
+      property="og:description"
+      content="An offline-first cashbook app for daily income and expenses, debts and stock. Custom fields, PDF receipts, encrypted backups to your own Google Drive or Huawei Drive."
+    />
+    <meta
+      property="og:url"
+      content="https://elshoram974.github.io/mre_cashbook_home/"
+    />
+    <meta
+      property="og:image"
+      content="https://elshoram974.github.io/assets/og-mre-cashbook.png"
+    />
+    <meta property="og:image:width" content="1024" />
+    <meta property="og:image:height" content="500" />
+    <meta
+      property="og:image:alt"
+      content="MRE CashBook app icon beside the words MRE CashBook, a personal finance app"
+    />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="MRE CashBook — Cashbook App &amp; Daily Expense Tracker"
+    />
+    <meta
+      name="twitter:description"
+      content="Offline cashbook app for daily income, expenses, debts and stock. PDF receipts, custom fields and encrypted backups to your own Drive."
+    />
+    <meta
+      name="twitter:image"
+      content="https://elshoram974.github.io/assets/og-mre-cashbook.png"
+    />
 
     <!-- ============ ICONS ============ -->
-    <link rel="icon" type="image/svg+xml" href="../mre_cashbook_icon.svg">
-    <link rel="icon" type="image/png" href="../mre_cashbook_icon.png">
-    <link rel="apple-touch-icon" href="../mre_cashbook_icon.png">
+    <link rel="icon" type="image/svg+xml" href="../mre_cashbook_icon.svg" />
+    <link rel="icon" type="image/png" href="../mre_cashbook_icon.png" />
+    <link rel="apple-touch-icon" href="../mre_cashbook_icon.png" />
 
     <style>
+      :root {
+        --deep: #00404e;
+        --brand: #005f73;
+        --brand-2: #0a7a80;
+        --mint: #2a9d8f;
+        --mint-2: #3ec9b8;
+        --coral: #e76f51;
+        --bg: #ffffff;
+        --bg-alt: #f4f8f8;
+        --card: #ffffff;
+        --text: #1e2528;
+        --muted: #55676c;
+        --line: #dde7e8;
+        --shadow:
+          0 1px 2px rgba(0, 48, 58, 0.06), 0 8px 24px rgba(0, 48, 58, 0.07);
+        --radius: 16px;
+        --maxw: 1120px;
+      }
+
+      @media (prefers-color-scheme: dark) {
         :root {
-            --deep: #00404E;
-            --brand: #005F73;
-            --brand-2: #0A7A80;
-            --mint: #2A9D8F;
-            --mint-2: #3EC9B8;
-            --coral: #E76F51;
-            --bg: #FFFFFF;
-            --bg-alt: #F4F8F8;
-            --card: #FFFFFF;
-            --text: #1E2528;
-            --muted: #55676C;
-            --line: #DDE7E8;
-            --shadow: 0 1px 2px rgba(0, 48, 58, .06), 0 8px 24px rgba(0, 48, 58, .07);
-            --radius: 16px;
-            --maxw: 1120px;
+          --bg: #0e1618;
+          --bg-alt: #121f22;
+          --card: #16252a;
+          --text: #eef5f5;
+          --muted: #a6bcc0;
+          --line: #22383e;
+          --shadow:
+            0 1px 2px rgba(0, 0, 0, 0.4), 0 8px 24px rgba(0, 0, 0, 0.35);
         }
+      }
 
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --bg: #0E1618;
-                --bg-alt: #121F22;
-                --card: #16252A;
-                --text: #EEF5F5;
-                --muted: #A6BCC0;
-                --line: #22383E;
-                --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 8px 24px rgba(0, 0, 0, .35);
-            }
-        }
+      * {
+        box-sizing: border-box;
+      }
 
-        * {
-            box-sizing: border-box;
-        }
+      html {
+        scroll-behavior: smooth;
+        -webkit-text-size-adjust: 100%;
+      }
 
-        html {
-            scroll-behavior: smooth;
-            -webkit-text-size-adjust: 100%;
-        }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, sans-serif;
+        font-size: 17px;
+        line-height: 1.65;
+        -webkit-font-smoothing: antialiased;
+      }
 
-        body {
-            margin: 0;
-            background: var(--bg);
-            color: var(--text);
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            font-size: 17px;
-            line-height: 1.65;
-            -webkit-font-smoothing: antialiased;
-        }
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
 
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
+      a {
+        color: var(--brand);
+      }
 
+      @media (prefers-color-scheme: dark) {
         a {
-            color: var(--brand);
+          color: var(--mint-2);
         }
+      }
 
-        @media (prefers-color-scheme: dark) {
-            a {
-                color: var(--mint-2);
-            }
-        }
+      .wrap {
+        width: 100%;
+        max-width: var(--maxw);
+        margin: 0 auto;
+        padding: 0 20px;
+      }
 
-        .wrap {
-            width: 100%;
-            max-width: var(--maxw);
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+      h1,
+      h2,
+      h3 {
+        line-height: 1.25;
+        letter-spacing: -0.015em;
+        margin: 0 0 0.5em;
+      }
 
-        h1,
-        h2,
-        h3 {
-            line-height: 1.25;
-            letter-spacing: -.015em;
-            margin: 0 0 .5em;
-        }
+      h2 {
+        font-size: 1.85rem;
+      }
 
-        h2 {
-            font-size: 1.85rem;
-        }
+      h3 {
+        font-size: 1.15rem;
+      }
 
-        h3 {
-            font-size: 1.15rem;
-        }
+      p {
+        margin: 0 0 1em;
+      }
 
-        p {
-            margin: 0 0 1em;
-        }
+      section {
+        padding: 64px 0;
+        border-top: 1px solid var(--line);
+      }
 
-        section {
-            padding: 64px 0;
-            border-top: 1px solid var(--line);
-        }
+      /* keep anchor targets clear of the sticky nav */
+      section,
+      header {
+        scroll-margin-top: 64px;
+      }
 
-        /* keep anchor targets clear of the sticky nav */
-        section,
-        header {
-            scroll-margin-top: 64px;
-        }
+      section.alt {
+        background: var(--bg-alt);
+      }
 
-        section.alt {
-            background: var(--bg-alt);
-        }
+      .lead {
+        font-size: 1.12rem;
+        color: var(--muted);
+        max-width: 62ch;
+      }
 
-        .lead {
-            font-size: 1.12rem;
-            color: var(--muted);
-            max-width: 62ch;
-        }
+      .eyebrow {
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        font-size: 0.78rem;
+        font-weight: 700;
+        color: var(--mint);
+        margin: 0 0 0.6em;
+      }
 
-        .eyebrow {
-            text-transform: uppercase;
-            letter-spacing: .12em;
-            font-size: .78rem;
-            font-weight: 700;
-            color: var(--mint);
-            margin: 0 0 .6em;
-        }
+      /* ---------- skip link + nav ---------- */
+      .skip {
+        position: absolute;
+        left: -9999px;
+      }
 
-        /* ---------- skip link + nav ---------- */
-        .skip {
-            position: absolute;
-            left: -9999px;
-        }
+      .skip:focus {
+        left: 12px;
+        top: 12px;
+        z-index: 99;
+        background: #fff;
+        color: var(--brand);
+        padding: 10px 14px;
+        border-radius: 8px;
+      }
 
-        .skip:focus {
-            left: 12px;
-            top: 12px;
-            z-index: 99;
-            background: #fff;
-            color: var(--brand);
-            padding: 10px 14px;
-            border-radius: 8px;
-        }
+      .site-nav {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        background: rgba(0, 64, 78, 0.96);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
 
-        .site-nav {
-            position: sticky;
-            top: 0;
-            z-index: 20;
-            background: rgba(0, 64, 78, .96);
-            border-bottom: 1px solid rgba(255, 255, 255, .1);
-        }
+      .site-nav .wrap {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        min-height: 58px;
+        flex-wrap: wrap;
+      }
 
-        .site-nav .wrap {
-            display: flex;
-            align-items: center;
-            gap: 18px;
-            min-height: 58px;
-            flex-wrap: wrap;
-        }
+      .brandmark {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #fff;
+        font-weight: 700;
+        text-decoration: none;
+        margin-inline-end: auto;
+      }
 
-        .brandmark {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            color: #fff;
-            font-weight: 700;
-            text-decoration: none;
-            margin-inline-end: auto;
-        }
+      .brandmark img {
+        width: 28px;
+        height: 28px;
+        border-radius: 7px;
+      }
 
-        .brandmark img {
-            width: 28px;
-            height: 28px;
-            border-radius: 7px;
-        }
+      .site-nav a.navlink {
+        color: #cfe9e7;
+        text-decoration: none;
+        font-size: 0.93rem;
+        padding: 6px 2px;
+      }
 
+      .site-nav a.navlink:hover,
+      .site-nav a.navlink:focus {
+        color: #fff;
+        text-decoration: underline;
+      }
+
+      @media (max-width: 700px) {
         .site-nav a.navlink {
-            color: #CFE9E7;
-            text-decoration: none;
-            font-size: .93rem;
-            padding: 6px 2px;
+          font-size: 0.86rem;
         }
+      }
 
-        .site-nav a.navlink:hover,
-        .site-nav a.navlink:focus {
-            color: #fff;
-            text-decoration: underline;
-        }
+      /* ---------- hero ---------- */
+      .hero {
+        background:
+          radial-gradient(
+            1000px 460px at 82% 8%,
+            rgba(62, 201, 184, 0.22),
+            transparent 60%
+          ),
+          linear-gradient(160deg, #00404e 0%, #005f73 48%, #0a7a80 100%);
+        color: #fff;
+        border-top: none;
+        padding: 56px 0 64px;
+      }
 
-        @media (max-width: 700px) {
-            .site-nav a.navlink {
-                font-size: .86rem;
-            }
-        }
+      .hero-grid {
+        display: grid;
+        gap: 40px;
+        align-items: center;
+      }
 
-        /* ---------- hero ---------- */
-        .hero {
-            background:
-                radial-gradient(1000px 460px at 82% 8%, rgba(62, 201, 184, .22), transparent 60%),
-                linear-gradient(160deg, #00404E 0%, #005F73 48%, #0A7A80 100%);
-            color: #fff;
-            border-top: none;
-            padding: 56px 0 64px;
-        }
+      /* grid items must be allowed to shrink below their content width */
+      .hero-grid > *,
+      .grid > *,
+      .two-col > *,
+      .shots > *,
+      .foot-grid > * {
+        min-width: 0;
+      }
 
+      @media (min-width: 900px) {
         .hero-grid {
-            display: grid;
-            gap: 40px;
-            align-items: center;
+          grid-template-columns: 1.05fr 0.95fr;
         }
+      }
 
-        /* grid items must be allowed to shrink below their content width */
-        .hero-grid>*,
-        .grid>*,
-        .two-col>*,
-        .shots>*,
-        .foot-grid>* {
-            min-width: 0;
-        }
+      .hero .app-icon {
+        width: 76px;
+        height: 76px;
+        border-radius: 20px;
+        box-shadow: 0 10px 26px rgba(0, 0, 0, 0.3);
+        margin-bottom: 18px;
+      }
 
-        @media (min-width: 900px) {
-            .hero-grid {
-                grid-template-columns: 1.05fr .95fr;
-            }
-        }
+      .hero h1 {
+        font-size: clamp(2.1rem, 6vw, 3.1rem);
+        margin-bottom: 0.35em;
+      }
 
-        .hero .app-icon {
-            width: 76px;
-            height: 76px;
-            border-radius: 20px;
-            box-shadow: 0 10px 26px rgba(0, 0, 0, .3);
-            margin-bottom: 18px;
-        }
+      .hero h1 .tagline {
+        display: block;
+        font-size: clamp(1rem, 2.6vw, 1.28rem);
+        font-weight: 500;
+        line-height: 1.4;
+        letter-spacing: 0;
+        color: #bfe7e2;
+        margin-top: 0.55em;
+      }
 
-        .hero h1 {
-            font-size: clamp(2.1rem, 6vw, 3.1rem);
-            margin-bottom: .35em;
-        }
+      .hero p {
+        color: #dcf0ee;
+        max-width: 60ch;
+      }
 
-        .hero h1 .tagline {
-            display: block;
-            font-size: clamp(1rem, 2.6vw, 1.28rem);
-            font-weight: 500;
-            line-height: 1.4;
-            letter-spacing: 0;
-            color: #BFE7E2;
-            margin-top: .55em;
-        }
+      .chips {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        padding: 0;
+        margin: 22px 0 0;
+      }
 
-        .hero p {
-            color: #DCF0EE;
-            max-width: 60ch;
-        }
+      .chips li {
+        font-size: 0.84rem;
+        font-weight: 600;
+        color: #cff3ee;
+        border: 1px solid rgba(207, 243, 238, 0.35);
+        border-radius: 999px;
+        padding: 5px 12px;
+      }
 
-        .chips {
-            list-style: none;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            padding: 0;
-            margin: 22px 0 0;
-        }
+      .hero-shot {
+        justify-self: center;
+        width: 100%;
+        max-width: 330px;
+        border-radius: 22px;
+        box-shadow: 0 22px 50px rgba(0, 0, 0, 0.35);
+      }
 
-        .chips li {
-            font-size: .84rem;
-            font-weight: 600;
-            color: #CFF3EE;
-            border: 1px solid rgba(207, 243, 238, .35);
-            border-radius: 999px;
-            padding: 5px 12px;
-        }
+      /* ---------- store buttons ---------- */
+      .stores {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin: 26px 0 0;
+      }
 
-        .hero-shot {
-            justify-self: center;
-            width: 100%;
-            max-width: 330px;
-            border-radius: 22px;
-            box-shadow: 0 22px 50px rgba(0, 0, 0, .35);
-        }
+      .store-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 11px;
+        background: #fff;
+        color: #00404e;
+        text-decoration: none;
+        border-radius: 12px;
+        padding: 11px 18px;
+        font-weight: 700;
+        font-size: 0.97rem;
+        border: 1px solid rgba(0, 0, 0, 0.06);
+        transition:
+          transform 0.15s ease,
+          box-shadow 0.15s ease;
+      }
 
-        /* ---------- store buttons ---------- */
-        .stores {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin: 26px 0 0;
-        }
+      .store-btn:hover,
+      .store-btn:focus {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 22px rgba(0, 0, 0, 0.22);
+      }
 
-        .store-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 11px;
-            background: #fff;
-            color: #00404E;
-            text-decoration: none;
-            border-radius: 12px;
-            padding: 11px 18px;
-            font-weight: 700;
-            font-size: .97rem;
-            border: 1px solid rgba(0, 0, 0, .06);
-            transition: transform .15s ease, box-shadow .15s ease;
-        }
+      .store-btn svg {
+        flex: none;
+      }
 
-        .store-btn:hover,
-        .store-btn:focus {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 22px rgba(0, 0, 0, .22);
-        }
+      .store-btn small {
+        display: block;
+        font-size: 0.7rem;
+        font-weight: 600;
+        color: #5d7379;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
 
-        .store-btn svg {
-            flex: none;
-        }
+      section .store-btn {
+        background: var(--brand);
+        color: #fff;
+        border-color: transparent;
+      }
 
-        .store-btn small {
-            display: block;
-            font-size: .7rem;
-            font-weight: 600;
-            color: #5D7379;
-            letter-spacing: .04em;
-            text-transform: uppercase;
-        }
+      section .store-btn small {
+        color: #b9ddd9;
+      }
 
-        section .store-btn {
-            background: var(--brand);
-            color: #fff;
-            border-color: transparent;
-        }
+      section .store-btn svg path,
+      section .store-btn svg polygon {
+        fill: #fff;
+      }
 
-        section .store-btn small {
-            color: #B9DDD9;
-        }
+      /* ---------- cards ---------- */
+      .grid {
+        display: grid;
+        gap: 18px;
+        grid-template-columns: repeat(auto-fit, minmax(min(270px, 100%), 1fr));
+      }
 
-        section .store-btn svg path,
-        section .store-btn svg polygon {
-            fill: #fff;
-        }
+      .card {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        padding: 22px;
+        box-shadow: var(--shadow);
+      }
 
-        /* ---------- cards ---------- */
-        .grid {
-            display: grid;
-            gap: 18px;
-            grid-template-columns: repeat(auto-fit, minmax(min(270px, 100%), 1fr));
-        }
+      .card h3 {
+        margin-bottom: 0.35em;
+      }
 
-        .card {
-            background: var(--card);
-            border: 1px solid var(--line);
-            border-radius: var(--radius);
-            padding: 22px;
-            box-shadow: var(--shadow);
-        }
+      .card p {
+        color: var(--muted);
+        font-size: 0.97rem;
+        margin: 0;
+      }
 
-        .card h3 {
-            margin-bottom: .35em;
-        }
+      .icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 11px;
+        background: linear-gradient(140deg, var(--brand) 0%, var(--mint) 100%);
+        display: grid;
+        place-items: center;
+        margin-bottom: 14px;
+      }
 
-        .card p {
-            color: var(--muted);
-            font-size: .97rem;
-            margin: 0;
-        }
+      .icon svg {
+        width: 21px;
+        height: 21px;
+        stroke: #fff;
+        fill: none;
+        stroke-width: 1.9;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
 
-        .icon {
-            width: 40px;
-            height: 40px;
-            border-radius: 11px;
-            background: linear-gradient(140deg, var(--brand) 0%, var(--mint) 100%);
-            display: grid;
-            place-items: center;
-            margin-bottom: 14px;
-        }
+      /* ---------- screenshots ---------- */
+      .shots {
+        display: grid;
+        gap: 22px;
+        grid-template-columns: repeat(auto-fit, minmax(min(290px, 100%), 1fr));
+        margin-top: 28px;
+      }
 
-        .icon svg {
-            width: 21px;
-            height: 21px;
-            stroke: #fff;
-            fill: none;
-            stroke-width: 1.9;
-            stroke-linecap: round;
-            stroke-linejoin: round;
-        }
+      .shot {
+        margin: 0;
+      }
 
-        /* ---------- screenshots ---------- */
-        .shots {
-            display: grid;
-            gap: 22px;
-            grid-template-columns: repeat(auto-fit, minmax(min(290px, 100%), 1fr));
-            margin-top: 28px;
-        }
+      .shot img {
+        border-radius: 14px;
+        border: 1px solid var(--line);
+        width: 100%;
+      }
 
-        .shot {
-            margin: 0;
-        }
+      .shot figcaption {
+        font-size: 0.89rem;
+        color: var(--muted);
+        margin-top: 9px;
+      }
 
-        .shot img {
-            border-radius: 14px;
-            border: 1px solid var(--line);
-            width: 100%;
-        }
+      /* ---------- lists ---------- */
+      .checklist {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
 
-        .shot figcaption {
-            font-size: .89rem;
-            color: var(--muted);
-            margin-top: 9px;
-        }
+      .checklist li {
+        position: relative;
+        padding-inline-start: 30px;
+        margin-bottom: 12px;
+        color: var(--muted);
+      }
 
-        /* ---------- lists ---------- */
-        .checklist {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
+      .checklist li::before {
+        content: "";
+        position: absolute;
+        inset-inline-start: 4px;
+        top: 0.55em;
+        width: 9px;
+        height: 9px;
+        border-radius: 3px;
+        background: var(--mint);
+      }
 
-        .checklist li {
-            position: relative;
-            padding-inline-start: 30px;
-            margin-bottom: 12px;
-            color: var(--muted);
-        }
+      .checklist strong {
+        color: var(--text);
+      }
 
-        .checklist li::before {
-            content: "";
-            position: absolute;
-            inset-inline-start: 4px;
-            top: .55em;
-            width: 9px;
-            height: 9px;
-            border-radius: 3px;
-            background: var(--mint);
-        }
+      .two-col {
+        display: grid;
+        gap: 26px;
+      }
 
-        .checklist strong {
-            color: var(--text);
-        }
-
+      @media (min-width: 860px) {
         .two-col {
-            display: grid;
-            gap: 26px;
+          grid-template-columns: 1fr 1fr;
         }
+      }
 
-        @media (min-width: 860px) {
-            .two-col {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
+      /* ---------- notice ---------- */
+      .notice {
+        border: 1px solid var(--line);
+        border-inline-start: 5px solid var(--coral);
+        background: var(--bg-alt);
+        border-radius: 12px;
+        padding: 18px 20px;
+        font-size: 0.96rem;
+        color: var(--muted);
+      }
 
-        /* ---------- notice ---------- */
-        .notice {
-            border: 1px solid var(--line);
-            border-inline-start: 5px solid var(--coral);
-            background: var(--bg-alt);
-            border-radius: 12px;
-            padding: 18px 20px;
-            font-size: .96rem;
-            color: var(--muted);
-        }
+      .notice strong {
+        color: var(--text);
+      }
 
-        .notice strong {
-            color: var(--text);
-        }
+      /* ---------- faq ---------- */
+      .faq h3 {
+        margin-top: 28px;
+        font-size: 1.08rem;
+      }
 
-        /* ---------- faq ---------- */
-        .faq h3 {
-            margin-top: 28px;
-            font-size: 1.08rem;
-        }
+      .faq p {
+        color: var(--muted);
+        max-width: 78ch;
+      }
 
-        .faq p {
-            color: var(--muted);
-            max-width: 78ch;
-        }
+      /* ---------- plain crawlable links ---------- */
+      .plain-links {
+        margin-top: 26px;
+        padding: 18px 20px;
+        border: 1px dashed var(--line);
+        border-radius: 12px;
+        background: var(--bg-alt);
+      }
 
-        /* ---------- plain crawlable links ---------- */
-        .plain-links {
-            margin-top: 26px;
-            padding: 18px 20px;
-            border: 1px dashed var(--line);
-            border-radius: 12px;
-            background: var(--bg-alt);
-        }
+      .plain-links p {
+        margin: 0 0 8px;
+        font-weight: 700;
+        font-size: 0.95rem;
+      }
 
-        .plain-links p {
-            margin: 0 0 8px;
-            font-weight: 700;
-            font-size: .95rem;
-        }
+      .plain-links a {
+        display: block;
+        margin: 6px 0;
+        font-size: 0.97rem;
+      }
 
-        .plain-links a {
-            display: block;
-            margin: 6px 0;
-            font-size: .97rem;
-        }
+      /* ---------- footer ---------- */
+      footer {
+        background: var(--deep);
+        color: #c7e3e1;
+        padding: 44px 0 34px;
+        font-size: 0.93rem;
+      }
 
-        /* ---------- footer ---------- */
-        footer {
-            background: var(--deep);
-            color: #C7E3E1;
-            padding: 44px 0 34px;
-            font-size: .93rem;
-        }
+      footer a {
+        color: #9fe3da;
+      }
 
-        footer a {
-            color: #9FE3DA;
-        }
+      footer .foot-grid {
+        display: grid;
+        gap: 22px;
+        grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
+      }
 
-        footer .foot-grid {
-            display: grid;
-            gap: 22px;
-            grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
-        }
+      footer .foot-title {
+        font-size: 1rem;
+        font-weight: 700;
+        color: #fff;
+        margin-bottom: 0.6em;
+      }
 
-        footer .foot-title {
-            font-size: 1rem;
-            font-weight: 700;
-            color: #fff;
-            margin-bottom: .6em;
-        }
+      footer ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
 
-        footer ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
+      footer li {
+        margin-bottom: 7px;
+      }
 
-        footer li {
-            margin-bottom: 7px;
-        }
-
-        .copyright {
-            margin-top: 30px;
-            padding-top: 18px;
-            border-top: 1px solid rgba(255, 255, 255, .12);
-            font-size: .86rem;
-            color: #8FB4B3;
-        }
+      .copyright {
+        margin-top: 30px;
+        padding-top: 18px;
+        border-top: 1px solid rgba(255, 255, 255, 0.12);
+        font-size: 0.86rem;
+        color: #8fb4b3;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <a class="skip" href="#main">Skip to content</a>
 
     <nav class="site-nav" aria-label="Primary">
-        <div class="wrap">
-            <a class="brandmark" href="#top">
-                <img src="../mre_cashbook_icon.png" alt="MRE CashBook app icon" width="28" height="28">
-                MRE CashBook
-            </a>
-            <a class="navlink" href="#features">Features</a>
-            <a class="navlink" href="#screens">Screens</a>
-            <a class="navlink" href="#use-cases">Who it's for</a>
-            <a class="navlink" href="#sync">Backup &amp; sync</a>
-            <a class="navlink" href="#faq">FAQ</a>
-            <a class="navlink" href="#download">Download</a>
-        </div>
+      <div class="wrap">
+        <a class="brandmark" href="#top">
+          <img
+            src="../mre_cashbook_icon.png"
+            alt="MRE CashBook app icon"
+            width="28"
+            height="28"
+          />
+          MRE CashBook
+        </a>
+        <a class="navlink" href="#features">Features</a>
+        <a class="navlink" href="#screens">Screens</a>
+        <a class="navlink" href="#use-cases">Who it's for</a>
+        <a class="navlink" href="#sync">Backup &amp; sync</a>
+        <a class="navlink" href="#faq">FAQ</a>
+        <a class="navlink" href="#download">Download</a>
+      </div>
     </nav>
 
     <header class="hero" id="top">
-        <div class="wrap hero-grid">
-            <div>
-                <img class="app-icon" src="../mre_cashbook_icon.png"
-                    alt="MRE CashBook cashbook and expense tracker app icon" width="76" height="76">
-                <p class="eyebrow">Personal &amp; small-business ledger</p>
-                <h1>MRE CashBook
-                    <span class="tagline">The offline cashbook app and daily expense tracker for income,
-                        expenses, debts and stock.</span>
-                </h1>
-                <p>MRE CashBook is a digital cashbook for the money you handle every day. Record cash in and cash
-                    out, keep a business ledger of who owes you and what you owe, watch stock move with your sales,
-                    and export a clean PDF when someone needs a receipt. No account to create, no ads, and your
-                    records stay on your device unless you choose to back them up.</p>
-                <div class="stores">
-                    <a class="store-btn" href="https://play.google.com/store/apps/details?id=net.mrecode.mrecashbook"
-                        aria-label="Download MRE CashBook on Google Play">
-                        <svg width="20" height="22" viewBox="0 0 24 26" aria-hidden="true">
-                            <path fill="#00404E"
-                                d="M2.2.4A2 2 0 0 0 1.5 2v22a2 2 0 0 0 .7 1.6l12-12.6L2.2.4Zm13.4 11.2 3.1-3.3 2.9 1.7c1.2.7 1.2 2.3 0 3l-2.9 1.7-3.1-3.1ZM3.8 26.4l11-11.5 3 3.1-11.6 6.7c-.8.5-1.7.4-2.4-.3Zm0-26.8c.7-.7 1.6-.8 2.4-.3l11.6 6.7-3 3.1-11-9.5Z" />
-                        </svg>
-                        <span><small>Get it on</small>Google Play</span>
-                    </a>
-                    <a class="store-btn" href="https://apps.apple.com/app/id6760567168"
-                        aria-label="Download MRE CashBook on the App Store">
-                        <svg width="19" height="22" viewBox="0 0 384 512" aria-hidden="true">
-                            <path fill="#00404E"
-                                d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z" />
-                        </svg>
-                        <span><small>Download on the</small>App Store</span>
-                    </a>
-                    <a class="store-btn" href="https://appgallery.huawei.com/app/C117118621"
-                        aria-label="Download MRE CashBook on Huawei AppGallery">
-                        <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
-                            <path fill="#00404E"
-                                d="M12 1.6 2.4 12 12 22.4 21.6 12 12 1.6Zm0 3.5 6.2 6.9-6.2 6.9-6.2-6.9L12 5.1Z" />
-                        </svg>
-                        <span><small>Explore it on</small>AppGallery</span>
-                    </a>
-                </div>
-                <ul class="chips">
-                    <li>Works offline</li>
-                    <li>No account needed</li>
-                    <li>No ads</li>
-                    <li>9 languages</li>
-                    <li>Phones &amp; tablets</li>
-                </ul>
-            </div>
-            <img class="hero-shot" src="../assets/screens/01-dashboard.jpg" width="400" height="800" fetchpriority="high"
-                alt="MRE CashBook home screen showing a net balance of 7,920.00 EGP above a list of books: Household Expenses, Debts &amp; Loans and Shop Stock">
+      <div class="wrap hero-grid">
+        <div>
+          <img
+            class="app-icon"
+            src="../mre_cashbook_icon.png"
+            alt="MRE CashBook cashbook and expense tracker app icon"
+            width="76"
+            height="76"
+          />
+          <p class="eyebrow">Personal &amp; small-business ledger</p>
+          <h1>
+            MRE CashBook
+            <span class="tagline"
+              >The offline cashbook app and daily expense tracker for income,
+              expenses, debts and stock.</span
+            >
+          </h1>
+          <p>
+            MRE CashBook is a digital cashbook for the money you handle every
+            day. Record cash in and cash out, keep a business ledger of who owes
+            you and what you owe, watch stock move with your sales, and export a
+            clean PDF when someone needs a receipt. No account to create, no
+            ads, and your records stay on your device unless you choose to back
+            them up.
+          </p>
+          <div class="stores">
+            <a
+              class="store-btn"
+              href="https://play.google.com/store/apps/details?id=net.mrecode.mrecashbook"
+              aria-label="Download MRE CashBook on Google Play"
+            >
+              <svg
+                width="20"
+                height="22"
+                viewBox="0 0 24 26"
+                aria-hidden="true"
+              >
+                <path
+                  fill="#00404E"
+                  d="M2.2.4A2 2 0 0 0 1.5 2v22a2 2 0 0 0 .7 1.6l12-12.6L2.2.4Zm13.4 11.2 3.1-3.3 2.9 1.7c1.2.7 1.2 2.3 0 3l-2.9 1.7-3.1-3.1ZM3.8 26.4l11-11.5 3 3.1-11.6 6.7c-.8.5-1.7.4-2.4-.3Zm0-26.8c.7-.7 1.6-.8 2.4-.3l11.6 6.7-3 3.1-11-9.5Z"
+                />
+              </svg>
+              <span><small>Get it on</small>Google Play</span>
+            </a>
+            <a
+              class="store-btn"
+              href="https://apps.apple.com/app/id6760567168"
+              aria-label="Download MRE CashBook on the App Store"
+            >
+              <svg
+                width="19"
+                height="22"
+                viewBox="0 0 384 512"
+                aria-hidden="true"
+              >
+                <path
+                  fill="#00404E"
+                  d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"
+                />
+              </svg>
+              <span><small>Download on the</small>App Store</span>
+            </a>
+            <a
+              class="store-btn"
+              href="https://appgallery.huawei.com/app/C117118621"
+              aria-label="Download MRE CashBook on Huawei AppGallery"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  fill="#00404E"
+                  d="M12 1.6 2.4 12 12 22.4 21.6 12 12 1.6Zm0 3.5 6.2 6.9-6.2 6.9-6.2-6.9L12 5.1Z"
+                />
+              </svg>
+              <span><small>Explore it on</small>AppGallery</span>
+            </a>
+          </div>
+          <ul class="chips">
+            <li>Works offline</li>
+            <li>No account needed</li>
+            <li>No ads</li>
+            <li>9 languages</li>
+            <li>Phones &amp; tablets</li>
+          </ul>
         </div>
+        <img
+          class="hero-shot"
+          src="../assets/screens/01-dashboard.jpg"
+          width="400"
+          height="800"
+          fetchpriority="high"
+          alt="MRE CashBook home screen showing a net balance of 7,920.00 EGP above a list of books: Household Expenses, Debts &amp; Loans and Shop Stock"
+        />
+      </div>
     </header>
 
     <main id="main">
+      <!-- ================= WHY ================= -->
+      <section id="why">
+        <div class="wrap">
+          <p class="eyebrow">Trust</p>
+          <h2>Why choose MRE CashBook</h2>
+          <p class="lead">
+            Most expense tracker apps ask for an account before they show you
+            anything. This one opens straight into a book you can write in.
+          </p>
+          <div class="grid" style="margin-top: 26px">
+            <article class="card">
+              <div class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M5 12.5 10 17.5 19 6.5" />
+                </svg>
+              </div>
+              <h3>Offline-first, not offline-only</h3>
+              <p>
+                The ledger lives in a local database on your phone. Nothing is
+                uploaded unless you switch on backup, and the app keeps working
+                on a train, in a basement, or on a shop counter with no signal.
+              </p>
+            </article>
+            <article class="card">
+              <div class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 3 4 6.5v5c0 5 3.4 8.6 8 9.5 4.6-.9 8-4.5 8-9.5v-5L12 3Z"
+                  />
+                </svg>
+              </div>
+              <h3>Your data, your storage</h3>
+              <p>
+                Backups are encrypted on the device before they leave it, and
+                they go to <em>your</em> Google Drive or Huawei Drive — not to a
+                server we run. We have no copy of your ledger to lose, sell, or
+                hand over.
+              </p>
+            </article>
+            <article class="card">
+              <div class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M3 6h18M3 12h18M3 18h12" />
+                </svg>
+              </div>
+              <h3>Nothing disappears quietly</h3>
+              <p>
+                Deleted books and entries wait in the Trash instead of
+                vanishing, and every book and entry keeps an activity log: what
+                changed, when, and what it changed from.
+              </p>
+            </article>
+            <article class="card">
+              <div class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <rect x="4" y="10" width="16" height="10" rx="2" />
+                  <path d="M8 10V7a4 4 0 0 1 8 0v3" />
+                </svg>
+              </div>
+              <h3>Private on a shared screen</h3>
+              <p>
+                App Lock uses your device's fingerprint or Face ID, and a
+                privacy toggle hides every balance at a glance — useful when you
+                hand the phone to a customer.
+              </p>
+            </article>
+            <article class="card">
+              <div class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 3v18M3 12h18" />
+                </svg>
+              </div>
+              <h3>Built for three stores</h3>
+              <p>
+                MRE CashBook ships to Google Play, the App Store and Huawei
+                AppGallery. On a Huawei device with no Google services, backup
+                runs through Huawei Drive instead — the feature isn't cut, it's
+                rerouted.
+              </p>
+            </article>
+            <article class="card">
+              <div class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="M12 8v5l3 2" />
+                </svg>
+              </div>
+              <h3>Honest about what it is</h3>
+              <p>
+                MRE CashBook is a personal record-keeping tool. It is not a
+                bank, a financial institution, or a financial advisory service,
+                and it never moves real money.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
 
-        <!-- ================= WHY ================= -->
-        <section id="why">
-            <div class="wrap">
-                <p class="eyebrow">Trust</p>
-                <h2>Why choose MRE CashBook</h2>
-                <p class="lead">Most expense tracker apps ask for an account before they show you anything. This one
-                    opens straight into a book you can write in.</p>
-                <div class="grid" style="margin-top:26px">
-                    <article class="card">
-                        <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24">
-                                <path d="M5 12.5 10 17.5 19 6.5" />
-                            </svg></div>
-                        <h3>Offline-first, not offline-only</h3>
-                        <p>The ledger lives in a local database on your phone. Nothing is uploaded unless you switch
-                            on backup, and the app keeps working on a train, in a basement, or on a shop counter with
-                            no signal.</p>
-                    </article>
-                    <article class="card">
-                        <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24">
-                                <path d="M12 3 4 6.5v5c0 5 3.4 8.6 8 9.5 4.6-.9 8-4.5 8-9.5v-5L12 3Z" />
-                            </svg></div>
-                        <h3>Your data, your storage</h3>
-                        <p>Backups are encrypted on the device before they leave it, and they go to <em>your</em>
-                            Google Drive or Huawei Drive — not to a server we run. We have no copy of your ledger to
-                            lose, sell, or hand over.</p>
-                    </article>
-                    <article class="card">
-                        <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24">
-                                <path d="M3 6h18M3 12h18M3 18h12" />
-                            </svg></div>
-                        <h3>Nothing disappears quietly</h3>
-                        <p>Deleted books and entries wait in the Trash instead of vanishing, and every book and entry
-                            keeps an activity log: what changed, when, and what it changed from.</p>
-                    </article>
-                    <article class="card">
-                        <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24">
-                                <rect x="4" y="10" width="16" height="10" rx="2" />
-                                <path d="M8 10V7a4 4 0 0 1 8 0v3" />
-                            </svg></div>
-                        <h3>Private on a shared screen</h3>
-                        <p>App Lock uses your device's fingerprint or Face ID, and a privacy toggle hides every
-                            balance at a glance — useful when you hand the phone to a customer.</p>
-                    </article>
-                    <article class="card">
-                        <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24">
-                                <path d="M12 3v18M3 12h18" />
-                            </svg></div>
-                        <h3>Built for three stores</h3>
-                        <p>MRE CashBook ships to Google Play, the App Store and Huawei AppGallery. On a Huawei device
-                            with no Google services, backup runs through Huawei Drive instead — the feature isn't cut,
-                            it's rerouted.</p>
-                    </article>
-                    <article class="card">
-                        <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24">
-                                <circle cx="12" cy="12" r="9" />
-                                <path d="M12 8v5l3 2" />
-                            </svg></div>
-                        <h3>Honest about what it is</h3>
-                        <p>MRE CashBook is a personal record-keeping tool. It is not a bank, a financial institution,
-                            or a financial advisory service, and it never moves real money.</p>
-                    </article>
-                </div>
+      <!-- ================= FEATURES ================= -->
+      <section id="features" class="alt">
+        <div class="wrap">
+          <p class="eyebrow">Features</p>
+          <h2>Everything a daily expense app should already do</h2>
+          <p class="lead">
+            Every feature below is in the shipping app — no roadmap items, no
+            "coming soon".
+          </p>
+
+          <div class="grid" style="margin-top: 26px">
+            <article class="card">
+              <h3>Track daily income and expenses</h3>
+              <p>
+                A Standard book records cash in and cash out with a balance that
+                updates as you type. Filter by cash in, cash out, or a date
+                range, and tick several entries to keep a running in, out and
+                net at the bottom of the screen.
+              </p>
+            </article>
+            <article class="card">
+              <h3>A business cashbook in three shapes</h3>
+              <p>
+                Pick the book type that matches the job:
+                <strong>Standard</strong> for cash flow,
+                <strong>Debts</strong> for who owes you and who you owe, and
+                <strong>Products</strong> for stock, packaging units and prices
+                that carry straight into a sale.
+              </p>
+            </article>
+            <article class="card">
+              <h3>Debts, payments and settlement</h3>
+              <p>
+                Settle a contact's balance across several entries at once, with
+                a summary of which entries the money covers before you confirm.
+                Paid too much? Send the surplus to another entry or record it as
+                a refund. Filter by settled, partly paid or unpaid.
+              </p>
+            </article>
+            <article class="card">
+              <h3>Data sync per user, to your own Drive</h3>
+              <p>
+                Sign in with your own Google or Huawei account and the app keeps
+                an encrypted backup in that account's private app folder.
+                Restore on a second device and the two ledgers are merged record
+                by record, with any conflicts listed for you to decide.
+              </p>
+            </article>
+            <article class="card">
+              <h3>Export reports and receipts as PDF</h3>
+              <p>
+                Choose the columns, see how many entries the report covers, then
+                export. Arabic reshaping and right-to-left layout are handled
+                properly. Share a selection as a PDF table, a totals card image,
+                or plain text.
+              </p>
+            </article>
+            <article class="card">
+              <h3>A calculator inside the amount field</h3>
+              <p>
+                Type <em>1200+340×2</em> with brackets right where the amount
+                goes. Every calculation you finish is kept in a list you can
+                label, reuse later, and drop into the entry note so the
+                arithmetic is part of the record.
+              </p>
+            </article>
+            <article class="card">
+              <h3>Multiple images, files and notes</h3>
+              <p>
+                Attach photos, PDFs and videos to an entry and see a real
+                thumbnail rather than a filename. Record a voice note straight
+                into the entry and play it back with a waveform. Notes and
+                attachments travel with the entry when you copy it to another
+                book.
+              </p>
+            </article>
+            <article class="card">
+              <h3>Build your own fields</h3>
+              <p>
+                Each book gets the fields it actually needs — text, numbers,
+                dates, yes/no, dropdowns, single or multiple choice, contacts,
+                product lines and files. A workshop and a household budget do
+                not need the same form.
+              </p>
+            </article>
+            <article class="card">
+              <h3>Recurring entries that stay visible</h3>
+              <p>
+                Set an entry to repeat daily, weekly, monthly or yearly. The app
+                posts it on time and tells you. One screen in Settings lists
+                every schedule with its next date, so nothing runs that you
+                cannot find, pause or cancel.
+              </p>
+            </article>
+            <article class="card">
+              <h3>A dashboard that answers questions</h3>
+              <p>
+                Cash flow over time, a donut chart of expense distribution you
+                can tap into, a KPI grid with revenue, expenses and net, plus
+                insight cards — largest transaction, most active contact, income
+                ratio — that open the detail behind them.
+              </p>
+            </article>
+            <article class="card">
+              <h3>Search that reaches inside your fields</h3>
+              <p>
+                Search amounts, notes and the values stored in your own custom
+                fields. Filters keep their search box pinned, which matters on a
+                field with hundreds of values.
+              </p>
+            </article>
+            <article class="card">
+              <h3>An AI assistant, only if you want it</h3>
+              <p>
+                Ask about your books in plain language, typed or spoken, or
+                photograph a receipt and let it become entries. It is off until
+                you use it, only the message you send is transmitted, and you
+                can plug in your own API key to run it on your own account.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SCREENS ================= -->
+      <section id="screens">
+        <div class="wrap">
+          <p class="eyebrow">Screens</p>
+          <h2>MRE CashBook in use</h2>
+          <p class="lead">
+            Screens from the shipping app, on a phone. Tablets get a side rail
+            and the same books.
+          </p>
+          <div class="shots">
+            <figure class="shot">
+              <img
+                src="../assets/screens/02-books.jpg"
+                width="400"
+                height="800"
+                loading="lazy"
+                alt="Add New Book screen in MRE CashBook with book type options Standard, Debts and Products"
+              />
+              <figcaption>
+                Pick a book type — Standard, Debts or Products — and start
+                tracking.
+              </figcaption>
+            </figure>
+            <figure class="shot">
+              <img
+                src="../assets/screens/03-custom-fields.jpg"
+                width="400"
+                height="800"
+                loading="lazy"
+                alt="Manage Fields screen listing Contact, Note and Payment Type fields, with a field type menu offering text, number, yes/no, date and dropdown"
+              />
+              <figcaption>
+                Custom fields: text, number, date, dropdown, contact, files.
+              </figcaption>
+            </figure>
+            <figure class="shot">
+              <img
+                src="../assets/screens/04-debts.jpg"
+                width="400"
+                height="800"
+                loading="lazy"
+                alt="Household expenses book in MRE CashBook listing dated cash-in and cash-out entries beside a Debts and Loans book showing a net debt balance"
+              />
+              <figcaption>
+                Daily entries, cash in and out, and debts tracked per contact.
+              </figcaption>
+            </figure>
+            <figure class="shot">
+              <img
+                src="../assets/screens/05-products.jpg"
+                width="400"
+                height="800"
+                loading="lazy"
+                alt="Add product screen in MRE CashBook with base unit, quantity, unit price, low stock alert and packaging units"
+              />
+              <figcaption>
+                Products with packaging units, unit price and a low-stock alert.
+              </figcaption>
+            </figure>
+            <figure class="shot">
+              <img
+                src="../assets/screens/06-insights.jpg"
+                width="400"
+                height="800"
+                loading="lazy"
+                alt="Analytics screen in MRE CashBook showing total balance, revenue, expenses, net cash flow, a cash flow line chart and an expense distribution donut chart"
+              />
+              <figcaption>
+                Analytics: cash flow, expense distribution and smart insight
+                cards.
+              </figcaption>
+            </figure>
+            <figure class="shot">
+              <img
+                src="../assets/screens/07-settings.jpg"
+                width="400"
+                height="800"
+                loading="lazy"
+                alt="Settings screen in MRE CashBook showing currency display, theme mode, language, App Lock with biometric authentication and recurring entries"
+              />
+              <figcaption>
+                Settings: App Lock, theme, language, backups and recurring
+                entries.
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= USE CASES ================= -->
+      <section id="use-cases" class="alt">
+        <div class="wrap">
+          <p class="eyebrow">Who it's for</p>
+          <h2>One cashbook app, two very different jobs</h2>
+          <div class="two-col" style="margin-top: 22px">
+            <div>
+              <h3>Personal — a daily expense app you'll actually keep using</h3>
+              <p>
+                Log the salary that arrived and the groceries that left, and see
+                the balance without doing the sums. Photograph the receipt so
+                the number has proof behind it. Set the rent and the
+                subscriptions as recurring entries and stop re-typing them every
+                month. Turn on App Lock so the person borrowing your phone
+                doesn't read your balance.
+              </p>
+              <ul class="checklist">
+                <li>
+                  <strong>Household budget</strong> — cash in, cash out, and a
+                  monthly total.
+                </li>
+                <li>
+                  <strong>Money between friends</strong> — a Debts book with a
+                  contact on each entry.
+                </li>
+                <li>
+                  <strong>Receipts</strong> — photos and PDFs attached to the
+                  entry they belong to.
+                </li>
+                <li>
+                  <strong>Spending patterns</strong> — where the month actually
+                  went, by category.
+                </li>
+              </ul>
             </div>
-        </section>
-
-        <!-- ================= FEATURES ================= -->
-        <section id="features" class="alt">
-            <div class="wrap">
-                <p class="eyebrow">Features</p>
-                <h2>Everything a daily expense app should already do</h2>
-                <p class="lead">Every feature below is in the shipping app — no roadmap items, no "coming soon".</p>
-
-                <div class="grid" style="margin-top:26px">
-                    <article class="card">
-                        <h3>Track daily income and expenses</h3>
-                        <p>A Standard book records cash in and cash out with a balance that updates as you type.
-                            Filter by cash in, cash out, or a date range, and tick several entries to keep a running
-                            in, out and net at the bottom of the screen.</p>
-                    </article>
-                    <article class="card">
-                        <h3>A business cashbook in three shapes</h3>
-                        <p>Pick the book type that matches the job: <strong>Standard</strong> for cash flow,
-                            <strong>Debts</strong> for who owes you and who you owe, and <strong>Products</strong> for
-                            stock, packaging units and prices that carry straight into a sale.</p>
-                    </article>
-                    <article class="card">
-                        <h3>Debts, payments and settlement</h3>
-                        <p>Settle a contact's balance across several entries at once, with a summary of which entries
-                            the money covers before you confirm. Paid too much? Send the surplus to another entry or
-                            record it as a refund. Filter by settled, partly paid or unpaid.</p>
-                    </article>
-                    <article class="card">
-                        <h3>Data sync per user, to your own Drive</h3>
-                        <p>Sign in with your own Google or Huawei account and the app keeps an encrypted backup in
-                            that account's private app folder. Restore on a second device and the two ledgers are
-                            merged record by record, with any conflicts listed for you to decide.</p>
-                    </article>
-                    <article class="card">
-                        <h3>Export reports and receipts as PDF</h3>
-                        <p>Choose the columns, see how many entries the report covers, then export. Arabic reshaping
-                            and right-to-left layout are handled properly. Share a selection as a PDF table, a totals
-                            card image, or plain text.</p>
-                    </article>
-                    <article class="card">
-                        <h3>A calculator inside the amount field</h3>
-                        <p>Type <em>1200+340×2</em> with brackets right where the amount goes. Every calculation you
-                            finish is kept in a list you can label, reuse later, and drop into the entry note so the
-                            arithmetic is part of the record.</p>
-                    </article>
-                    <article class="card">
-                        <h3>Multiple images, files and notes</h3>
-                        <p>Attach photos, PDFs and videos to an entry and see a real thumbnail rather than a filename.
-                            Record a voice note straight into the entry and play it back with a waveform. Notes and
-                            attachments travel with the entry when you copy it to another book.</p>
-                    </article>
-                    <article class="card">
-                        <h3>Build your own fields</h3>
-                        <p>Each book gets the fields it actually needs — text, numbers, dates, yes/no, dropdowns,
-                            single or multiple choice, contacts, product lines and files. A workshop and a household
-                            budget do not need the same form.</p>
-                    </article>
-                    <article class="card">
-                        <h3>Recurring entries that stay visible</h3>
-                        <p>Set an entry to repeat daily, weekly, monthly or yearly. The app posts it on time and tells
-                            you. One screen in Settings lists every schedule with its next date, so nothing runs that
-                            you cannot find, pause or cancel.</p>
-                    </article>
-                    <article class="card">
-                        <h3>A dashboard that answers questions</h3>
-                        <p>Cash flow over time, a donut chart of expense distribution you can tap into, a KPI grid
-                            with revenue, expenses and net, plus insight cards — largest transaction, most active
-                            contact, income ratio — that open the detail behind them.</p>
-                    </article>
-                    <article class="card">
-                        <h3>Search that reaches inside your fields</h3>
-                        <p>Search amounts, notes and the values stored in your own custom fields. Filters keep their
-                            search box pinned, which matters on a field with hundreds of values.</p>
-                    </article>
-                    <article class="card">
-                        <h3>An AI assistant, only if you want it</h3>
-                        <p>Ask about your books in plain language, typed or spoken, or photograph a receipt and let it
-                            become entries. It is off until you use it, only the message you send is transmitted, and
-                            you can plug in your own API key to run it on your own account.</p>
-                    </article>
-                </div>
+            <div>
+              <h3>
+                Small business — a business ledger without an accounting course
+              </h3>
+              <p>
+                A shop, a workshop, a delivery round or a freelance practice
+                keeps the same three books: the till, the customers who pay
+                later, and the stock on the shelf. MRE CashBook keeps them side
+                by side and totals them into one net balance on the home screen.
+              </p>
+              <ul class="checklist">
+                <li>
+                  <strong>Know who owes you today</strong> — filter unpaid and
+                  partly paid, settle several entries in one confirmation.
+                </li>
+                <li>
+                  <strong>Stock that follows the sale</strong> — product lines
+                  carry quantity, packaging unit and price into the entry, and a
+                  low-stock alert warns you before the shelf is empty.
+                </li>
+                <li>
+                  <strong>A receipt you can send</strong> — export a PDF or
+                  share a totals card, with billed, paid and net stated in words
+                  so the customer isn't reading a minus sign.
+                </li>
+                <li>
+                  <strong>Fixed costs on time</strong> — rent, wages and
+                  subscriptions posted automatically, each one listed with its
+                  next date.
+                </li>
+                <li>
+                  <strong>Two people, one ledger</strong> — back up from the
+                  shop phone, restore and merge on yours.
+                </li>
+                <li>
+                  <strong>No connection required</strong> — the market stall
+                  keeps working when the network doesn't.
+                </li>
+              </ul>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <!-- ================= SCREENS ================= -->
-        <section id="screens">
-            <div class="wrap">
-                <p class="eyebrow">Screens</p>
-                <h2>MRE CashBook in use</h2>
-                <p class="lead">Screens from the shipping app, on a phone. Tablets get a side rail and the same books.
+      <!-- ================= SYNC ================= -->
+      <section id="sync">
+        <div class="wrap">
+          <p class="eyebrow">Backup &amp; cloud sync</p>
+          <h2>How cloud sync in MRE CashBook actually works</h2>
+          <p class="lead">
+            Cloud sync is per user and it is optional. Here is the whole
+            mechanism, without the marketing.
+          </p>
+          <div class="two-col" style="margin-top: 22px">
+            <div>
+              <ul class="checklist">
+                <li>
+                  <strong>Off by default.</strong> Until you turn it on, the app
+                  never talks to a drive at all.
+                </li>
+                <li>
+                  <strong>You sign in with your own account.</strong> Google
+                  Sign-In on Google Play and iOS devices, Huawei ID on
+                  AppGallery devices.
+                </li>
+                <li>
+                  <strong>The app asks for one restricted permission</strong> —
+                  <code>https://www.googleapis.com/auth/drive.appdata</code> —
+                  which can only see the hidden app-data folder that MRE
+                  CashBook creates inside your own Drive. It cannot list, read
+                  or touch the rest of your files.
+                </li>
+                <li>
+                  <strong
+                    >The backup is encrypted on your device before
+                    upload</strong
+                  >
+                  (AES-256, with a fresh random salt and IV for every backup and
+                  a key stretched with PBKDF2).
+                </li>
+                <li>
+                  <strong
+                    >The file goes straight from your phone to your
+                    Drive.</strong
+                  >
+                  We do not run a server that stores your ledger, and we cannot
+                  open your Drive.
+                </li>
+                <li>
+                  <strong>Restoring merges, record by record</strong>, and shows
+                  you the books where two devices disagree instead of
+                  overwriting one of them.
+                </li>
+                <li>
+                  <strong>You can delete it yourself</strong> — remove the files
+                  from your Drive, or disconnect the app in your Google or
+                  Huawei account settings.
+                </li>
+              </ul>
+            </div>
+            <div>
+              <div class="notice">
+                <p>
+                  <strong>What we are not claiming.</strong> No app can promise
+                  absolute security, and this one won't. The backup is encrypted
+                  with a key built into the app, not with a password only you
+                  know — treat it as protection against casual access to the
+                  file, not as end-to-end encryption. Anyone who can unlock your
+                  phone, or who can sign in to your Google or Huawei account,
+                  can reach your data. Use your device lock, turn on App Lock
+                  inside MRE CashBook, and enable 2-step verification on the
+                  account you sync with.
                 </p>
-                <div class="shots">
-                    <figure class="shot">
-                        <img src="../assets/screens/02-books.jpg" width="400" height="800" loading="lazy"
-                            alt="Add New Book screen in MRE CashBook with book type options Standard, Debts and Products">
-                        <figcaption>Pick a book type — Standard, Debts or Products — and start tracking.</figcaption>
-                    </figure>
-                    <figure class="shot">
-                        <img src="../assets/screens/03-custom-fields.jpg" width="400" height="800" loading="lazy"
-                            alt="Manage Fields screen listing Contact, Note and Payment Type fields, with a field type menu offering text, number, yes/no, date and dropdown">
-                        <figcaption>Custom fields: text, number, date, dropdown, contact, files.</figcaption>
-                    </figure>
-                    <figure class="shot">
-                        <img src="../assets/screens/04-debts.jpg" width="400" height="800" loading="lazy"
-                            alt="Household expenses book in MRE CashBook listing dated cash-in and cash-out entries beside a Debts and Loans book showing a net debt balance">
-                        <figcaption>Daily entries, cash in and out, and debts tracked per contact.</figcaption>
-                    </figure>
-                    <figure class="shot">
-                        <img src="../assets/screens/05-products.jpg" width="400" height="800" loading="lazy"
-                            alt="Add product screen in MRE CashBook with base unit, quantity, unit price, low stock alert and packaging units">
-                        <figcaption>Products with packaging units, unit price and a low-stock alert.</figcaption>
-                    </figure>
-                    <figure class="shot">
-                        <img src="../assets/screens/06-insights.jpg" width="400" height="800" loading="lazy"
-                            alt="Analytics screen in MRE CashBook showing total balance, revenue, expenses, net cash flow, a cash flow line chart and an expense distribution donut chart">
-                        <figcaption>Analytics: cash flow, expense distribution and smart insight cards.</figcaption>
-                    </figure>
-                    <figure class="shot">
-                        <img src="../assets/screens/07-settings.jpg" width="400" height="800" loading="lazy"
-                            alt="Settings screen in MRE CashBook showing currency display, theme mode, language, App Lock with biometric authentication and recurring entries">
-                        <figcaption>Settings: App Lock, theme, language, backups and recurring entries.</figcaption>
-                    </figure>
-                </div>
-            </div>
-        </section>
-
-        <!-- ================= USE CASES ================= -->
-        <section id="use-cases" class="alt">
-            <div class="wrap">
-                <p class="eyebrow">Who it's for</p>
-                <h2>One cashbook app, two very different jobs</h2>
-                <div class="two-col" style="margin-top:22px">
-                    <div>
-                        <h3>Personal — a daily expense app you'll actually keep using</h3>
-                        <p>Log the salary that arrived and the groceries that left, and see the balance without doing
-                            the sums. Photograph the receipt so the number has proof behind it. Set the rent and the
-                            subscriptions as recurring entries and stop re-typing them every month. Turn on App Lock
-                            so the person borrowing your phone doesn't read your balance.</p>
-                        <ul class="checklist">
-                            <li><strong>Household budget</strong> — cash in, cash out, and a monthly total.</li>
-                            <li><strong>Money between friends</strong> — a Debts book with a contact on each entry.
-                            </li>
-                            <li><strong>Receipts</strong> — photos and PDFs attached to the entry they belong to.</li>
-                            <li><strong>Spending patterns</strong> — where the month actually went, by category.</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3>Small business — a business ledger without an accounting course</h3>
-                        <p>A shop, a workshop, a delivery round or a freelance practice keeps the same three books:
-                            the till, the customers who pay later, and the stock on the shelf. MRE CashBook keeps them
-                            side by side and totals them into one net balance on the home screen.</p>
-                        <ul class="checklist">
-                            <li><strong>Know who owes you today</strong> — filter unpaid and partly paid, settle
-                                several entries in one confirmation.</li>
-                            <li><strong>Stock that follows the sale</strong> — product lines carry quantity, packaging
-                                unit and price into the entry, and a low-stock alert warns you before the shelf is
-                                empty.</li>
-                            <li><strong>A receipt you can send</strong> — export a PDF or share a totals card, with
-                                billed, paid and net stated in words so the customer isn't reading a minus sign.</li>
-                            <li><strong>Fixed costs on time</strong> — rent, wages and subscriptions posted
-                                automatically, each one listed with its next date.</li>
-                            <li><strong>Two people, one ledger</strong> — back up from the shop phone, restore and
-                                merge on yours.</li>
-                            <li><strong>No connection required</strong> — the market stall keeps working when the
-                                network doesn't.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ================= SYNC ================= -->
-        <section id="sync">
-            <div class="wrap">
-                <p class="eyebrow">Backup &amp; cloud sync</p>
-                <h2>How cloud sync in MRE CashBook actually works</h2>
-                <p class="lead">Cloud sync is per user and it is optional. Here is the whole mechanism, without the
-                    marketing.</p>
-                <div class="two-col" style="margin-top:22px">
-                    <div>
-                        <ul class="checklist">
-                            <li><strong>Off by default.</strong> Until you turn it on, the app never talks to a drive
-                                at all.</li>
-                            <li><strong>You sign in with your own account.</strong> Google Sign-In on Google Play and
-                                iOS devices, Huawei ID on AppGallery devices.</li>
-                            <li><strong>The app asks for one restricted permission</strong> —
-                                <code>https://www.googleapis.com/auth/drive.appdata</code> — which can only see the
-                                hidden app-data folder that MRE CashBook creates inside your own Drive. It cannot
-                                list, read or touch the rest of your files.
-                            </li>
-                            <li><strong>The backup is encrypted on your device before upload</strong> (AES-256, with a
-                                fresh random salt and IV for every backup and a key stretched with PBKDF2).</li>
-                            <li><strong>The file goes straight from your phone to your Drive.</strong> We do not run a
-                                server that stores your ledger, and we cannot open your Drive.</li>
-                            <li><strong>Restoring merges, record by record</strong>, and shows you the books where two
-                                devices disagree instead of overwriting one of them.</li>
-                            <li><strong>You can delete it yourself</strong> — remove the files from your Drive, or
-                                disconnect the app in your Google or Huawei account settings.</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <div class="notice">
-                            <p><strong>What we are not claiming.</strong> No app can promise absolute security, and
-                                this one won't. The backup is encrypted with a key built into the app, not with a
-                                password only you know — treat it as protection against casual access to the file, not
-                                as end-to-end encryption. Anyone who can unlock your phone, or who can sign in to your
-                                Google or Huawei account, can reach your data. Use your device lock, turn on App Lock
-                                inside MRE CashBook, and enable 2-step verification on the account you sync with.</p>
-                            <p>Your ledger — entries, debts, inventory — is never sent to us. A small device profile
-                                is sent on launch, and crash reports and notification identifiers go to Firebase and
-                                OneSignal, as described in the
-                                <a href="https://elshoram974.github.io/privacy_mre_cashbook/">MRE CashBook privacy
-                                    policy</a>.
-                            </p>
-                            <p style="margin-bottom:0"><strong>Limited Use disclosure.</strong> MRE CashBook's use and
-                                transfer of information received from Google APIs to any other app will adhere to the
-                                <a href="https://developers.google.com/terms/api-services-user-data-policy#additional_requirements_for_specific_api_scopes"
-                                    rel="noopener">Google API Services User Data Policy</a>, including the Limited Use
-                                requirements. Details in our <a href="../mre_cashbook_privacy_not_important/">Google API data disclosure</a>.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ================= DOWNLOAD ================= -->
-        <section id="download" class="alt">
-            <div class="wrap">
-                <p class="eyebrow">Download</p>
-                <h2>Get MRE CashBook</h2>
-                <p class="lead">Free to download on Android 7.0 and newer, iOS 15 and newer, and Huawei devices
-                    through AppGallery. Current version 1.5.2.</p>
-
-                <div class="stores">
-                    <a class="store-btn" href="https://play.google.com/store/apps/details?id=net.mrecode.mrecashbook"
-                        aria-label="Download MRE CashBook on Google Play">
-                        <svg width="20" height="22" viewBox="0 0 24 26" aria-hidden="true">
-                            <path
-                                d="M2.2.4A2 2 0 0 0 1.5 2v22a2 2 0 0 0 .7 1.6l12-12.6L2.2.4Zm13.4 11.2 3.1-3.3 2.9 1.7c1.2.7 1.2 2.3 0 3l-2.9 1.7-3.1-3.1ZM3.8 26.4l11-11.5 3 3.1-11.6 6.7c-.8.5-1.7.4-2.4-.3Zm0-26.8c.7-.7 1.6-.8 2.4-.3l11.6 6.7-3 3.1-11-9.5Z" />
-                        </svg>
-                        <span><small>Get it on</small>Google Play</span>
-                    </a>
-                    <a class="store-btn" href="https://apps.apple.com/app/id6760567168"
-                        aria-label="Download MRE CashBook on the App Store">
-                        <svg width="19" height="22" viewBox="0 0 384 512" aria-hidden="true">
-                            <path
-                                d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z" />
-                        </svg>
-                        <span><small>Download on the</small>App Store</span>
-                    </a>
-                    <a class="store-btn" href="https://appgallery.huawei.com/app/C117118621"
-                        aria-label="Download MRE CashBook on Huawei AppGallery">
-                        <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
-                            <path d="M12 1.6 2.4 12 12 22.4 21.6 12 12 1.6Zm0 3.5 6.2 6.9-6.2 6.9-6.2-6.9L12 5.1Z" />
-                        </svg>
-                        <span><small>Explore it on</small>AppGallery</span>
-                    </a>
-                </div>
-
-                <div class="plain-links">
-                    <p>Direct store links</p>
-                    <a href="https://play.google.com/store/apps/details?id=net.mrecode.mrecashbook">
-                        Download MRE CashBook on Google Play
-                    </a>
-                    <a href="https://apps.apple.com/app/id6760567168">Download MRE CashBook on the App Store
-                        (iPhone and iPad)</a>
-                    <a href="https://appgallery.huawei.com/app/C117118621">Download MRE CashBook on Huawei
-                        AppGallery</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- ================= FAQ ================= -->
-        <section id="faq" class="faq">
-            <div class="wrap">
-                <p class="eyebrow">FAQ</p>
-                <h2>Frequently asked questions about MRE CashBook</h2>
-
-                <h3>Is MRE CashBook free?</h3>
-                <p>Yes. MRE CashBook is free to download on Google Play, the App Store and Huawei AppGallery, and
-                    there are no ads. The optional AI assistant has a daily message limit; adding your own API key
-                    removes that limit and bills you through your own provider account.</p>
-
-                <h3>Does the app work offline?</h3>
-                <p>Yes — that is the default. Every book, entry, report and PDF export works with no connection,
-                    because the ledger is stored in a database on your device. A connection is only needed for the
-                    optional cloud backup and the optional AI assistant.</p>
-
-                <h3>Do I need to create an account?</h3>
-                <p>No. You can install MRE CashBook and start recording expenses immediately. Signing in with Google
-                    or Huawei is only asked for if you decide to back up to your own Drive.</p>
-
-                <h3>Where is my financial data stored?</h3>
-                <p>On your device. If you enable cloud sync, an encrypted backup is also kept in the private app
-                    folder of your own Google Drive or Huawei Drive. Your entries, debts and inventory are never
-                    uploaded to servers run by MRE Code.</p>
-
-                <h3>Can I sync MRE CashBook between two devices?</h3>
-                <p>Yes, through backup and restore. The first device uploads an encrypted backup to your Drive, the
-                    second one downloads it, and the two databases are merged record by record — with a list of the
-                    books where they disagree. It is not live, continuous editing on two phones at once.</p>
-
-                <h3>Can I export my cashbook to PDF?</h3>
-                <p>Yes. Reports and receipts export as PDF with the columns you choose, and the entry count is shown
-                    before you export. You can also share a selection as a PDF table, a totals card image, or plain
-                    text. Arabic text is reshaped and laid out right-to-left correctly.</p>
-
-                <h3>Is it suitable for a small business?</h3>
-                <p>Yes. Use a Debts book for customers and suppliers, a Products book for stock, packaging units and
-                    prices, and a Standard book for the daily till. Sharing an entry from a Debts or Products book
-                    shows what was billed, what was paid, and who owes whom in words.</p>
-
-                <h3>Which devices and languages are supported?</h3>
-                <p>Android 7.0 and newer, iOS 15 and newer on iPhone and iPad, and Huawei devices through AppGallery —
-                    including devices with no Google services, where backup runs on Huawei Drive. The app ships in 9
-                    languages (Arabic, English, Spanish, French, German, Turkish, Russian, Hindi and Chinese) with
-                    full right-to-left support, in light and dark themes.</p>
-
-                <h3>Can I attach photos or voice notes to an entry?</h3>
-                <p>Yes. Photos, PDFs and videos attach to an entry with a real thumbnail, and you can record a voice
-                    note into the entry and play it back with a waveform. Attachments are included in your backups.
+                <p>
+                  Your ledger — entries, debts, inventory — is never sent to us.
+                  A small device profile is sent on launch, and crash reports
+                  and notification identifiers go to Firebase and OneSignal, as
+                  described in the
+                  <a href="https://elshoram974.github.io/privacy_mre_cashbook/"
+                    >MRE CashBook privacy policy</a
+                  >.
                 </p>
-
-                <h3>Is MRE CashBook a bank or a financial advisor?</h3>
-                <p>No. It is a personal record-keeping tool for money you have already handled. It does not move
-                    money, hold funds, issue loans, or give financial advice.</p>
+                <p style="margin-bottom: 0">
+                  <strong>Limited Use disclosure.</strong> MRE CashBook's use
+                  and transfer of information received from Google APIs to any
+                  other app will adhere to the
+                  <a
+                    href="https://developers.google.com/terms/api-services-user-data-policy#additional_requirements_for_specific_api_scopes"
+                    rel="noopener"
+                    >Google API Services User Data Policy</a
+                  >, including the Limited Use requirements. Details in our
+                  <a href="../google_api_data_disclosure/"
+                    >Google API data disclosure</a
+                  >.
+                </p>
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= DOWNLOAD ================= -->
+      <section id="download" class="alt">
+        <div class="wrap">
+          <p class="eyebrow">Download</p>
+          <h2>Get MRE CashBook</h2>
+          <p class="lead">
+            Free to download on Android 7.0 and newer, iOS 15 and newer, and
+            Huawei devices through AppGallery. Current version 1.5.2.
+          </p>
+
+          <div class="stores">
+            <a
+              class="store-btn"
+              href="https://play.google.com/store/apps/details?id=net.mrecode.mrecashbook"
+              aria-label="Download MRE CashBook on Google Play"
+            >
+              <svg
+                width="20"
+                height="22"
+                viewBox="0 0 24 26"
+                aria-hidden="true"
+              >
+                <path
+                  d="M2.2.4A2 2 0 0 0 1.5 2v22a2 2 0 0 0 .7 1.6l12-12.6L2.2.4Zm13.4 11.2 3.1-3.3 2.9 1.7c1.2.7 1.2 2.3 0 3l-2.9 1.7-3.1-3.1ZM3.8 26.4l11-11.5 3 3.1-11.6 6.7c-.8.5-1.7.4-2.4-.3Zm0-26.8c.7-.7 1.6-.8 2.4-.3l11.6 6.7-3 3.1-11-9.5Z"
+                />
+              </svg>
+              <span><small>Get it on</small>Google Play</span>
+            </a>
+            <a
+              class="store-btn"
+              href="https://apps.apple.com/app/id6760567168"
+              aria-label="Download MRE CashBook on the App Store"
+            >
+              <svg
+                width="19"
+                height="22"
+                viewBox="0 0 384 512"
+                aria-hidden="true"
+              >
+                <path
+                  d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"
+                />
+              </svg>
+              <span><small>Download on the</small>App Store</span>
+            </a>
+            <a
+              class="store-btn"
+              href="https://appgallery.huawei.com/app/C117118621"
+              aria-label="Download MRE CashBook on Huawei AppGallery"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  d="M12 1.6 2.4 12 12 22.4 21.6 12 12 1.6Zm0 3.5 6.2 6.9-6.2 6.9-6.2-6.9L12 5.1Z"
+                />
+              </svg>
+              <span><small>Explore it on</small>AppGallery</span>
+            </a>
+          </div>
+
+          <div class="plain-links">
+            <p>Direct store links</p>
+            <a
+              href="https://play.google.com/store/apps/details?id=net.mrecode.mrecashbook"
+            >
+              Download MRE CashBook on Google Play
+            </a>
+            <a href="https://apps.apple.com/app/id6760567168"
+              >Download MRE CashBook on the App Store (iPhone and iPad)</a
+            >
+            <a href="https://appgallery.huawei.com/app/C117118621"
+              >Download MRE CashBook on Huawei AppGallery</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= FAQ ================= -->
+      <section id="faq" class="faq">
+        <div class="wrap">
+          <p class="eyebrow">FAQ</p>
+          <h2>Frequently asked questions about MRE CashBook</h2>
+
+          <h3>Is MRE CashBook free?</h3>
+          <p>
+            Yes. MRE CashBook is free to download on Google Play, the App Store
+            and Huawei AppGallery, and there are no ads. The optional AI
+            assistant has a daily message limit; adding your own API key removes
+            that limit and bills you through your own provider account.
+          </p>
+
+          <h3>Does the app work offline?</h3>
+          <p>
+            Yes — that is the default. Every book, entry, report and PDF export
+            works with no connection, because the ledger is stored in a database
+            on your device. A connection is only needed for the optional cloud
+            backup and the optional AI assistant.
+          </p>
+
+          <h3>Do I need to create an account?</h3>
+          <p>
+            No. You can install MRE CashBook and start recording expenses
+            immediately. Signing in with Google or Huawei is only asked for if
+            you decide to back up to your own Drive.
+          </p>
+
+          <h3>Where is my financial data stored?</h3>
+          <p>
+            On your device. If you enable cloud sync, an encrypted backup is
+            also kept in the private app folder of your own Google Drive or
+            Huawei Drive. Your entries, debts and inventory are never uploaded
+            to servers run by MRE Code.
+          </p>
+
+          <h3>Can I sync MRE CashBook between two devices?</h3>
+          <p>
+            Yes, through backup and restore. The first device uploads an
+            encrypted backup to your Drive, the second one downloads it, and the
+            two databases are merged record by record — with a list of the books
+            where they disagree. It is not live, continuous editing on two
+            phones at once.
+          </p>
+
+          <h3>Can I export my cashbook to PDF?</h3>
+          <p>
+            Yes. Reports and receipts export as PDF with the columns you choose,
+            and the entry count is shown before you export. You can also share a
+            selection as a PDF table, a totals card image, or plain text. Arabic
+            text is reshaped and laid out right-to-left correctly.
+          </p>
+
+          <h3>Is it suitable for a small business?</h3>
+          <p>
+            Yes. Use a Debts book for customers and suppliers, a Products book
+            for stock, packaging units and prices, and a Standard book for the
+            daily till. Sharing an entry from a Debts or Products book shows
+            what was billed, what was paid, and who owes whom in words.
+          </p>
+
+          <h3>Which devices and languages are supported?</h3>
+          <p>
+            Android 7.0 and newer, iOS 15 and newer on iPhone and iPad, and
+            Huawei devices through AppGallery — including devices with no Google
+            services, where backup runs on Huawei Drive. The app ships in 9
+            languages (Arabic, English, Spanish, French, German, Turkish,
+            Russian, Hindi and Chinese) with full right-to-left support, in
+            light and dark themes.
+          </p>
+
+          <h3>Can I attach photos or voice notes to an entry?</h3>
+          <p>
+            Yes. Photos, PDFs and videos attach to an entry with a real
+            thumbnail, and you can record a voice note into the entry and play
+            it back with a waveform. Attachments are included in your backups.
+          </p>
+
+          <h3>Is MRE CashBook a bank or a financial advisor?</h3>
+          <p>
+            No. It is a personal record-keeping tool for money you have already
+            handled. It does not move money, hold funds, issue loans, or give
+            financial advice.
+          </p>
+        </div>
+      </section>
     </main>
 
     <footer>
-        <div class="wrap">
-            <div class="foot-grid">
-                <div>
-                    <p class="foot-title">MRE CashBook</p>
-                    <p>An offline-first cashbook app, expense tracker and small-business ledger by MRE Code.</p>
-                </div>
-                <div>
-                    <p class="foot-title">Download</p>
-                    <ul>
-                        <li><a href="https://play.google.com/store/apps/details?id=net.mrecode.mrecashbook">Google
-                                Play</a></li>
-                        <li><a href="https://apps.apple.com/app/id6760567168">App Store</a></li>
-                        <li><a href="https://appgallery.huawei.com/app/C117118621">Huawei AppGallery</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <p class="foot-title">On this page</p>
-                    <ul>
-                        <li><a href="#features">Features</a></li>
-                        <li><a href="#use-cases">Personal &amp; small business</a></li>
-                        <li><a href="#sync">Backup &amp; cloud sync</a></li>
-                        <li><a href="#faq">FAQ</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <p class="foot-title">Support</p>
-                    <ul>
-                        <li><a href="../privacy_mre_cashbook/">Privacy policy</a></li>
-                        <li><a href="../mre_cashbook_privacy_not_important/">Google API data disclosure</a></li>
-                        <li><a href="../">All MRE Code apps</a></li>
-                        <li><a href="https://wa.me/201553668845">WhatsApp support</a></li>
-                        <li><a href="mailto:mrecode24@gmail.com">mrecode24@gmail.com</a></li>
-                        <li><a href="https://mrecode.net">mrecode.net</a></li>
-                    </ul>
-                </div>
-            </div>
-            <p class="copyright">© 2026 MRE Code. MRE CashBook is a personal record-keeping tool, not a bank or a
-                financial advisory service. Google Play and the Google Play logo are trademarks of Google LLC.</p>
+      <div class="wrap">
+        <div class="foot-grid">
+          <div>
+            <p class="foot-title">MRE CashBook</p>
+            <p>
+              An offline-first cashbook app, expense tracker and small-business
+              ledger by MRE Code.
+            </p>
+          </div>
+          <div>
+            <p class="foot-title">Download</p>
+            <ul>
+              <li>
+                <a
+                  href="https://play.google.com/store/apps/details?id=net.mrecode.mrecashbook"
+                  >Google Play</a
+                >
+              </li>
+              <li>
+                <a href="https://apps.apple.com/app/id6760567168">App Store</a>
+              </li>
+              <li>
+                <a href="https://appgallery.huawei.com/app/C117118621"
+                  >Huawei AppGallery</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <p class="foot-title">On this page</p>
+            <ul>
+              <li><a href="#features">Features</a></li>
+              <li><a href="#use-cases">Personal &amp; small business</a></li>
+              <li><a href="#sync">Backup &amp; cloud sync</a></li>
+              <li><a href="#faq">FAQ</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="foot-title">Support</p>
+            <ul>
+              <li><a href="../privacy_mre_cashbook/">Privacy policy</a></li>
+              <li>
+                <a href="../google_api_data_disclosure/"
+                  >Google API data disclosure</a
+                >
+              </li>
+              <li><a href="../">All MRE Code apps</a></li>
+              <li><a href="https://wa.me/201553668845">WhatsApp support</a></li>
+              <li>
+                <a href="mailto:mrecode24@gmail.com">mrecode24@gmail.com</a>
+              </li>
+              <li><a href="https://mrecode.net">mrecode.net</a></li>
+            </ul>
+          </div>
         </div>
+        <p class="copyright">
+          © 2026 MRE Code. MRE CashBook is a personal record-keeping tool, not a
+          bank or a financial advisory service. Google Play and the Google Play
+          logo are trademarks of Google LLC.
+        </p>
+      </div>
     </footer>
 
     <!-- ============ STRUCTURED DATA ============ -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "Organization",
-          "@id": "https://mrecode.net/#organization",
-          "name": "MRE Code",
-          "url": "https://mrecode.net",
-          "logo": "https://elshoram974.github.io/mre_cashbook_icon.png",
-          "email": "mrecode24@gmail.com"
-        },
-        {
-          "@type": "WebSite",
-          "@id": "https://elshoram974.github.io/#website",
-          "url": "https://elshoram974.github.io/",
-          "name": "MRE Code",
-          "publisher": { "@id": "https://mrecode.net/#organization" },
-          "inLanguage": "en"
-        },
-        {
-          "@type": "WebPage",
-          "@id": "https://elshoram974.github.io/mre_cashbook_home/#webpage",
-          "url": "https://elshoram974.github.io/mre_cashbook_home/",
-          "name": "MRE CashBook — Cashbook App, Expense Tracker & Business Ledger",
-          "description": "MRE CashBook is a free offline cashbook app and daily expense tracker for personal and small business ledgers: debts, stock, PDF reports and encrypted backups.",
-          "isPartOf": { "@id": "https://elshoram974.github.io/#website" },
-          "about": { "@id": "https://elshoram974.github.io/mre_cashbook_home/#app" },
-          "primaryImageOfPage": "https://elshoram974.github.io/assets/og-mre-cashbook.png",
-          "inLanguage": "en"
-        },
-        {
-          "@type": "MobileApplication",
-          "@id": "https://elshoram974.github.io/mre_cashbook_home/#app",
-          "name": "MRE CashBook",
-          "alternateName": "MRE CashBook: Expense Tracker",
-          "applicationCategory": "FinanceApplication",
-          "applicationSubCategory": "Expense Tracker, Cashbook, Business Ledger",
-          "operatingSystem": "Android 7.0+, iOS 15.0+, HarmonyOS",
-          "softwareVersion": "1.5.2",
-          "url": "https://elshoram974.github.io/mre_cashbook_home/",
-          "image": "https://elshoram974.github.io/mre_cashbook_icon.png",
-          "screenshot": [
-            "https://elshoram974.github.io/assets/screens/01-dashboard.jpg",
-            "https://elshoram974.github.io/assets/screens/04-debts.jpg",
-            "https://elshoram974.github.io/assets/screens/05-products.jpg",
-            "https://elshoram974.github.io/assets/screens/06-insights.jpg"
-          ],
-          "description": "MRE CashBook is an offline-first cashbook app and daily expense tracker for personal money and small business. Record cash in and cash out, track debts per contact, manage product stock, attach photos and voice notes, export PDF reports and receipts, and keep encrypted backups in your own Google Drive or Huawei Drive.",
-          "inLanguage": ["en", "ar", "es", "fr", "de", "tr", "ru", "hi", "zh"],
-          "isAccessibleForFree": true,
-          "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "USD",
-            "availability": "https://schema.org/InStock"
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://mrecode.net/#organization",
+            "name": "MRE Code",
+            "url": "https://mrecode.net",
+            "logo": "https://elshoram974.github.io/mre_cashbook_icon.png",
+            "email": "mrecode24@gmail.com"
           },
-          "downloadUrl": [
-            "https://play.google.com/store/apps/details?id=net.mrecode.mrecashbook",
-            "https://apps.apple.com/app/id6760567168",
-            "https://appgallery.huawei.com/app/C117118621"
-          ],
-          "installUrl": "https://play.google.com/store/apps/details?id=net.mrecode.mrecashbook",
-          "sameAs": [
-            "https://play.google.com/store/apps/details?id=net.mrecode.mrecashbook",
-            "https://apps.apple.com/app/id6760567168",
-            "https://appgallery.huawei.com/app/C117118621"
-          ],
-          "featureList": [
-            "Track daily income and expenses in a cash in / cash out book",
-            "Three book types: Standard cash flow, Debts, and Products with stock",
-            "Debt tracking per contact with multi-entry settlement and refunds",
-            "Custom fields per book: text, number, date, dropdown, contact, product lines, files",
-            "Built-in calculator with brackets and a reusable calculation history",
-            "Photo, PDF and video attachments with thumbnails, plus voice notes",
-            "PDF reports and receipts with Arabic reshaping and right-to-left layout",
-            "Recurring entries: daily, weekly, monthly or yearly, each listed with its next date",
-            "Analytics dashboard with cash flow, expense distribution and insight cards",
-            "Encrypted local backups and optional sync to your own Google Drive or Huawei Drive",
-            "Biometric app lock and a balance privacy toggle",
-            "Offline-first, no account required, 9 languages with right-to-left support"
-          ],
-          "permissions": "Camera, Microphone, Contacts, Storage, Notifications (all optional and requested only when used)",
-          "author": { "@id": "https://mrecode.net/#organization" },
-          "publisher": { "@id": "https://mrecode.net/#organization" }
-        },
-        {
-          "@type": "FAQPage",
-          "@id": "https://elshoram974.github.io/mre_cashbook_home/#faq",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "Is MRE CashBook free?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes. MRE CashBook is free to download on Google Play, the App Store and Huawei AppGallery, and there are no ads. The optional AI assistant has a daily message limit; adding your own API key removes that limit and bills you through your own provider account."
-              }
+          {
+            "@type": "WebSite",
+            "@id": "https://elshoram974.github.io/#website",
+            "url": "https://elshoram974.github.io/",
+            "name": "MRE Code",
+            "publisher": { "@id": "https://mrecode.net/#organization" },
+            "inLanguage": "en"
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://elshoram974.github.io/mre_cashbook_home/#webpage",
+            "url": "https://elshoram974.github.io/mre_cashbook_home/",
+            "name": "MRE CashBook — Cashbook App, Expense Tracker & Business Ledger",
+            "description": "MRE CashBook is a free offline cashbook app and daily expense tracker for personal and small business ledgers: debts, stock, PDF reports and encrypted backups.",
+            "isPartOf": { "@id": "https://elshoram974.github.io/#website" },
+            "about": {
+              "@id": "https://elshoram974.github.io/mre_cashbook_home/#app"
             },
-            {
-              "@type": "Question",
-              "name": "Does the app work offline?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes, that is the default. Every book, entry, report and PDF export works with no connection, because the ledger is stored in a database on your device. A connection is only needed for the optional cloud backup and the optional AI assistant."
-              }
+            "primaryImageOfPage": "https://elshoram974.github.io/assets/og-mre-cashbook.png",
+            "inLanguage": "en"
+          },
+          {
+            "@type": "MobileApplication",
+            "@id": "https://elshoram974.github.io/mre_cashbook_home/#app",
+            "name": "MRE CashBook",
+            "alternateName": "MRE CashBook: Expense Tracker",
+            "applicationCategory": "FinanceApplication",
+            "applicationSubCategory": "Expense Tracker, Cashbook, Business Ledger",
+            "operatingSystem": "Android 7.0+, iOS 15.0+, HarmonyOS",
+            "softwareVersion": "1.5.2",
+            "url": "https://elshoram974.github.io/mre_cashbook_home/",
+            "image": "https://elshoram974.github.io/mre_cashbook_icon.png",
+            "screenshot": [
+              "https://elshoram974.github.io/assets/screens/01-dashboard.jpg",
+              "https://elshoram974.github.io/assets/screens/04-debts.jpg",
+              "https://elshoram974.github.io/assets/screens/05-products.jpg",
+              "https://elshoram974.github.io/assets/screens/06-insights.jpg"
+            ],
+            "description": "MRE CashBook is an offline-first cashbook app and daily expense tracker for personal money and small business. Record cash in and cash out, track debts per contact, manage product stock, attach photos and voice notes, export PDF reports and receipts, and keep encrypted backups in your own Google Drive or Huawei Drive.",
+            "inLanguage": [
+              "en",
+              "ar",
+              "es",
+              "fr",
+              "de",
+              "tr",
+              "ru",
+              "hi",
+              "zh"
+            ],
+            "isAccessibleForFree": true,
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD",
+              "availability": "https://schema.org/InStock"
             },
-            {
-              "@type": "Question",
-              "name": "Do I need to create an account?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "No. You can install MRE CashBook and start recording expenses immediately. Signing in with Google or Huawei is only asked for if you decide to back up to your own Drive."
+            "downloadUrl": [
+              "https://play.google.com/store/apps/details?id=net.mrecode.mrecashbook",
+              "https://apps.apple.com/app/id6760567168",
+              "https://appgallery.huawei.com/app/C117118621"
+            ],
+            "installUrl": "https://play.google.com/store/apps/details?id=net.mrecode.mrecashbook",
+            "sameAs": [
+              "https://play.google.com/store/apps/details?id=net.mrecode.mrecashbook",
+              "https://apps.apple.com/app/id6760567168",
+              "https://appgallery.huawei.com/app/C117118621"
+            ],
+            "featureList": [
+              "Track daily income and expenses in a cash in / cash out book",
+              "Three book types: Standard cash flow, Debts, and Products with stock",
+              "Debt tracking per contact with multi-entry settlement and refunds",
+              "Custom fields per book: text, number, date, dropdown, contact, product lines, files",
+              "Built-in calculator with brackets and a reusable calculation history",
+              "Photo, PDF and video attachments with thumbnails, plus voice notes",
+              "PDF reports and receipts with Arabic reshaping and right-to-left layout",
+              "Recurring entries: daily, weekly, monthly or yearly, each listed with its next date",
+              "Analytics dashboard with cash flow, expense distribution and insight cards",
+              "Encrypted local backups and optional sync to your own Google Drive or Huawei Drive",
+              "Biometric app lock and a balance privacy toggle",
+              "Offline-first, no account required, 9 languages with right-to-left support"
+            ],
+            "permissions": "Camera, Microphone, Contacts, Storage, Notifications (all optional and requested only when used)",
+            "author": { "@id": "https://mrecode.net/#organization" },
+            "publisher": { "@id": "https://mrecode.net/#organization" }
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://elshoram974.github.io/mre_cashbook_home/#faq",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Is MRE CashBook free?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. MRE CashBook is free to download on Google Play, the App Store and Huawei AppGallery, and there are no ads. The optional AI assistant has a daily message limit; adding your own API key removes that limit and bills you through your own provider account."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does the app work offline?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, that is the default. Every book, entry, report and PDF export works with no connection, because the ledger is stored in a database on your device. A connection is only needed for the optional cloud backup and the optional AI assistant."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do I need to create an account?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. You can install MRE CashBook and start recording expenses immediately. Signing in with Google or Huawei is only asked for if you decide to back up to your own Drive."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Where is my financial data stored?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "On your device. If you enable cloud sync, an encrypted backup is also kept in the private app folder of your own Google Drive or Huawei Drive. Your entries, debts and inventory are never uploaded to servers run by MRE Code."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I sync MRE CashBook between two devices?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, through backup and restore. The first device uploads an encrypted backup to your Drive, the second one downloads it, and the two databases are merged record by record, with a list of the books where they disagree. It is not live, continuous editing on two phones at once."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I export my cashbook to PDF?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Reports and receipts export as PDF with the columns you choose, and the entry count is shown before you export. You can also share a selection as a PDF table, a totals card image, or plain text. Arabic text is reshaped and laid out right-to-left correctly."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is it suitable for a small business?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Use a Debts book for customers and suppliers, a Products book for stock, packaging units and prices, and a Standard book for the daily till. Sharing an entry from a Debts or Products book shows what was billed, what was paid, and who owes whom in words."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Which devices and languages are supported?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Android 7.0 and newer, iOS 15 and newer on iPhone and iPad, and Huawei devices through AppGallery, including devices with no Google services, where backup runs on Huawei Drive. The app ships in 9 languages (Arabic, English, Spanish, French, German, Turkish, Russian, Hindi and Chinese) with full right-to-left support, in light and dark themes."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I attach photos or voice notes to an entry?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Photos, PDFs and videos attach to an entry with a real thumbnail, and you can record a voice note into the entry and play it back with a waveform. Attachments are included in your backups."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is MRE CashBook a bank or a financial advisor?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. It is a personal record-keeping tool for money you have already handled. It does not move money, hold funds, issue loans, or give financial advice."
+                }
               }
-            },
-            {
-              "@type": "Question",
-              "name": "Where is my financial data stored?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "On your device. If you enable cloud sync, an encrypted backup is also kept in the private app folder of your own Google Drive or Huawei Drive. Your entries, debts and inventory are never uploaded to servers run by MRE Code."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Can I sync MRE CashBook between two devices?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes, through backup and restore. The first device uploads an encrypted backup to your Drive, the second one downloads it, and the two databases are merged record by record, with a list of the books where they disagree. It is not live, continuous editing on two phones at once."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Can I export my cashbook to PDF?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes. Reports and receipts export as PDF with the columns you choose, and the entry count is shown before you export. You can also share a selection as a PDF table, a totals card image, or plain text. Arabic text is reshaped and laid out right-to-left correctly."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Is it suitable for a small business?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes. Use a Debts book for customers and suppliers, a Products book for stock, packaging units and prices, and a Standard book for the daily till. Sharing an entry from a Debts or Products book shows what was billed, what was paid, and who owes whom in words."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Which devices and languages are supported?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Android 7.0 and newer, iOS 15 and newer on iPhone and iPad, and Huawei devices through AppGallery, including devices with no Google services, where backup runs on Huawei Drive. The app ships in 9 languages (Arabic, English, Spanish, French, German, Turkish, Russian, Hindi and Chinese) with full right-to-left support, in light and dark themes."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Can I attach photos or voice notes to an entry?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes. Photos, PDFs and videos attach to an entry with a real thumbnail, and you can record a voice note into the entry and play it back with a waveform. Attachments are included in your backups."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Is MRE CashBook a bank or a financial advisor?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "No. It is a personal record-keeping tool for money you have already handled. It does not move money, hold funds, issue loans, or give financial advice."
-              }
-            }
-          ]
-        }
-      ]
-    }
+            ]
+          }
+        ]
+      }
     </script>
 
     <!--
@@ -1277,6 +1669,5 @@
       Same rule for testimonials: add them once you have real, attributable user quotes
       (Play Store reviews you can link to, or customers who gave permission).
     -->
-</body>
-
+  </body>
 </html>

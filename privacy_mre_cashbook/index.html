@@ -1,793 +1,1888 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" id="html-root" dir="auto">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Privacy Policy - MRE CashBook</title>
-    <meta name="description" content="MRE CashBook privacy policy in 9 languages. Your ledger data stays on your device; optional encrypted backup goes only to your own Google Drive or Huawei Drive.">
-    <link rel="canonical" href="https://elshoram974.github.io/privacy_mre_cashbook/">
-    <meta name="robots" content="index, follow">
+    <meta
+      name="description"
+      content="MRE CashBook privacy policy in 9 languages. Your ledger data stays on your device; optional encrypted backup goes only to your own Google Drive or Huawei Drive."
+    />
+    <link
+      rel="canonical"
+      href="https://elshoram974.github.io/privacy_mre_cashbook/"
+    />
+    <meta name="robots" content="index, follow" />
     <style>
-        /* الوان التطبيق - اللايت مود (افتراضي للويب) */
-        :root {
-            --bg-color: transparent;
-            --text-color: #2D2F33;
-            --p-color: #55575A;
-            --heading-color: #005F73;
-            --border-color: #2A9D8F;
-            --highlight-bg: #E8F5E9;
-            --highlight-text: #005F73;
-            --highlight-border: #E76F51;
-            --btn-bg: #005F73;
-            --btn-text: #ffffff;
-            --btn-email-bg: #2A9D8F;
-            --toggle-bg: #F8F9FA;
-            --toggle-text: #005F73;
-        }
+      /* الوان التطبيق - اللايت مود (افتراضي للويب) */
+      :root {
+        --bg-color: transparent;
+        --text-color: #2d2f33;
+        --p-color: #55575a;
+        --heading-color: #005f73;
+        --border-color: #2a9d8f;
+        --highlight-bg: #e8f5e9;
+        --highlight-text: #005f73;
+        --highlight-border: #e76f51;
+        --btn-bg: #005f73;
+        --btn-text: #ffffff;
+        --btn-email-bg: #2a9d8f;
+        --toggle-bg: #f8f9fa;
+        --toggle-text: #005f73;
+      }
 
-        /* الوان التطبيق - الدارك مود (يعمل داخل التطبيق فقط) */
-        [data-theme="dark"] {
-            --bg-color: transparent;
-            --text-color: #FFFFFF;
-            --p-color: #B3B3B3;
-            --heading-color: #0A9396;
-            --border-color: #3EC9B8;
-            --highlight-bg: rgba(62, 201, 184, 0.1);
-            --highlight-text: #3EC9B8;
-            --highlight-border: #F28B70;
-            --btn-bg: #0A9396;
-            --btn-text: #ffffff;
-            --btn-email-bg: #3EC9B8;
-            --toggle-bg: #1E1E2C;
-            --toggle-text: #0A9396;
-        }
+      /* الوان التطبيق - الدارك مود (يعمل داخل التطبيق فقط) */
+      [data-theme="dark"] {
+        --bg-color: transparent;
+        --text-color: #ffffff;
+        --p-color: #b3b3b3;
+        --heading-color: #0a9396;
+        --border-color: #3ec9b8;
+        --highlight-bg: rgba(62, 201, 184, 0.1);
+        --highlight-text: #3ec9b8;
+        --highlight-border: #f28b70;
+        --btn-bg: #0a9396;
+        --btn-text: #ffffff;
+        --btn-email-bg: #3ec9b8;
+        --toggle-bg: #1e1e2c;
+        --toggle-text: #0a9396;
+      }
 
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: var(--text-color);
+        background-color: var(--bg-color);
+        margin: 0 auto;
+        max-width: 800px;
+        padding: 15px;
+        transition:
+          background-color 0.3s,
+          color 0.3s;
+      }
+
+      @media (max-width: 600px) {
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--bg-color);
-            margin: 0 auto;
-            max-width: 800px;
-            padding: 15px;
-            transition: background-color 0.3s, color 0.3s;
+          padding: 10px;
         }
+        h1 {
+          font-size: 22px;
+        }
+        h2 {
+          font-size: 18px;
+        }
+        p,
+        li {
+          font-size: 14px;
+        }
+      }
 
-        @media (max-width: 600px) {
-            body { padding: 10px; }
-            h1 { font-size: 22px; }
-            h2 { font-size: 18px; }
-            p, li { font-size: 14px; }
-        }
+      h1,
+      h2 {
+        color: var(--heading-color);
+        border-bottom: 2px solid var(--border-color);
+        padding-bottom: 10px;
+        margin-top: 20px;
+      }
 
-        h1, h2 {
-            color: var(--heading-color);
-            border-bottom: 2px solid var(--border-color);
-            padding-bottom: 10px;
-            margin-top: 20px;
-        }
+      p,
+      li {
+        font-size: 15px;
+        color: var(--p-color);
+      }
 
-        p, li {
-            font-size: 15px;
-            color: var(--p-color);
-        }
+      .highlight {
+        background-color: var(--highlight-bg);
+        padding: 15px;
+        border-left: 4px solid var(--highlight-border);
+        border-radius: 8px;
+        font-weight: bold;
+        color: var(--highlight-text);
+        transition: all 0.3s;
+      }
 
-        .highlight {
-            background-color: var(--highlight-bg);
-            padding: 15px;
-            border-left: 4px solid var(--highlight-border);
-            border-radius: 8px;
-            font-weight: bold;
-            color: var(--highlight-text);
-            transition: all 0.3s;
-        }
+      [dir="rtl"] .highlight {
+        border-left: none;
+        border-right: 4px solid var(--highlight-border);
+      }
 
-        [dir="rtl"] .highlight {
-            border-left: none;
-            border-right: 4px solid var(--highlight-border);
-        }
+      .contact-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
 
-        .contact-group {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 20px;
-            margin-bottom: 20px;
-        }
+      .contact-btn {
+        display: inline-block;
+        background-color: var(--btn-bg);
+        color: var(--btn-text) !important;
+        padding: 12px 24px;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: bold;
+        transition:
+          opacity 0.3s,
+          transform 0.2s;
+      }
 
-        .contact-btn {
-            display: inline-block;
-            background-color: var(--btn-bg);
-            color: var(--btn-text) !important;
-            padding: 12px 24px;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-            transition: opacity 0.3s, transform 0.2s;
-        }
+      .contact-btn.email {
+        background-color: var(--btn-email-bg);
+      }
 
-        .contact-btn.email {
-            background-color: var(--btn-email-bg);
-        }
+      .contact-btn:active {
+        transform: scale(0.95);
+      }
 
-        .contact-btn:active {
-            transform: scale(0.95);
-        }
+      .app-logo {
+        display: block;
+        width: 96px;
+        height: 96px;
+        margin: 10px auto 0;
+        border-radius: 20px;
+        object-fit: contain;
+      }
 
-        .app-logo {
-            display: block;
-            width: 96px;
-            height: 96px;
-            margin: 10px auto 0;
-            border-radius: 20px;
-            object-fit: contain;
-        }
+      .top-controls {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        margin-bottom: 15px;
+      }
 
-        .top-controls {
-            display: flex;
-            justify-content: center;
-            margin-top: 10px;
-            margin-bottom: 15px;
-        }
+      .lang-select {
+        background-color: var(--toggle-bg);
+        color: var(--toggle-text);
+        border: 1px solid var(--border-color);
+        padding: 8px 16px;
+        border-radius: 20px;
+        font-size: 14px;
+        font-weight: bold;
+        outline: none;
+        cursor: pointer;
+        transition: all 0.3s;
+      }
 
-        .lang-select {
-            background-color: var(--toggle-bg);
-            color: var(--toggle-text);
-            border: 1px solid var(--border-color);
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 14px;
-            font-weight: bold;
-            outline: none;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
+      .lang-section {
+        display: none;
+      }
 
-        .lang-section {
-            display: none;
-        }
+      /* روابط صفحات الموقع - تظهر على الويب فقط وتختفي داخل التطبيق */
+      .site-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 30px;
+        padding-top: 20px;
+        border-top: 1px solid var(--border-color);
+      }
 
-        /* روابط صفحات الموقع - تظهر على الويب فقط وتختفي داخل التطبيق */
-        .site-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 1px solid var(--border-color);
-        }
+      .site-links a {
+        display: inline-block;
+        background-color: var(--toggle-bg);
+        color: var(--toggle-text);
+        border: 1px solid var(--border-color);
+        padding: 10px 18px;
+        text-decoration: none;
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: bold;
+        transition: all 0.3s;
+      }
 
-        .site-links a {
-            display: inline-block;
-            background-color: var(--toggle-bg);
-            color: var(--toggle-text);
-            border: 1px solid var(--border-color);
-            padding: 10px 18px;
-            text-decoration: none;
-            border-radius: 8px;
-            font-size: 14px;
-            font-weight: bold;
-            transition: all 0.3s;
-        }
-
-        .site-links a:active {
-            transform: scale(0.95);
-        }
+      .site-links a:active {
+        transform: scale(0.95);
+      }
     </style>
-    <link rel="icon" href="mre_cashbook_icon.png" type="image/png">
-</head>
+    <link rel="icon" href="mre_cashbook_icon.png" type="image/png" />
+  </head>
 
-<body>
-
-    <img src="mre_cashbook_icon.png" alt="MRE CashBook" class="app-logo">
+  <body>
+    <img src="mre_cashbook_icon.png" alt="MRE CashBook" class="app-logo" />
 
     <div class="top-controls" id="top-controls">
-        <select class="lang-select" id="lang-select" onchange="changeLang(this.value)">
-            <option value="ar">العربية</option>
-            <option value="de">Deutsch</option>
-            <option value="en">English</option>
-            <option value="es">Español</option>
-            <option value="fr">Français</option>
-            <option value="hi">हिन्दी</option>
-            <option value="ru">Русский</option>
-            <option value="tr">Türkçe</option>
-            <option value="zh">中文</option>
-        </select>
+      <select
+        class="lang-select"
+        id="lang-select"
+        onchange="changeLang(this.value)"
+      >
+        <option value="ar">العربية</option>
+        <option value="de">Deutsch</option>
+        <option value="en">English</option>
+        <option value="es">Español</option>
+        <option value="fr">Français</option>
+        <option value="hi">हिन्दी</option>
+        <option value="ru">Русский</option>
+        <option value="tr">Türkçe</option>
+        <option value="zh">中文</option>
+      </select>
     </div>
 
     <!-- ARABIC -->
-    <div id="section-ar" class="lang-section" style="direction: rtl; text-align: right;">
-        <h1>سياسة الخصوصية لتطبيق MRE CashBook</h1>
-        <p><strong>آخر تحديث:</strong> أغسطس 2026</p>
-        <p>تم تطوير تطبيق <strong>MRE CashBook</strong> بواسطة <strong>MRE Code</strong>. التطبيق مصمم ليكون دفتراً رقمياً شخصياً لمساعدة المستخدمين على تسجيل وتتبع حساباتهم وقيودهم المالية. <strong>نحن لسنا بنكاً، أو مؤسسة مالية، أو خدمة استشارية.</strong></p>
-        <div class="highlight">نحن لا نقوم بجمع، إرسال، تخزين، بيع، أو مشاركة أي من بياناتك المالية (مثل القيود أو الديون أو المخزون) على الإطلاق. بيانات دفترك تبقى بنسبة 100% على جهازك المحلي أو في التخزين السحابي الخاص بك.</div>
+    <div
+      id="section-ar"
+      class="lang-section"
+      style="direction: rtl; text-align: right"
+    >
+      <h1>سياسة الخصوصية لتطبيق MRE CashBook</h1>
+      <p><strong>آخر تحديث:</strong> أغسطس 2026</p>
+      <p>
+        تم تطوير تطبيق <strong>MRE CashBook</strong> بواسطة
+        <strong>MRE Code</strong>. التطبيق مصمم ليكون دفتراً رقمياً شخصياً
+        لمساعدة المستخدمين على تسجيل وتتبع حساباتهم وقيودهم المالية.
+        <strong>نحن لسنا بنكاً، أو مؤسسة مالية، أو خدمة استشارية.</strong>
+      </p>
+      <div class="highlight">
+        نحن لا نقوم بجمع، إرسال، تخزين، بيع، أو مشاركة أي من بياناتك المالية
+        (مثل القيود أو الديون أو المخزون) على الإطلاق. بيانات دفترك تبقى بنسبة
+        100% على جهازك المحلي أو في التخزين السحابي الخاص بك.
+      </div>
 
-        <h2>1. جمع البيانات واستخدامها</h2>
-        <p>نحن لا نطلب منك إنشاء حساب لاستخدام التطبيق، وسجلاتك المالية <strong>لا يتم أبداً</strong> رفعها لخوادمنا. ومع ذلك، إذا فعّلت اختيارياً "المزامنة السحابية" عبر حساب Google أو Huawei، فإننا نجمع اسمك وبريدك الإلكتروني وعنوان صورة حسابك. تُستخدم لإدارة حسابك عبر أجهزتك ولإشعارات الحساب. لا نبيعها. قد يُرسَل بريدك إلى مزود الإشعارات (OneSignal) فقط كي تصل التذكيرات للحساب الصحيح.</p>
-        <p>عند فتح التطبيق نرسل ملفاً تعريفياً صغيراً للجهاز إلى Firebase.</p>
+      <h2>1. جمع البيانات واستخدامها</h2>
+      <p>
+        نحن لا نطلب منك إنشاء حساب لاستخدام التطبيق، وسجلاتك المالية
+        <strong>لا يتم أبداً</strong> رفعها لخوادمنا. ومع ذلك، إذا فعّلت
+        اختيارياً "المزامنة السحابية" عبر حساب Google أو Huawei، فإننا نجمع اسمك
+        وبريدك الإلكتروني وعنوان صورة حسابك. تُستخدم لإدارة حسابك عبر أجهزتك
+        ولإشعارات الحساب. لا نبيعها. قد يُرسَل بريدك إلى مزود الإشعارات
+        (OneSignal) فقط كي تصل التذكيرات للحساب الصحيح.
+      </p>
+      <p>عند فتح التطبيق نرسل ملفاً تعريفياً صغيراً للجهاز إلى Firebase.</p>
 
-        <h2>2. خدمات الطرف الثالث (التحليلات والإشعارات)</h2>
-        <p>لضمان استقرار التطبيق وإرسال الإشعارات الضرورية، نستخدم خدمات موثوقة من طرف ثالث:</p>
-        <ul>
-            <li><strong>Firebase Crashlytics:</strong> تقوم بجمع بيانات تشخيصية مجهولة المصدر، سجلات الأعطال، ومعرفات الأجهزة لمساعدتنا في تتبع وإصلاح أخطاء التطبيق. هذه البيانات لا ترتبط بهويتك الشخصية بأي شكل.</li>
-            <li><strong>OneSignal:</strong> تستخدم لإرسال إشعارات النظام الضرورية (مثل تذكير النسخ الاحتياطي). يتم استخدام معرفات الجهاز محلياً فقط لضمان وصول هذه الإشعارات لك.</li>
-            <li><strong>مزودو الذكاء الاصطناعي (اختياري):</strong> المساعد الذكي لا يعمل إلا عند استخدامك له. عندها نشارك مع المزود الذي اخترته — Google Gemini أو DeepSeek أو OpenAI (ChatGPT) أو Anthropic (Claude) أو AgentRouter أو نقطة اتصال مخصصة — (١) رسائل الدردشة داخل التطبيق لذلك الطلب مع موجز قصير من المحادثة الأخيرة، (٢) أي صورة ترفقها، (٣) أي تسجيل صوتي ترسله، كي يُولَّد الرد. هذا اختياري. قاعدة بيانات الدفتر لا تُرفع؛ قد نُرفق أسماء الدفاتر والحقول (وليس المبالغ) كسياق. المحادثة تُحفظ على جهازك وتُحذف حسب إعداد الاحتفاظ. لا نستخدم محتواك لتدريب أي نماذج. إذا أدخلت مفتاح API خاصًا بك، تخضع طلباتك لسياسة ذلك المزود.</li>
-        </ul>
+      <h2>2. خدمات الطرف الثالث (التحليلات والإشعارات)</h2>
+      <p>
+        لضمان استقرار التطبيق وإرسال الإشعارات الضرورية، نستخدم خدمات موثوقة من
+        طرف ثالث:
+      </p>
+      <ul>
+        <li>
+          <strong>Firebase Crashlytics:</strong> تقوم بجمع بيانات تشخيصية مجهولة
+          المصدر، سجلات الأعطال، ومعرفات الأجهزة لمساعدتنا في تتبع وإصلاح أخطاء
+          التطبيق. هذه البيانات لا ترتبط بهويتك الشخصية بأي شكل.
+        </li>
+        <li>
+          <strong>OneSignal:</strong> تستخدم لإرسال إشعارات النظام الضرورية (مثل
+          تذكير النسخ الاحتياطي). يتم استخدام معرفات الجهاز محلياً فقط لضمان
+          وصول هذه الإشعارات لك.
+        </li>
+        <li>
+          <strong>مزودو الذكاء الاصطناعي (اختياري):</strong> المساعد الذكي لا
+          يعمل إلا عند استخدامك له. عندها نشارك مع المزود الذي اخترته — Google
+          Gemini أو DeepSeek أو OpenAI (ChatGPT) أو Anthropic (Claude) أو
+          AgentRouter أو نقطة اتصال مخصصة — (١) رسائل الدردشة داخل التطبيق لذلك
+          الطلب مع موجز قصير من المحادثة الأخيرة، (٢) أي صورة ترفقها، (٣) أي
+          تسجيل صوتي ترسله، كي يُولَّد الرد. هذا اختياري. قاعدة بيانات الدفتر لا
+          تُرفع؛ قد نُرفق أسماء الدفاتر والحقول (وليس المبالغ) كسياق. المحادثة
+          تُحفظ على جهازك وتُحذف حسب إعداد الاحتفاظ. لا نستخدم محتواك لتدريب أي
+          نماذج. إذا أدخلت مفتاح API خاصًا بك، تخضع طلباتك لسياسة ذلك المزود.
+        </li>
+      </ul>
 
-        <h2>3. المزامنة السحابية (Cloud Sync)، Google Drive / Huawei Drive، والنسخ الاحتياطي</h2>
-        <p>يعمل التطبيق بشكل افتراضي بدون إنترنت تماماً (Offline-First). إذا اخترت تفعيل ميزة "المزامنة السحابية"، سيطلب التطبيق الوصول إلى حساب <strong>Google Drive / Huawei Drive</strong> الخاص بك لتخزين ملفات النسخ الاحتياطي بأمان. عند تفعيل ميزة "النسخ التلقائي"، سيقوم التطبيق بالعمل في الخلفية (حتى عند إغلاقه) لرفع النسخ المشفرة دورياً لضمان عدم فقدان بياناتك.</p>
-        <ul>
-            <li>يتم تشفير ملفات النسخ الاحتياطي الخاص بك محلياً داخل التطبيق قبل رفعها مباشرة وبشكل آمن إلى حساب Google Drive / Huawei Drive <strong>الشخصي الخاص بك</strong>.</li>
-            <li>نحن، كمطورين للتطبيق، <strong>ليس لدينا أي صلاحية أو وصول مطلقاً</strong> إلى حساب Google Drive / Huawei Drive الخاص بك، أو ملفات النسخ الاحتياطي، أو أي من بياناتك المالية.</li>
-            <li>يتم نقل البيانات مباشرة بين هاتفك الذكي وخوادم Google المشفرة.</li>
-        </ul>
+      <h2>
+        3. المزامنة السحابية (Cloud Sync)، Google Drive / Huawei Drive، والنسخ
+        الاحتياطي
+      </h2>
+      <p>
+        يعمل التطبيق بشكل افتراضي بدون إنترنت تماماً (Offline-First). إذا اخترت
+        تفعيل ميزة "المزامنة السحابية"، سيطلب التطبيق الوصول إلى حساب
+        <strong>Google Drive / Huawei Drive</strong> الخاص بك لتخزين ملفات النسخ
+        الاحتياطي بأمان. عند تفعيل ميزة "النسخ التلقائي"، سيقوم التطبيق بالعمل
+        في الخلفية (حتى عند إغلاقه) لرفع النسخ المشفرة دورياً لضمان عدم فقدان
+        بياناتك.
+      </p>
+      <ul>
+        <li>
+          يتم تشفير ملفات النسخ الاحتياطي الخاص بك محلياً داخل التطبيق قبل رفعها
+          مباشرة وبشكل آمن إلى حساب Google Drive / Huawei Drive
+          <strong>الشخصي الخاص بك</strong>.
+        </li>
+        <li>
+          نحن، كمطورين للتطبيق،
+          <strong>ليس لدينا أي صلاحية أو وصول مطلقاً</strong> إلى حساب Google
+          Drive / Huawei Drive الخاص بك، أو ملفات النسخ الاحتياطي، أو أي من
+          بياناتك المالية.
+        </li>
+        <li>يتم نقل البيانات مباشرة بين هاتفك الذكي وخوادم Google المشفرة.</li>
+      </ul>
 
-        <h2>4. الصلاحيات المطلوبة</h2>
-        <ul>
-            <li><strong>التخزين / الملفات:</strong> تُستخدم حصريًا لتصدير تقارير PDF، ولحفظ أو استعادة النسخ الاحتياطية لقاعدة بياناتك (ملفات ‎.mrecb‎)، ولإرفاق ملفات بقيودك.</li>
-            <li><strong>البصمة / التعرف على الوجه:</strong> يستخدمها نظام جهازك محليًا لقفل التطبيق وللموافقة على النسخ الاحتياطي. نحن لا نصل إلى بياناتك الحيوية ولا نخزنها.</li>
-            <li><strong>جهات الاتصال:</strong> إذا استخدمت حقل "جهة اتصال"، يطلب التطبيق الوصول إلى دفتر هاتفك فقط ليتيح لك اختيار اسم بسرعة. تُعالَج هذه البيانات محليًا ولا تُرفع أبدًا إلى أي خادم.</li>
-            <li><strong>الميكروفون والتعرف على الكلام:</strong> يُستخدم لأمرين. (١) الملاحظات الصوتية: التسجيل الذي تضيفه إلى قيد يُحفَظ على جهازك كجزء من ذلك القيد، ويُدرَج ضمن نسخك الاحتياطية إذا فعّلتها، ويُحذف عند حذفك للقيد. (٢) الأوامر الصوتية للمساعد الذكي: يُحوَّل كلامك إلى نص، ويُرسَل النص أو الصوت إلى مزود الذكاء الاصطناعي الذي اخترته لتنفيذ طلبك. نحن لا نستخدم صوتك ولا نصوصك لتدريب أي نماذج ذكاء اصطناعي.</li>
-            <li><strong>الكاميرا:</strong> تُستخدم عند اختيارك تصوير إيصال أو فاتورة، إما لإرفاق الصورة بقيد أو ليقرأها المساعد الذكي ويحولها إلى قيود. لا يعمل التطبيق بالكاميرا في الخلفية.</li>
-            <li><strong>الصور / الوسائط:</strong> تُستخدم عند اختيارك صورة من معرضك لإرفاقها بقيد أو لإرسالها إلى المساعد الذكي. يصل التطبيق فقط إلى العناصر التي تختارها.</li>
-            <li><strong>الإشعارات:</strong> تُستخدم لتذكيرك بالقيود المتكررة عند استحقاقها، ولتنبيهات النسخ الاحتياطي، ولحالة المزامنة. يمكنك إيقافها من إعدادات نظامك في أي وقت.</li>
-            <li><strong>المنبهات الدقيقة والتشغيل عند الإقلاع (أندرويد):</strong> تُستخدم لإنشاء قيودك المتكررة في موعدها المحدد ولاستعادة جداولها بعد إعادة تشغيل الجهاز.</li>
-        </ul>
+      <h2>4. الصلاحيات المطلوبة</h2>
+      <ul>
+        <li>
+          <strong>التخزين / الملفات:</strong> تُستخدم حصريًا لتصدير تقارير PDF،
+          ولحفظ أو استعادة النسخ الاحتياطية لقاعدة بياناتك (ملفات ‎.mrecb‎)،
+          ولإرفاق ملفات بقيودك.
+        </li>
+        <li>
+          <strong>البصمة / التعرف على الوجه:</strong> يستخدمها نظام جهازك محليًا
+          لقفل التطبيق وللموافقة على النسخ الاحتياطي. نحن لا نصل إلى بياناتك
+          الحيوية ولا نخزنها.
+        </li>
+        <li>
+          <strong>جهات الاتصال:</strong> إذا استخدمت حقل "جهة اتصال"، يطلب
+          التطبيق الوصول إلى دفتر هاتفك فقط ليتيح لك اختيار اسم بسرعة. تُعالَج
+          هذه البيانات محليًا ولا تُرفع أبدًا إلى أي خادم.
+        </li>
+        <li>
+          <strong>الميكروفون والتعرف على الكلام:</strong> يُستخدم لأمرين. (١)
+          الملاحظات الصوتية: التسجيل الذي تضيفه إلى قيد يُحفَظ على جهازك كجزء من
+          ذلك القيد، ويُدرَج ضمن نسخك الاحتياطية إذا فعّلتها، ويُحذف عند حذفك
+          للقيد. (٢) الأوامر الصوتية للمساعد الذكي: يُحوَّل كلامك إلى نص،
+          ويُرسَل النص أو الصوت إلى مزود الذكاء الاصطناعي الذي اخترته لتنفيذ
+          طلبك. نحن لا نستخدم صوتك ولا نصوصك لتدريب أي نماذج ذكاء اصطناعي.
+        </li>
+        <li>
+          <strong>الكاميرا:</strong> تُستخدم عند اختيارك تصوير إيصال أو فاتورة،
+          إما لإرفاق الصورة بقيد أو ليقرأها المساعد الذكي ويحولها إلى قيود. لا
+          يعمل التطبيق بالكاميرا في الخلفية.
+        </li>
+        <li>
+          <strong>الصور / الوسائط:</strong> تُستخدم عند اختيارك صورة من معرضك
+          لإرفاقها بقيد أو لإرسالها إلى المساعد الذكي. يصل التطبيق فقط إلى
+          العناصر التي تختارها.
+        </li>
+        <li>
+          <strong>الإشعارات:</strong> تُستخدم لتذكيرك بالقيود المتكررة عند
+          استحقاقها، ولتنبيهات النسخ الاحتياطي، ولحالة المزامنة. يمكنك إيقافها
+          من إعدادات نظامك في أي وقت.
+        </li>
+        <li>
+          <strong>المنبهات الدقيقة والتشغيل عند الإقلاع (أندرويد):</strong>
+          تُستخدم لإنشاء قيودك المتكررة في موعدها المحدد ولاستعادة جداولها بعد
+          إعادة تشغيل الجهاز.
+        </li>
+      </ul>
 
-        <h2>5. سياسة حذف البيانات</h2>
-        <p>نظراً لأن بياناتك لا يتم تخزينها على خوادمنا أبداً، فأنت تمتلك السيطرة الكاملة على حذفها. لحذف جميع بياناتك نهائياً:</p>
-        <ul>
-            <li><strong>البيانات المحلية:</strong> ببساطة قم بحذف (إلغاء تثبيت) تطبيق MRE CashBook من هاتفك.</li>
-            <li><strong>البيانات السحابية:</strong> توجه إلى حساب Google Drive / Huawei Drive الخاص بك، ابحث عن مجلد التطبيق أو ملفات النسخ الاحتياطي، وقم بحذفها. يمكنك أيضاً إلغاء ربط التطبيق من إعدادات حساب Google الخاص بك.</li>
-        </ul>
+      <h2>5. سياسة حذف البيانات</h2>
+      <p>
+        نظراً لأن بياناتك لا يتم تخزينها على خوادمنا أبداً، فأنت تمتلك السيطرة
+        الكاملة على حذفها. لحذف جميع بياناتك نهائياً:
+      </p>
+      <ul>
+        <li>
+          <strong>البيانات المحلية:</strong> ببساطة قم بحذف (إلغاء تثبيت) تطبيق
+          MRE CashBook من هاتفك.
+        </li>
+        <li>
+          <strong>البيانات السحابية:</strong> توجه إلى حساب Google Drive /
+          Huawei Drive الخاص بك، ابحث عن مجلد التطبيق أو ملفات النسخ الاحتياطي،
+          وقم بحذفها. يمكنك أيضاً إلغاء ربط التطبيق من إعدادات حساب Google الخاص
+          بك.
+        </li>
+      </ul>
 
-        <h2>6. تواصل معنا</h2>
-        <p>إذا كان لديك أي أسئلة أو استفسارات حول سياسة الخصوصية، يمكنك التواصل معنا عبر:</p>
-        <div class="contact-group">
-            <a href="https://wa.me/201553668845" class="contact-btn" target="_blank">تواصل عبر واتساب</a>
-            <a href="mailto:mrecode24@gmail.com" class="contact-btn email" target="_blank">الدعم عبر الإيميل</a>
-        </div>
+      <h2>6. تواصل معنا</h2>
+      <p>
+        إذا كان لديك أي أسئلة أو استفسارات حول سياسة الخصوصية، يمكنك التواصل
+        معنا عبر:
+      </p>
+      <div class="contact-group">
+        <a href="https://wa.me/201553668845" class="contact-btn" target="_blank"
+          >تواصل عبر واتساب</a
+        >
+        <a
+          href="mailto:mrecode24@gmail.com"
+          class="contact-btn email"
+          target="_blank"
+          >الدعم عبر الإيميل</a
+        >
+      </div>
     </div>
 
     <!-- ENGLISH -->
     <div id="section-en" class="lang-section">
-        <h1>Privacy Policy for MRE CashBook</h1>
-        <p><strong>Last Updated:</strong> August 2026</p>
-        <p><strong>MRE Code</strong> developed the <strong>MRE CashBook</strong> app. It is designed solely as a personal digital ledger to help users manually record and track their personal and business entries. <strong>We are NOT a bank, financial institution, or advisory service.</strong></p>
-        <div class="highlight">We do NOT collect, transmit, store, sell, or share ANY of your financial data (such as entries, debts, or inventory). Your ledger data stays 100% locally on your device or in your personal cloud.</div>
+      <h1>Privacy Policy for MRE CashBook</h1>
+      <p><strong>Last Updated:</strong> August 2026</p>
+      <p>
+        <strong>MRE Code</strong> developed the
+        <strong>MRE CashBook</strong> app. It is designed solely as a personal
+        digital ledger to help users manually record and track their personal
+        and business entries.
+        <strong
+          >We are NOT a bank, financial institution, or advisory
+          service.</strong
+        >
+      </p>
+      <div class="highlight">
+        We do NOT collect, transmit, store, sell, or share ANY of your financial
+        data (such as entries, debts, or inventory). Your ledger data stays 100%
+        locally on your device or in your personal cloud.
+      </div>
 
-        <h2>1. Data Collection and Usage</h2>
-        <p>We do not require you to create an account to use the app, and your financial records are <strong>never</strong> uploaded to our servers. However, if you optionally enable Cloud Sync with Google or Huawei, we collect your name, email, and account photo URL. This is used to manage your account across devices and to send account-related notifications. We do not sell it. Your email may be sent to our notification provider (OneSignal) solely so reminders reach the right account.</p>
-        <p>On launch we send a small device profile to Firebase.</p>
+      <h2>1. Data Collection and Usage</h2>
+      <p>
+        We do not require you to create an account to use the app, and your
+        financial records are <strong>never</strong> uploaded to our servers.
+        However, if you optionally enable Cloud Sync with Google or Huawei, we
+        collect your name, email, and account photo URL. This is used to manage
+        your account across devices and to send account-related notifications.
+        We do not sell it. Your email may be sent to our notification provider
+        (OneSignal) solely so reminders reach the right account.
+      </p>
+      <p>On launch we send a small device profile to Firebase.</p>
 
-        <h2>2. Third-Party Services (Analytics & Notifications)</h2>
-        <p>To ensure app stability and deliver essential notifications, we use the following third-party services:</p>
-        <ul>
-            <li><strong>Firebase Crashlytics:</strong> Collects anonymous diagnostic data, crash logs, and device identifiers strictly to help us track and fix app crashes. This data is not linked to your identity.</li>
-            <li><strong>OneSignal:</strong> Used to deliver critical local and system notifications (e.g., backup reminders). Device identifiers are used solely for delivering these notifications.</li>
-            <li><strong>AI Providers (optional):</strong> The AI Assistant only runs when you use it. For that request we share with the provider you selected — Google Gemini, DeepSeek, OpenAI (ChatGPT), Anthropic (Claude), AgentRouter, or a custom endpoint — (1) your in-app chat messages (the prompt plus a short recent history), (2) any photo you attach, and (3) any voice recording you send, so it can generate a reply. Your ledger database is never uploaded; we may include book names and field labels (not amounts) as context. Chat stays on your device and is deleted per your retention setting. We do not use your content to train AI models. If you supply your own API key, those requests are governed by that provider's privacy policy.</li>
-        </ul>
+      <h2>2. Third-Party Services (Analytics & Notifications)</h2>
+      <p>
+        To ensure app stability and deliver essential notifications, we use the
+        following third-party services:
+      </p>
+      <ul>
+        <li>
+          <strong>Firebase Crashlytics:</strong> Collects anonymous diagnostic
+          data, crash logs, and device identifiers strictly to help us track and
+          fix app crashes. This data is not linked to your identity.
+        </li>
+        <li>
+          <strong>OneSignal:</strong> Used to deliver critical local and system
+          notifications (e.g., backup reminders). Device identifiers are used
+          solely for delivering these notifications.
+        </li>
+        <li>
+          <strong>AI Providers (optional):</strong> The AI Assistant only runs
+          when you use it. For that request we share with the provider you
+          selected — Google Gemini, DeepSeek, OpenAI (ChatGPT), Anthropic
+          (Claude), AgentRouter, or a custom endpoint — (1) your in-app chat
+          messages (the prompt plus a short recent history), (2) any photo you
+          attach, and (3) any voice recording you send, so it can generate a
+          reply. Your ledger database is never uploaded; we may include book
+          names and field labels (not amounts) as context. Chat stays on your
+          device and is deleted per your retention setting. We do not use your
+          content to train AI models. If you supply your own API key, those
+          requests are governed by that provider's privacy policy.
+        </li>
+      </ul>
 
-        <h2>3. Cloud Sync, Google Drive / Huawei Drive & Backups</h2>
-        <p>By default, the app operates completely offline. If you enable the "Cloud Sync" feature, the app will request access to your <strong>Google Drive / Huawei Drive</strong> account to safely store your database backups. When Automatic Backup is enabled, the app uses background processing (even when closed) to periodically upload your encrypted backups to ensure your data is always safe without manual intervention.</p>
-        <ul>
-            <li>Your backup files are encrypted locally before being uploaded directly and securely to <strong>your personal</strong> Google Drive / Huawei Drive account.</li>
-            <li>We, the developers, have <strong>ABSOLUTELY NO ACCESS</strong> to your Google Drive / Huawei Drive account, your backup files, or any of your ledger data.</li>
-            <li>The data is transmitted directly between your device and Google's servers.</li>
-        </ul>
+      <h2>3. Cloud Sync, Google Drive / Huawei Drive & Backups</h2>
+      <p>
+        By default, the app operates completely offline. If you enable the
+        "Cloud Sync" feature, the app will request access to your
+        <strong>Google Drive / Huawei Drive</strong> account to safely store
+        your database backups. When Automatic Backup is enabled, the app uses
+        background processing (even when closed) to periodically upload your
+        encrypted backups to ensure your data is always safe without manual
+        intervention.
+      </p>
+      <ul>
+        <li>
+          Your backup files are encrypted locally before being uploaded directly
+          and securely to <strong>your personal</strong> Google Drive / Huawei
+          Drive account.
+        </li>
+        <li>
+          We, the developers, have <strong>ABSOLUTELY NO ACCESS</strong> to your
+          Google Drive / Huawei Drive account, your backup files, or any of your
+          ledger data.
+        </li>
+        <li>
+          The data is transmitted directly between your device and Google's
+          servers.
+        </li>
+      </ul>
 
-        <h2>4. Required Permissions</h2>
-        <ul>
-            <li><strong>Storage / Files:</strong> Used strictly to export PDF reports, to save or restore your database backups (.mrecb files), and to attach files to your entries.</li>
-            <li><strong>Biometrics (Face ID / Touch ID / Fingerprint):</strong> Used locally by your device's OS for the "App Lock" and backup authorization. We do not access or store your biometric data.</li>
-            <li><strong>Contacts:</strong> If you use the custom "Contact" field, the app requests access to your phonebook solely to let you quickly pick a name. This data is processed locally and is NEVER uploaded to any server.</li>
-            <li><strong>Microphone &amp; Speech Recognition:</strong> Used for two things. (1) Voice notes: a recording you add to an entry is saved on your device as part of that entry, is included in your backups if you enable them, and is deleted when you delete the entry. (2) AI Assistant voice commands: your speech is converted to text, and that text or audio is sent to the AI provider you selected in order to carry out your request. We do not use your audio or text to train any AI models.</li>
-            <li><strong>Camera:</strong> Used only when you choose to photograph a receipt or invoice, either to attach the image to an entry or to let the AI Assistant read it and turn it into entries. The app never uses the camera in the background.</li>
-            <li><strong>Photos / Media:</strong> Used only when you pick an image from your gallery to attach to an entry or to send to the AI Assistant. The app only receives the items you select.</li>
-            <li><strong>Notifications:</strong> Used to remind you when a recurring entry is due, for backup reminders, and for sync status. You can turn them off in your system settings at any time.</li>
-            <li><strong>Exact alarms &amp; run at startup (Android):</strong> Used to create your recurring entries at the time you scheduled them, and to restore those schedules after the device restarts.</li>
-        </ul>
+      <h2>4. Required Permissions</h2>
+      <ul>
+        <li>
+          <strong>Storage / Files:</strong> Used strictly to export PDF reports,
+          to save or restore your database backups (.mrecb files), and to attach
+          files to your entries.
+        </li>
+        <li>
+          <strong>Biometrics (Face ID / Touch ID / Fingerprint):</strong> Used
+          locally by your device's OS for the "App Lock" and backup
+          authorization. We do not access or store your biometric data.
+        </li>
+        <li>
+          <strong>Contacts:</strong> If you use the custom "Contact" field, the
+          app requests access to your phonebook solely to let you quickly pick a
+          name. This data is processed locally and is NEVER uploaded to any
+          server.
+        </li>
+        <li>
+          <strong>Microphone &amp; Speech Recognition:</strong> Used for two
+          things. (1) Voice notes: a recording you add to an entry is saved on
+          your device as part of that entry, is included in your backups if you
+          enable them, and is deleted when you delete the entry. (2) AI
+          Assistant voice commands: your speech is converted to text, and that
+          text or audio is sent to the AI provider you selected in order to
+          carry out your request. We do not use your audio or text to train any
+          AI models.
+        </li>
+        <li>
+          <strong>Camera:</strong> Used only when you choose to photograph a
+          receipt or invoice, either to attach the image to an entry or to let
+          the AI Assistant read it and turn it into entries. The app never uses
+          the camera in the background.
+        </li>
+        <li>
+          <strong>Photos / Media:</strong> Used only when you pick an image from
+          your gallery to attach to an entry or to send to the AI Assistant. The
+          app only receives the items you select.
+        </li>
+        <li>
+          <strong>Notifications:</strong> Used to remind you when a recurring
+          entry is due, for backup reminders, and for sync status. You can turn
+          them off in your system settings at any time.
+        </li>
+        <li>
+          <strong>Exact alarms &amp; run at startup (Android):</strong> Used to
+          create your recurring entries at the time you scheduled them, and to
+          restore those schedules after the device restarts.
+        </li>
+      </ul>
 
-        <h2>5. Data Deletion Policy</h2>
-        <p>Because your data is not stored on our servers, you have full control over your data deletion. To completely delete your data:</p>
-        <ul>
-            <li><strong>Local Data:</strong> Simply uninstall the MRE CashBook app from your device.</li>
-            <li><strong>Cloud Data:</strong> Go to your Google Drive / Huawei Drive account, locate the MRE CashBook backup folder, and delete the files. Alternatively, you can disconnect the app from your Google account settings.</li>
-        </ul>
+      <h2>5. Data Deletion Policy</h2>
+      <p>
+        Because your data is not stored on our servers, you have full control
+        over your data deletion. To completely delete your data:
+      </p>
+      <ul>
+        <li>
+          <strong>Local Data:</strong> Simply uninstall the MRE CashBook app
+          from your device.
+        </li>
+        <li>
+          <strong>Cloud Data:</strong> Go to your Google Drive / Huawei Drive
+          account, locate the MRE CashBook backup folder, and delete the files.
+          Alternatively, you can disconnect the app from your Google account
+          settings.
+        </li>
+      </ul>
 
-        <h2>6. Contact Us</h2>
-        <p>If you have any questions about this Privacy Policy, you can contact us at:</p>
-        <div class="contact-group">
-            <a href="https://wa.me/201553668845" class="contact-btn" target="_blank">WhatsApp Us</a>
-            <a href="mailto:mrecode24@gmail.com" class="contact-btn email" target="_blank">Email Support</a>
-        </div>
+      <h2>6. Contact Us</h2>
+      <p>
+        If you have any questions about this Privacy Policy, you can contact us
+        at:
+      </p>
+      <div class="contact-group">
+        <a href="https://wa.me/201553668845" class="contact-btn" target="_blank"
+          >WhatsApp Us</a
+        >
+        <a
+          href="mailto:mrecode24@gmail.com"
+          class="contact-btn email"
+          target="_blank"
+          >Email Support</a
+        >
+      </div>
     </div>
 
     <!-- SPANISH -->
     <div id="section-es" class="lang-section">
-        <h1>Política de Privacidad de MRE CashBook</h1>
-        <p><strong>Última actualización:</strong> Agosto de 2026</p>
-        <p><strong>MRE Code</strong> desarrolló la aplicación <strong>MRE CashBook</strong>. Está diseñada únicamente como un libro de contabilidad digital personal para ayudar a los usuarios a registrar manualmente sus entradas. <strong>NO somos un banco, una institución financiera ni un servicio de asesoría.</strong></p>
-        <div class="highlight">NO recopilamos, transmitimos, almacenamos, vendemos ni compartimos NINGUNO de sus datos financieros (como entradas, deudas o inventario). Los datos de su libro de contabilidad permanecen 100% en su dispositivo o en su nube personal.</div>
+      <h1>Política de Privacidad de MRE CashBook</h1>
+      <p><strong>Última actualización:</strong> Agosto de 2026</p>
+      <p>
+        <strong>MRE Code</strong> desarrolló la aplicación
+        <strong>MRE CashBook</strong>. Está diseñada únicamente como un libro de
+        contabilidad digital personal para ayudar a los usuarios a registrar
+        manualmente sus entradas.
+        <strong
+          >NO somos un banco, una institución financiera ni un servicio de
+          asesoría.</strong
+        >
+      </p>
+      <div class="highlight">
+        NO recopilamos, transmitimos, almacenamos, vendemos ni compartimos
+        NINGUNO de sus datos financieros (como entradas, deudas o inventario).
+        Los datos de su libro de contabilidad permanecen 100% en su dispositivo
+        o en su nube personal.
+      </div>
 
-        <h2>1. Recopilación y uso de datos</h2>
-        <p>No requerimos que cree una cuenta para usar la aplicación, y sus registros financieros <strong>nunca</strong> se suben a nuestros servidores. Si habilita opcionalmente la sincronización en la nube con Google o Huawei, recopilamos su nombre, correo electrónico y URL de foto de cuenta, para gestionar su cuenta en sus dispositivos y enviar notificaciones. No los vendemos. Su correo puede enviarse a nuestro proveedor de notificaciones (OneSignal) solo para que los recordatorios lleguen a la cuenta correcta.</p>
-        <p>Al abrir la app enviamos un perfil breve del dispositivo a Firebase.</p>
+      <h2>1. Recopilación y uso de datos</h2>
+      <p>
+        No requerimos que cree una cuenta para usar la aplicación, y sus
+        registros financieros <strong>nunca</strong> se suben a nuestros
+        servidores. Si habilita opcionalmente la sincronización en la nube con
+        Google o Huawei, recopilamos su nombre, correo electrónico y URL de foto
+        de cuenta, para gestionar su cuenta en sus dispositivos y enviar
+        notificaciones. No los vendemos. Su correo puede enviarse a nuestro
+        proveedor de notificaciones (OneSignal) solo para que los recordatorios
+        lleguen a la cuenta correcta.
+      </p>
+      <p>
+        Al abrir la app enviamos un perfil breve del dispositivo a Firebase.
+      </p>
 
-        <h2>2. Servicios de terceros (Análisis y notificaciones)</h2>
-        <p>Para garantizar la estabilidad de la aplicación y enviar notificaciones esenciales, utilizamos los siguientes servicios de terceros:</p>
-        <ul>
-            <li><strong>Firebase Crashlytics:</strong> Recopila datos de diagnóstico anónimos, registros de fallos e identificadores de dispositivos estrictamente para ayudarnos a solucionar problemas. Estos datos no están vinculados a su identidad.</li>
-            <li><strong>OneSignal:</strong> Utilizado para enviar notificaciones críticas del sistema (por ejemplo, recordatorios de copia de seguridad). Los identificadores de dispositivos se utilizan únicamente para enviar estas notificaciones.</li>
-            <li><strong>Proveedores de IA (opcional):</strong> El Asistente de IA solo se ejecuta cuando lo usas. En esa petición compartimos con el proveedor que hayas elegido — Google Gemini, DeepSeek, OpenAI (ChatGPT), Anthropic (Claude), AgentRouter o un endpoint personalizado — (1) tus mensajes de chat en la app (el texto más un breve historial reciente), (2) cualquier foto que adjuntas y (3) cualquier grabación de voz que envías, para generar una respuesta. Tu base de datos contable nunca se sube; podemos incluir nombres de libros y de campos (no importes) como contexto. El chat permanece en tu dispositivo y se borra según tu retención. No usamos tu contenido para entrenar modelos. Si aportas tu propia clave API, rige la política de ese proveedor.</li>
-        </ul>
+      <h2>2. Servicios de terceros (Análisis y notificaciones)</h2>
+      <p>
+        Para garantizar la estabilidad de la aplicación y enviar notificaciones
+        esenciales, utilizamos los siguientes servicios de terceros:
+      </p>
+      <ul>
+        <li>
+          <strong>Firebase Crashlytics:</strong> Recopila datos de diagnóstico
+          anónimos, registros de fallos e identificadores de dispositivos
+          estrictamente para ayudarnos a solucionar problemas. Estos datos no
+          están vinculados a su identidad.
+        </li>
+        <li>
+          <strong>OneSignal:</strong> Utilizado para enviar notificaciones
+          críticas del sistema (por ejemplo, recordatorios de copia de
+          seguridad). Los identificadores de dispositivos se utilizan únicamente
+          para enviar estas notificaciones.
+        </li>
+        <li>
+          <strong>Proveedores de IA (opcional):</strong> El Asistente de IA solo
+          se ejecuta cuando lo usas. En esa petición compartimos con el
+          proveedor que hayas elegido — Google Gemini, DeepSeek, OpenAI
+          (ChatGPT), Anthropic (Claude), AgentRouter o un endpoint personalizado
+          — (1) tus mensajes de chat en la app (el texto más un breve historial
+          reciente), (2) cualquier foto que adjuntas y (3) cualquier grabación
+          de voz que envías, para generar una respuesta. Tu base de datos
+          contable nunca se sube; podemos incluir nombres de libros y de campos
+          (no importes) como contexto. El chat permanece en tu dispositivo y se
+          borra según tu retención. No usamos tu contenido para entrenar
+          modelos. Si aportas tu propia clave API, rige la política de ese
+          proveedor.
+        </li>
+      </ul>
 
-        <h2>3. Sincronización en la nube, Google Drive / Huawei Drive y copias de seguridad</h2>
-        <p>De forma predeterminada, la aplicación funciona completamente fuera de línea. Si habilita la función "Sincronización en la nube", la aplicación solicitará acceso a su cuenta de <strong>Google Drive / Huawei Drive</strong> para almacenar de forma segura sus copias de seguridad. Cuando la copia de seguridad automática está activada, la aplicación utiliza el procesamiento en segundo plano (incluso cuando está cerrada) para cargar periódicamente sus copias de seguridad cifradas.</p>
-        <ul>
-            <li>Sus archivos de copia de seguridad se cifran localmente antes de cargarse directamente de forma segura a <strong>su cuenta personal</strong> de Google Drive / Huawei Drive.</li>
-            <li>Nosotros, los desarrolladores, <strong>NO TENEMOS ACCESO ABSOLUTO</strong> a su cuenta de Google Drive / Huawei Drive, a sus archivos de copia de seguridad ni a ninguno de sus datos.</li>
-            <li>Los datos se transmiten directamente entre su dispositivo y los servidores de Google.</li>
-        </ul>
+      <h2>
+        3. Sincronización en la nube, Google Drive / Huawei Drive y copias de
+        seguridad
+      </h2>
+      <p>
+        De forma predeterminada, la aplicación funciona completamente fuera de
+        línea. Si habilita la función "Sincronización en la nube", la aplicación
+        solicitará acceso a su cuenta de
+        <strong>Google Drive / Huawei Drive</strong> para almacenar de forma
+        segura sus copias de seguridad. Cuando la copia de seguridad automática
+        está activada, la aplicación utiliza el procesamiento en segundo plano
+        (incluso cuando está cerrada) para cargar periódicamente sus copias de
+        seguridad cifradas.
+      </p>
+      <ul>
+        <li>
+          Sus archivos de copia de seguridad se cifran localmente antes de
+          cargarse directamente de forma segura a
+          <strong>su cuenta personal</strong> de Google Drive / Huawei Drive.
+        </li>
+        <li>
+          Nosotros, los desarrolladores,
+          <strong>NO TENEMOS ACCESO ABSOLUTO</strong> a su cuenta de Google
+          Drive / Huawei Drive, a sus archivos de copia de seguridad ni a
+          ninguno de sus datos.
+        </li>
+        <li>
+          Los datos se transmiten directamente entre su dispositivo y los
+          servidores de Google.
+        </li>
+      </ul>
 
-        <h2>4. Permisos requeridos</h2>
-        <ul>
-            <li><strong>Almacenamiento / Archivos:</strong> Se usa estrictamente para exportar informes PDF, guardar o restaurar las copias de seguridad de tu base de datos (archivos .mrecb) y adjuntar archivos a tus asientos.</li>
-            <li><strong>Biometría (Face ID / Touch ID / Huella):</strong> La usa localmente el sistema de tu dispositivo para el "Bloqueo de app" y la autorización de copias. No accedemos ni almacenamos tus datos biométricos.</li>
-            <li><strong>Contactos:</strong> Si usas el campo personalizado "Contacto", la app solicita acceso a tu agenda únicamente para que puedas elegir un nombre rápidamente. Estos datos se procesan localmente y NUNCA se suben a ningún servidor.</li>
-            <li><strong>Micrófono y reconocimiento de voz:</strong> Se usa para dos cosas. (1) Notas de voz: la grabación que añades a un asiento se guarda en tu dispositivo como parte de ese asiento, se incluye en tus copias de seguridad si las activas y se borra cuando eliminas el asiento. (2) Comandos de voz del Asistente de IA: tu voz se convierte en texto, y ese texto o audio se envía al proveedor de IA que hayas seleccionado para ejecutar tu petición. No usamos tu audio ni tu texto para entrenar modelos de IA.</li>
-            <li><strong>Cámara:</strong> Se usa solo cuando eliges fotografiar un recibo o factura, ya sea para adjuntar la imagen a un asiento o para que el Asistente de IA la lea y la convierta en asientos. La app nunca usa la cámara en segundo plano.</li>
-            <li><strong>Fotos / Multimedia:</strong> Se usa solo cuando eliges una imagen de tu galería para adjuntarla a un asiento o enviarla al Asistente de IA. La app solo recibe los elementos que seleccionas.</li>
-            <li><strong>Notificaciones:</strong> Se usan para recordarte cuándo vence un asiento periódico, para avisos de copia de seguridad y para el estado de sincronización. Puedes desactivarlas en los ajustes del sistema cuando quieras.</li>
-            <li><strong>Alarmas exactas e inicio automático (Android):</strong> Se usan para crear tus asientos periódicos a la hora programada y para restaurar esas programaciones tras reiniciar el dispositivo.</li>
-        </ul>
+      <h2>4. Permisos requeridos</h2>
+      <ul>
+        <li>
+          <strong>Almacenamiento / Archivos:</strong> Se usa estrictamente para
+          exportar informes PDF, guardar o restaurar las copias de seguridad de
+          tu base de datos (archivos .mrecb) y adjuntar archivos a tus asientos.
+        </li>
+        <li>
+          <strong>Biometría (Face ID / Touch ID / Huella):</strong> La usa
+          localmente el sistema de tu dispositivo para el "Bloqueo de app" y la
+          autorización de copias. No accedemos ni almacenamos tus datos
+          biométricos.
+        </li>
+        <li>
+          <strong>Contactos:</strong> Si usas el campo personalizado "Contacto",
+          la app solicita acceso a tu agenda únicamente para que puedas elegir
+          un nombre rápidamente. Estos datos se procesan localmente y NUNCA se
+          suben a ningún servidor.
+        </li>
+        <li>
+          <strong>Micrófono y reconocimiento de voz:</strong> Se usa para dos
+          cosas. (1) Notas de voz: la grabación que añades a un asiento se
+          guarda en tu dispositivo como parte de ese asiento, se incluye en tus
+          copias de seguridad si las activas y se borra cuando eliminas el
+          asiento. (2) Comandos de voz del Asistente de IA: tu voz se convierte
+          en texto, y ese texto o audio se envía al proveedor de IA que hayas
+          seleccionado para ejecutar tu petición. No usamos tu audio ni tu texto
+          para entrenar modelos de IA.
+        </li>
+        <li>
+          <strong>Cámara:</strong> Se usa solo cuando eliges fotografiar un
+          recibo o factura, ya sea para adjuntar la imagen a un asiento o para
+          que el Asistente de IA la lea y la convierta en asientos. La app nunca
+          usa la cámara en segundo plano.
+        </li>
+        <li>
+          <strong>Fotos / Multimedia:</strong> Se usa solo cuando eliges una
+          imagen de tu galería para adjuntarla a un asiento o enviarla al
+          Asistente de IA. La app solo recibe los elementos que seleccionas.
+        </li>
+        <li>
+          <strong>Notificaciones:</strong> Se usan para recordarte cuándo vence
+          un asiento periódico, para avisos de copia de seguridad y para el
+          estado de sincronización. Puedes desactivarlas en los ajustes del
+          sistema cuando quieras.
+        </li>
+        <li>
+          <strong>Alarmas exactas e inicio automático (Android):</strong> Se
+          usan para crear tus asientos periódicos a la hora programada y para
+          restaurar esas programaciones tras reiniciar el dispositivo.
+        </li>
+      </ul>
 
-        <h2>5. Política de eliminación de datos</h2>
-        <p>Debido a que sus datos no se almacenan en nuestros servidores, usted tiene el control total sobre su eliminación. Para eliminar completamente sus datos:</p>
-        <ul>
-            <li><strong>Datos locales:</strong> Simplemente desinstale la aplicación MRE CashBook de su dispositivo.</li>
-            <li><strong>Datos en la nube:</strong> Vaya a su cuenta de Google Drive / Huawei Drive, ubique la carpeta de copia de seguridad y elimine los archivos.</li>
-        </ul>
+      <h2>5. Política de eliminación de datos</h2>
+      <p>
+        Debido a que sus datos no se almacenan en nuestros servidores, usted
+        tiene el control total sobre su eliminación. Para eliminar completamente
+        sus datos:
+      </p>
+      <ul>
+        <li>
+          <strong>Datos locales:</strong> Simplemente desinstale la aplicación
+          MRE CashBook de su dispositivo.
+        </li>
+        <li>
+          <strong>Datos en la nube:</strong> Vaya a su cuenta de Google Drive /
+          Huawei Drive, ubique la carpeta de copia de seguridad y elimine los
+          archivos.
+        </li>
+      </ul>
 
-        <h2>6. Contáctenos</h2>
-        <p>Si tiene alguna pregunta sobre esta Política de Privacidad, puede contactarnos en:</p>
-        <div class="contact-group">
-            <a href="https://wa.me/201553668845" class="contact-btn" target="_blank">Contáctenos por WhatsApp</a>
-            <a href="mailto:mrecode24@gmail.com" class="contact-btn email" target="_blank">Soporte por correo electrónico</a>
-        </div>
+      <h2>6. Contáctenos</h2>
+      <p>
+        Si tiene alguna pregunta sobre esta Política de Privacidad, puede
+        contactarnos en:
+      </p>
+      <div class="contact-group">
+        <a href="https://wa.me/201553668845" class="contact-btn" target="_blank"
+          >Contáctenos por WhatsApp</a
+        >
+        <a
+          href="mailto:mrecode24@gmail.com"
+          class="contact-btn email"
+          target="_blank"
+          >Soporte por correo electrónico</a
+        >
+      </div>
     </div>
 
     <!-- FRENCH -->
     <div id="section-fr" class="lang-section">
-        <h1>Politique de confidentialité de MRE CashBook</h1>
-        <p><strong>Dernière mise à jour :</strong> Août 2026</p>
-        <p><strong>MRE Code</strong> a développé l'application <strong>MRE CashBook</strong>. Elle est conçue uniquement comme un grand livre numérique personnel pour aider les utilisateurs à enregistrer manuellement leurs entrées. <strong>Nous ne sommes PAS une banque, une institution financière ou un service de conseil.</strong></p>
-        <div class="highlight">Nous ne collectons, ne transmettons, ne stockons, ne vendons ni ne partageons AUCUNE de vos données financières (comme les entrées, les dettes ou les stocks). Les données de votre grand livre restent à 100% localement sur votre appareil ou dans votre cloud personnel.</div>
+      <h1>Politique de confidentialité de MRE CashBook</h1>
+      <p><strong>Dernière mise à jour :</strong> Août 2026</p>
+      <p>
+        <strong>MRE Code</strong> a développé l'application
+        <strong>MRE CashBook</strong>. Elle est conçue uniquement comme un grand
+        livre numérique personnel pour aider les utilisateurs à enregistrer
+        manuellement leurs entrées.
+        <strong
+          >Nous ne sommes PAS une banque, une institution financière ou un
+          service de conseil.</strong
+        >
+      </p>
+      <div class="highlight">
+        Nous ne collectons, ne transmettons, ne stockons, ne vendons ni ne
+        partageons AUCUNE de vos données financières (comme les entrées, les
+        dettes ou les stocks). Les données de votre grand livre restent à 100%
+        localement sur votre appareil ou dans votre cloud personnel.
+      </div>
 
-        <h2>1. Collecte et utilisation des données</h2>
-        <p>Nous ne vous demandons pas de créer un compte, et vos dossiers financiers ne sont <strong>jamais</strong> téléchargés sur nos serveurs. Si vous activez facultativement la synchronisation cloud avec Google ou Huawei, nous collectons votre nom, e-mail et URL de photo de compte, pour gérer votre compte sur vos appareils et envoyer des notifications. Nous ne les vendons pas. Votre e-mail peut être envoyé à notre fournisseur de notifications (OneSignal) uniquement pour que les rappels atteignent le bon compte.</p>
-        <p>Au lancement, nous envoyons un petit profil d'appareil à Firebase.</p>
+      <h2>1. Collecte et utilisation des données</h2>
+      <p>
+        Nous ne vous demandons pas de créer un compte, et vos dossiers
+        financiers ne sont <strong>jamais</strong> téléchargés sur nos serveurs.
+        Si vous activez facultativement la synchronisation cloud avec Google ou
+        Huawei, nous collectons votre nom, e-mail et URL de photo de compte,
+        pour gérer votre compte sur vos appareils et envoyer des notifications.
+        Nous ne les vendons pas. Votre e-mail peut être envoyé à notre
+        fournisseur de notifications (OneSignal) uniquement pour que les rappels
+        atteignent le bon compte.
+      </p>
+      <p>Au lancement, nous envoyons un petit profil d'appareil à Firebase.</p>
 
-        <h2>2. Services tiers (Analyses et notifications)</h2>
-        <p>Pour assurer la stabilité de l'application, nous utilisons :</p>
-        <ul>
-            <li><strong>Firebase Crashlytics :</strong> Collecte des données de diagnostic anonymes et des journaux de plantage pour nous aider à corriger les bogues. Ces données ne sont pas liées à votre identité.</li>
-            <li><strong>OneSignal :</strong> Utilisé pour envoyer des notifications locales essentielles (par exemple, des rappels de sauvegarde).</li>
-            <li><strong>Fournisseurs d'IA (facultatif) :</strong> L'Assistant IA ne s'exécute que lorsque vous l'utilisez. Pour cette requête, nous partageons avec le fournisseur choisi — Google Gemini, DeepSeek, OpenAI (ChatGPT), Anthropic (Claude), AgentRouter ou un point de terminaison personnalisé — (1) vos messages de chat dans l'app (le texte plus un court historique récent), (2) toute photo jointe et (3) tout enregistrement vocal envoyé, afin de générer une réponse. Votre base comptable n'est jamais téléversée ; nous pouvons inclure les noms des livres et des champs (pas les montants) comme contexte. Le chat reste sur votre appareil et est supprimé selon votre rétention. Nous n'utilisons pas votre contenu pour entraîner des modèles. Si vous fournissez votre propre clé API, la politique de ce fournisseur s'applique.</li>
-        </ul>
+      <h2>2. Services tiers (Analyses et notifications)</h2>
+      <p>Pour assurer la stabilité de l'application, nous utilisons :</p>
+      <ul>
+        <li>
+          <strong>Firebase Crashlytics :</strong> Collecte des données de
+          diagnostic anonymes et des journaux de plantage pour nous aider à
+          corriger les bogues. Ces données ne sont pas liées à votre identité.
+        </li>
+        <li>
+          <strong>OneSignal :</strong> Utilisé pour envoyer des notifications
+          locales essentielles (par exemple, des rappels de sauvegarde).
+        </li>
+        <li>
+          <strong>Fournisseurs d'IA (facultatif) :</strong> L'Assistant IA ne
+          s'exécute que lorsque vous l'utilisez. Pour cette requête, nous
+          partageons avec le fournisseur choisi — Google Gemini, DeepSeek,
+          OpenAI (ChatGPT), Anthropic (Claude), AgentRouter ou un point de
+          terminaison personnalisé — (1) vos messages de chat dans l'app (le
+          texte plus un court historique récent), (2) toute photo jointe et (3)
+          tout enregistrement vocal envoyé, afin de générer une réponse. Votre
+          base comptable n'est jamais téléversée ; nous pouvons inclure les noms
+          des livres et des champs (pas les montants) comme contexte. Le chat
+          reste sur votre appareil et est supprimé selon votre rétention. Nous
+          n'utilisons pas votre contenu pour entraîner des modèles. Si vous
+          fournissez votre propre clé API, la politique de ce fournisseur
+          s'applique.
+        </li>
+      </ul>
 
-        <h2>3. Synchronisation Cloud, Google Drive / Huawei Drive et Sauvegardes</h2>
-        <p>Par défaut, l'application fonctionne entièrement hors ligne. Si vous activez la "Synchronisation Cloud", l'application demandera l'accès à votre compte <strong>Google Drive / Huawei Drive</strong> pour stocker vos sauvegardes en toute sécurité. Lorsque la sauvegarde automatique est activée, l'application utilise le traitement en arrière-plan (même lorsqu'elle est fermée) pour télécharger périodiquement vos sauvegardes cryptées.</p>
-        <ul>
-            <li>Vos fichiers de sauvegarde sont cryptés localement avant d'être téléchargés directement et en toute sécurité sur <strong>votre compte Google Drive / Huawei Drive personnel</strong>.</li>
-            <li>Nous, les développeurs, n'avons <strong>ABSOLUMENT AUCUN ACCÈS</strong> à votre compte Google Drive / Huawei Drive, à vos fichiers de sauvegarde ou à vos données financières.</li>
-            <li>Les données sont transmises directement entre votre appareil et les serveurs de Google.</li>
-        </ul>
+      <h2>
+        3. Synchronisation Cloud, Google Drive / Huawei Drive et Sauvegardes
+      </h2>
+      <p>
+        Par défaut, l'application fonctionne entièrement hors ligne. Si vous
+        activez la "Synchronisation Cloud", l'application demandera l'accès à
+        votre compte <strong>Google Drive / Huawei Drive</strong> pour stocker
+        vos sauvegardes en toute sécurité. Lorsque la sauvegarde automatique est
+        activée, l'application utilise le traitement en arrière-plan (même
+        lorsqu'elle est fermée) pour télécharger périodiquement vos sauvegardes
+        cryptées.
+      </p>
+      <ul>
+        <li>
+          Vos fichiers de sauvegarde sont cryptés localement avant d'être
+          téléchargés directement et en toute sécurité sur
+          <strong>votre compte Google Drive / Huawei Drive personnel</strong>.
+        </li>
+        <li>
+          Nous, les développeurs, n'avons
+          <strong>ABSOLUMENT AUCUN ACCÈS</strong> à votre compte Google Drive /
+          Huawei Drive, à vos fichiers de sauvegarde ou à vos données
+          financières.
+        </li>
+        <li>
+          Les données sont transmises directement entre votre appareil et les
+          serveurs de Google.
+        </li>
+      </ul>
 
-        <h2>4. Autorisations requises</h2>
-        <ul>
-            <li><strong>Stockage / Fichiers :</strong> Utilisé strictement pour exporter des rapports PDF, sauvegarder ou restaurer les sauvegardes de votre base de données (fichiers .mrecb) et joindre des fichiers à vos écritures.</li>
-            <li><strong>Biométrie (Face ID / Touch ID / Empreinte) :</strong> Utilisée localement par le système de votre appareil pour le « Verrouillage de l'app » et l'autorisation des sauvegardes. Nous n'accédons pas à vos données biométriques et ne les stockons pas.</li>
-            <li><strong>Contacts :</strong> Si vous utilisez le champ personnalisé « Contact », l'application demande l'accès à votre répertoire uniquement pour vous laisser choisir un nom rapidement. Ces données sont traitées localement et ne sont JAMAIS téléversées vers un serveur.</li>
-            <li><strong>Microphone et reconnaissance vocale :</strong> Utilisés pour deux choses. (1) Notes vocales : l'enregistrement que vous ajoutez à une écriture est stocké sur votre appareil dans cette écriture, est inclus dans vos sauvegardes si vous les activez, et est supprimé lorsque vous supprimez l'écriture. (2) Commandes vocales de l'Assistant IA : votre voix est convertie en texte, et ce texte ou cet audio est envoyé au fournisseur d'IA que vous avez choisi afin d'exécuter votre demande. Nous n'utilisons ni votre audio ni votre texte pour entraîner des modèles d'IA.</li>
-            <li><strong>Appareil photo :</strong> Utilisé uniquement lorsque vous choisissez de photographier un reçu ou une facture, soit pour joindre l'image à une écriture, soit pour que l'Assistant IA la lise et la transforme en écritures. L'application n'utilise jamais l'appareil photo en arrière-plan.</li>
-            <li><strong>Photos / Médias :</strong> Utilisé uniquement lorsque vous choisissez une image de votre galerie pour la joindre à une écriture ou l'envoyer à l'Assistant IA. L'application ne reçoit que les éléments que vous sélectionnez.</li>
-            <li><strong>Notifications :</strong> Utilisées pour vous rappeler l'échéance d'une écriture récurrente, pour les rappels de sauvegarde et pour l'état de synchronisation. Vous pouvez les désactiver dans les réglages de votre système à tout moment.</li>
-            <li><strong>Alarmes exactes et démarrage automatique (Android) :</strong> Utilisées pour créer vos écritures récurrentes à l'heure planifiée et pour restaurer ces planifications après un redémarrage de l'appareil.</li>
-        </ul>
+      <h2>4. Autorisations requises</h2>
+      <ul>
+        <li>
+          <strong>Stockage / Fichiers :</strong> Utilisé strictement pour
+          exporter des rapports PDF, sauvegarder ou restaurer les sauvegardes de
+          votre base de données (fichiers .mrecb) et joindre des fichiers à vos
+          écritures.
+        </li>
+        <li>
+          <strong>Biométrie (Face ID / Touch ID / Empreinte) :</strong> Utilisée
+          localement par le système de votre appareil pour le « Verrouillage de
+          l'app » et l'autorisation des sauvegardes. Nous n'accédons pas à vos
+          données biométriques et ne les stockons pas.
+        </li>
+        <li>
+          <strong>Contacts :</strong> Si vous utilisez le champ personnalisé «
+          Contact », l'application demande l'accès à votre répertoire uniquement
+          pour vous laisser choisir un nom rapidement. Ces données sont traitées
+          localement et ne sont JAMAIS téléversées vers un serveur.
+        </li>
+        <li>
+          <strong>Microphone et reconnaissance vocale :</strong> Utilisés pour
+          deux choses. (1) Notes vocales : l'enregistrement que vous ajoutez à
+          une écriture est stocké sur votre appareil dans cette écriture, est
+          inclus dans vos sauvegardes si vous les activez, et est supprimé
+          lorsque vous supprimez l'écriture. (2) Commandes vocales de
+          l'Assistant IA : votre voix est convertie en texte, et ce texte ou cet
+          audio est envoyé au fournisseur d'IA que vous avez choisi afin
+          d'exécuter votre demande. Nous n'utilisons ni votre audio ni votre
+          texte pour entraîner des modèles d'IA.
+        </li>
+        <li>
+          <strong>Appareil photo :</strong> Utilisé uniquement lorsque vous
+          choisissez de photographier un reçu ou une facture, soit pour joindre
+          l'image à une écriture, soit pour que l'Assistant IA la lise et la
+          transforme en écritures. L'application n'utilise jamais l'appareil
+          photo en arrière-plan.
+        </li>
+        <li>
+          <strong>Photos / Médias :</strong> Utilisé uniquement lorsque vous
+          choisissez une image de votre galerie pour la joindre à une écriture
+          ou l'envoyer à l'Assistant IA. L'application ne reçoit que les
+          éléments que vous sélectionnez.
+        </li>
+        <li>
+          <strong>Notifications :</strong> Utilisées pour vous rappeler
+          l'échéance d'une écriture récurrente, pour les rappels de sauvegarde
+          et pour l'état de synchronisation. Vous pouvez les désactiver dans les
+          réglages de votre système à tout moment.
+        </li>
+        <li>
+          <strong>Alarmes exactes et démarrage automatique (Android) :</strong>
+          Utilisées pour créer vos écritures récurrentes à l'heure planifiée et
+          pour restaurer ces planifications après un redémarrage de l'appareil.
+        </li>
+      </ul>
 
-        <h2>5. Politique de suppression des données</h2>
-        <p>Puisque vos données ne sont pas stockées sur nos serveurs, vous avez le contrôle total de leur suppression :</p>
-        <ul>
-            <li><strong>Données locales :</strong> Désinstallez simplement l'application MRE CashBook de votre appareil.</li>
-            <li><strong>Données Cloud :</strong> Accédez à votre compte Google Drive / Huawei Drive, localisez le dossier de sauvegarde MRE CashBook et supprimez les fichiers.</li>
-        </ul>
+      <h2>5. Politique de suppression des données</h2>
+      <p>
+        Puisque vos données ne sont pas stockées sur nos serveurs, vous avez le
+        contrôle total de leur suppression :
+      </p>
+      <ul>
+        <li>
+          <strong>Données locales :</strong> Désinstallez simplement
+          l'application MRE CashBook de votre appareil.
+        </li>
+        <li>
+          <strong>Données Cloud :</strong> Accédez à votre compte Google Drive /
+          Huawei Drive, localisez le dossier de sauvegarde MRE CashBook et
+          supprimez les fichiers.
+        </li>
+      </ul>
 
-        <h2>6. Nous contacter</h2>
-        <div class="contact-group">
-            <a href="https://wa.me/201553668845" class="contact-btn" target="_blank">WhatsApp</a>
-            <a href="mailto:mrecode24@gmail.com" class="contact-btn email" target="_blank">Email</a>
-        </div>
+      <h2>6. Nous contacter</h2>
+      <div class="contact-group">
+        <a href="https://wa.me/201553668845" class="contact-btn" target="_blank"
+          >WhatsApp</a
+        >
+        <a
+          href="mailto:mrecode24@gmail.com"
+          class="contact-btn email"
+          target="_blank"
+          >Email</a
+        >
+      </div>
     </div>
 
     <!-- GERMAN -->
     <div id="section-de" class="lang-section">
-        <h1>Datenschutzrichtlinie für MRE CashBook</h1>
-        <p><strong>Zuletzt aktualisiert:</strong> August 2026</p>
-        <p><strong>MRE Code</strong> hat die <strong>MRE CashBook</strong>-App entwickelt. Sie ist ausschließlich als persönliches digitales Hauptbuch gedacht. <strong>Wir sind KEINE Bank, kein Finanzinstitut und kein Beratungsdienst.</strong></p>
-        <div class="highlight">Wir sammeln, übertragen, speichern, verkaufen oder teilen KEINE Ihrer Finanzdaten (wie Einträge, Schulden oder Inventar). Ihre Daten verbleiben zu 100% lokal auf Ihrem Gerät oder in Ihrer persönlichen Cloud.</div>
+      <h1>Datenschutzrichtlinie für MRE CashBook</h1>
+      <p><strong>Zuletzt aktualisiert:</strong> August 2026</p>
+      <p>
+        <strong>MRE Code</strong> hat die <strong>MRE CashBook</strong>-App
+        entwickelt. Sie ist ausschließlich als persönliches digitales Hauptbuch
+        gedacht.
+        <strong
+          >Wir sind KEINE Bank, kein Finanzinstitut und kein
+          Beratungsdienst.</strong
+        >
+      </p>
+      <div class="highlight">
+        Wir sammeln, übertragen, speichern, verkaufen oder teilen KEINE Ihrer
+        Finanzdaten (wie Einträge, Schulden oder Inventar). Ihre Daten
+        verbleiben zu 100% lokal auf Ihrem Gerät oder in Ihrer persönlichen
+        Cloud.
+      </div>
 
-        <h2>1. Datenerhebung und -nutzung</h2>
-        <p>Sie müssen kein Konto erstellen, und Ihre Finanzdaten werden <strong>niemals</strong> auf unsere Server hochgeladen. Wenn Sie optional die Cloud-Synchronisierung über Google oder Huawei aktivieren, erfassen wir Name, E-Mail und Profilfoto-URL zur Kontoverwaltung auf Ihren Geräten und für Kontobenachrichtigungen. Wir verkaufen diese Daten nicht. Ihre E-Mail kann an unseren Benachrichtigungsanbieter (OneSignal) gehen, nur damit Erinnerungen das richtige Konto erreichen.</p>
-        <p>Beim Start senden wir ein kleines Geräteprofil an Firebase.</p>
+      <h2>1. Datenerhebung und -nutzung</h2>
+      <p>
+        Sie müssen kein Konto erstellen, und Ihre Finanzdaten werden
+        <strong>niemals</strong> auf unsere Server hochgeladen. Wenn Sie
+        optional die Cloud-Synchronisierung über Google oder Huawei aktivieren,
+        erfassen wir Name, E-Mail und Profilfoto-URL zur Kontoverwaltung auf
+        Ihren Geräten und für Kontobenachrichtigungen. Wir verkaufen diese Daten
+        nicht. Ihre E-Mail kann an unseren Benachrichtigungsanbieter (OneSignal)
+        gehen, nur damit Erinnerungen das richtige Konto erreichen.
+      </p>
+      <p>Beim Start senden wir ein kleines Geräteprofil an Firebase.</p>
 
-        <h2>2. Drittanbieter-Dienste (Analyse & Benachrichtigungen)</h2>
-        <p>Um die Stabilität der App zu gewährleisten, verwenden wir die folgenden Dienste:</p>
-        <ul>
-            <li><strong>Firebase Crashlytics:</strong> Erfasst anonyme Diagnosedaten und Absturzprotokolle, um uns bei der Behebung von App-Fehlern zu helfen. Diese Daten sind nicht mit Ihrer Identität verknüpft.</li>
-            <li><strong>OneSignal:</strong> Wird verwendet, um wichtige lokale Benachrichtigungen (z.B. Backup-Erinnerungen) zu senden.</li>
-            <li><strong>KI-Anbieter (optional):</strong> Der KI-Assistent läuft nur, wenn Sie ihn verwenden. Für diese Anfrage teilen wir mit dem von Ihnen gewählten Anbieter — Google Gemini, DeepSeek, OpenAI (ChatGPT), Anthropic (Claude), AgentRouter oder einem eigenen Endpunkt — (1) Ihre In-App-Chatnachrichten (die Eingabe plus eine kurze jüngste Historie), (2) jedes angehängte Foto und (3) jede gesendete Sprachaufnahme, damit eine Antwort erzeugt werden kann. Ihre Buchhaltungsdatenbank wird niemals hochgeladen; Buch- und Feldnamen (keine Beträge) können als Kontext enthalten sein. Der Chat bleibt auf Ihrem Gerät und wird gemäß Ihrer Aufbewahrung gelöscht. Wir nutzen Ihre Inhalte nicht zum Trainieren von Modellen. Mit eigenem API-Schlüssel gilt die Datenschutzrichtlinie dieses Anbieters.</li>
-        </ul>
+      <h2>2. Drittanbieter-Dienste (Analyse & Benachrichtigungen)</h2>
+      <p>
+        Um die Stabilität der App zu gewährleisten, verwenden wir die folgenden
+        Dienste:
+      </p>
+      <ul>
+        <li>
+          <strong>Firebase Crashlytics:</strong> Erfasst anonyme Diagnosedaten
+          und Absturzprotokolle, um uns bei der Behebung von App-Fehlern zu
+          helfen. Diese Daten sind nicht mit Ihrer Identität verknüpft.
+        </li>
+        <li>
+          <strong>OneSignal:</strong> Wird verwendet, um wichtige lokale
+          Benachrichtigungen (z.B. Backup-Erinnerungen) zu senden.
+        </li>
+        <li>
+          <strong>KI-Anbieter (optional):</strong> Der KI-Assistent läuft nur,
+          wenn Sie ihn verwenden. Für diese Anfrage teilen wir mit dem von Ihnen
+          gewählten Anbieter — Google Gemini, DeepSeek, OpenAI (ChatGPT),
+          Anthropic (Claude), AgentRouter oder einem eigenen Endpunkt — (1) Ihre
+          In-App-Chatnachrichten (die Eingabe plus eine kurze jüngste Historie),
+          (2) jedes angehängte Foto und (3) jede gesendete Sprachaufnahme, damit
+          eine Antwort erzeugt werden kann. Ihre Buchhaltungsdatenbank wird
+          niemals hochgeladen; Buch- und Feldnamen (keine Beträge) können als
+          Kontext enthalten sein. Der Chat bleibt auf Ihrem Gerät und wird gemäß
+          Ihrer Aufbewahrung gelöscht. Wir nutzen Ihre Inhalte nicht zum
+          Trainieren von Modellen. Mit eigenem API-Schlüssel gilt die
+          Datenschutzrichtlinie dieses Anbieters.
+        </li>
+      </ul>
 
-        <h2>3. Cloud-Synchronisierung, Google Drive / Huawei Drive & Backups</h2>
-        <p>Standardmäßig funktioniert die App komplett offline. Wenn Sie die "Cloud-Synchronisierung" aktivieren, fordert die App Zugriff auf Ihr <strong>Google Drive / Huawei Drive</strong>-Konto an, um Ihre Datenbank-Backups sicher zu speichern. Wenn das automatische Backup aktiviert ist, verwendet die App Hintergrundprozesse (auch wenn sie geschlossen ist), um Ihre verschlüsselten Backups regelmäßig hochzuladen.</p>
-        <ul>
-            <li>Ihre Backup-Dateien werden lokal verschlüsselt, bevor sie direkt und sicher auf <strong>Ihr persönliches</strong> Google Drive / Huawei Drive-Konto hochgeladen werden.</li>
-            <li>Wir als Entwickler haben <strong>ABSOLUT KEINEN ZUGRIFF</strong> auf Ihr Google Drive / Huawei Drive-Konto, Ihre Backup-Dateien oder Ihre Finanzdaten.</li>
-            <li>Die Daten werden direkt zwischen Ihrem Gerät und den Google-Servern übertragen.</li>
-        </ul>
+      <h2>3. Cloud-Synchronisierung, Google Drive / Huawei Drive & Backups</h2>
+      <p>
+        Standardmäßig funktioniert die App komplett offline. Wenn Sie die
+        "Cloud-Synchronisierung" aktivieren, fordert die App Zugriff auf Ihr
+        <strong>Google Drive / Huawei Drive</strong>-Konto an, um Ihre
+        Datenbank-Backups sicher zu speichern. Wenn das automatische Backup
+        aktiviert ist, verwendet die App Hintergrundprozesse (auch wenn sie
+        geschlossen ist), um Ihre verschlüsselten Backups regelmäßig
+        hochzuladen.
+      </p>
+      <ul>
+        <li>
+          Ihre Backup-Dateien werden lokal verschlüsselt, bevor sie direkt und
+          sicher auf <strong>Ihr persönliches</strong> Google Drive / Huawei
+          Drive-Konto hochgeladen werden.
+        </li>
+        <li>
+          Wir als Entwickler haben <strong>ABSOLUT KEINEN ZUGRIFF</strong> auf
+          Ihr Google Drive / Huawei Drive-Konto, Ihre Backup-Dateien oder Ihre
+          Finanzdaten.
+        </li>
+        <li>
+          Die Daten werden direkt zwischen Ihrem Gerät und den Google-Servern
+          übertragen.
+        </li>
+      </ul>
 
-        <h2>4. Erforderliche Berechtigungen</h2>
-        <ul>
-            <li><strong>Speicher / Dateien:</strong> Wird ausschließlich verwendet, um PDF-Berichte zu exportieren, Backups Ihrer Datenbank (.mrecb-Dateien) zu speichern oder wiederherzustellen und Dateien an Ihre Buchungen anzuhängen.</li>
-            <li><strong>Biometrie (Face ID / Touch ID / Fingerabdruck):</strong> Wird lokal vom Betriebssystem Ihres Geräts für die „App-Sperre" und die Backup-Autorisierung verwendet. Wir greifen nicht auf Ihre biometrischen Daten zu und speichern sie nicht.</li>
-            <li><strong>Kontakte:</strong> Wenn Sie das benutzerdefinierte Feld „Kontakt" verwenden, fragt die App den Zugriff auf Ihr Telefonbuch nur an, damit Sie schnell einen Namen auswählen können. Diese Daten werden lokal verarbeitet und NIEMALS auf einen Server hochgeladen.</li>
-            <li><strong>Mikrofon &amp; Spracherkennung:</strong> Wird für zwei Dinge verwendet. (1) Sprachnotizen: Eine Aufnahme, die Sie einer Buchung hinzufügen, wird als Teil dieser Buchung auf Ihrem Gerät gespeichert, ist in Ihren Backups enthalten, wenn Sie diese aktivieren, und wird gelöscht, wenn Sie die Buchung löschen. (2) Sprachbefehle des KI-Assistenten: Ihre Sprache wird in Text umgewandelt, und dieser Text bzw. das Audio wird an den von Ihnen gewählten KI-Anbieter gesendet, um Ihre Anfrage auszuführen. Wir verwenden Ihr Audio oder Ihren Text nicht, um KI-Modelle zu trainieren.</li>
-            <li><strong>Kamera:</strong> Wird nur verwendet, wenn Sie einen Beleg oder eine Rechnung fotografieren möchten, entweder um das Bild an eine Buchung anzuhängen oder damit der KI-Assistent es liest und daraus Buchungen macht. Die App nutzt die Kamera nie im Hintergrund.</li>
-            <li><strong>Fotos / Medien:</strong> Wird nur verwendet, wenn Sie ein Bild aus Ihrer Galerie auswählen, um es an eine Buchung anzuhängen oder an den KI-Assistenten zu senden. Die App erhält nur die von Ihnen ausgewählten Elemente.</li>
-            <li><strong>Benachrichtigungen:</strong> Werden verwendet, um Sie an fällige wiederkehrende Buchungen zu erinnern, für Backup-Erinnerungen und für den Synchronisierungsstatus. Sie können sie jederzeit in Ihren Systemeinstellungen deaktivieren.</li>
-            <li><strong>Exakte Alarme &amp; Start beim Hochfahren (Android):</strong> Werden verwendet, um Ihre wiederkehrenden Buchungen zur geplanten Zeit anzulegen und diese Zeitpläne nach einem Neustart des Geräts wiederherzustellen.</li>
-        </ul>
+      <h2>4. Erforderliche Berechtigungen</h2>
+      <ul>
+        <li>
+          <strong>Speicher / Dateien:</strong> Wird ausschließlich verwendet, um
+          PDF-Berichte zu exportieren, Backups Ihrer Datenbank (.mrecb-Dateien)
+          zu speichern oder wiederherzustellen und Dateien an Ihre Buchungen
+          anzuhängen.
+        </li>
+        <li>
+          <strong>Biometrie (Face ID / Touch ID / Fingerabdruck):</strong> Wird
+          lokal vom Betriebssystem Ihres Geräts für die „App-Sperre" und die
+          Backup-Autorisierung verwendet. Wir greifen nicht auf Ihre
+          biometrischen Daten zu und speichern sie nicht.
+        </li>
+        <li>
+          <strong>Kontakte:</strong> Wenn Sie das benutzerdefinierte Feld
+          „Kontakt" verwenden, fragt die App den Zugriff auf Ihr Telefonbuch nur
+          an, damit Sie schnell einen Namen auswählen können. Diese Daten werden
+          lokal verarbeitet und NIEMALS auf einen Server hochgeladen.
+        </li>
+        <li>
+          <strong>Mikrofon &amp; Spracherkennung:</strong> Wird für zwei Dinge
+          verwendet. (1) Sprachnotizen: Eine Aufnahme, die Sie einer Buchung
+          hinzufügen, wird als Teil dieser Buchung auf Ihrem Gerät gespeichert,
+          ist in Ihren Backups enthalten, wenn Sie diese aktivieren, und wird
+          gelöscht, wenn Sie die Buchung löschen. (2) Sprachbefehle des
+          KI-Assistenten: Ihre Sprache wird in Text umgewandelt, und dieser Text
+          bzw. das Audio wird an den von Ihnen gewählten KI-Anbieter gesendet,
+          um Ihre Anfrage auszuführen. Wir verwenden Ihr Audio oder Ihren Text
+          nicht, um KI-Modelle zu trainieren.
+        </li>
+        <li>
+          <strong>Kamera:</strong> Wird nur verwendet, wenn Sie einen Beleg oder
+          eine Rechnung fotografieren möchten, entweder um das Bild an eine
+          Buchung anzuhängen oder damit der KI-Assistent es liest und daraus
+          Buchungen macht. Die App nutzt die Kamera nie im Hintergrund.
+        </li>
+        <li>
+          <strong>Fotos / Medien:</strong> Wird nur verwendet, wenn Sie ein Bild
+          aus Ihrer Galerie auswählen, um es an eine Buchung anzuhängen oder an
+          den KI-Assistenten zu senden. Die App erhält nur die von Ihnen
+          ausgewählten Elemente.
+        </li>
+        <li>
+          <strong>Benachrichtigungen:</strong> Werden verwendet, um Sie an
+          fällige wiederkehrende Buchungen zu erinnern, für Backup-Erinnerungen
+          und für den Synchronisierungsstatus. Sie können sie jederzeit in Ihren
+          Systemeinstellungen deaktivieren.
+        </li>
+        <li>
+          <strong>Exakte Alarme &amp; Start beim Hochfahren (Android):</strong>
+          Werden verwendet, um Ihre wiederkehrenden Buchungen zur geplanten Zeit
+          anzulegen und diese Zeitpläne nach einem Neustart des Geräts
+          wiederherzustellen.
+        </li>
+      </ul>
 
-        <h2>5. Datenlöschungsrichtlinie</h2>
-        <p>Da Ihre Daten nicht auf unseren Servern gespeichert werden, haben Sie die volle Kontrolle über die Löschung:</p>
-        <ul>
-            <li><strong>Lokale Daten:</strong> Deinstallieren Sie einfach die MRE CashBook-App von Ihrem Gerät.</li>
-            <li><strong>Cloud-Daten:</strong> Gehen Sie zu Ihrem Google Drive / Huawei Drive-Konto, suchen Sie den Backup-Ordner und löschen Sie die Dateien.</li>
-        </ul>
+      <h2>5. Datenlöschungsrichtlinie</h2>
+      <p>
+        Da Ihre Daten nicht auf unseren Servern gespeichert werden, haben Sie
+        die volle Kontrolle über die Löschung:
+      </p>
+      <ul>
+        <li>
+          <strong>Lokale Daten:</strong> Deinstallieren Sie einfach die MRE
+          CashBook-App von Ihrem Gerät.
+        </li>
+        <li>
+          <strong>Cloud-Daten:</strong> Gehen Sie zu Ihrem Google Drive / Huawei
+          Drive-Konto, suchen Sie den Backup-Ordner und löschen Sie die Dateien.
+        </li>
+      </ul>
 
-        <h2>6. Kontakt</h2>
-        <div class="contact-group">
-            <a href="https://wa.me/201553668845" class="contact-btn" target="_blank">WhatsApp</a>
-            <a href="mailto:mrecode24@gmail.com" class="contact-btn email" target="_blank">Email</a>
-        </div>
+      <h2>6. Kontakt</h2>
+      <div class="contact-group">
+        <a href="https://wa.me/201553668845" class="contact-btn" target="_blank"
+          >WhatsApp</a
+        >
+        <a
+          href="mailto:mrecode24@gmail.com"
+          class="contact-btn email"
+          target="_blank"
+          >Email</a
+        >
+      </div>
     </div>
 
     <!-- HINDI -->
     <div id="section-hi" class="lang-section">
-        <h1>MRE CashBook के लिए गोपनीयता नीति</h1>
-        <p><strong>अंतिम अपडेट:</strong> अगस्त 2026</p>
-        <p><strong>MRE Code</strong> ने <strong>MRE CashBook</strong> ऐप विकसित किया है। यह एक व्यक्तिगत डिजिटल बहीखाता के रूप में डिज़ाइन किया गया है। <strong>हम कोई बैंक, वित्तीय संस्थान या सलाहकार सेवा नहीं हैं।</strong></p>
-        <div class="highlight">हम आपके किसी भी वित्तीय डेटा (जैसे प्रविष्टियां, ऋण, या इन्वेंट्री) को एकत्र, प्रसारित, संग्रहीत, बेचते या साझा नहीं करते हैं। आपका डेटा 100% स्थानीय रूप से आपके डिवाइस या आपके व्यक्तिगत क्लाउड में रहता है।</div>
+      <h1>MRE CashBook के लिए गोपनीयता नीति</h1>
+      <p><strong>अंतिम अपडेट:</strong> अगस्त 2026</p>
+      <p>
+        <strong>MRE Code</strong> ने <strong>MRE CashBook</strong> ऐप विकसित
+        किया है। यह एक व्यक्तिगत डिजिटल बहीखाता के रूप में डिज़ाइन किया गया है।
+        <strong>हम कोई बैंक, वित्तीय संस्थान या सलाहकार सेवा नहीं हैं।</strong>
+      </p>
+      <div class="highlight">
+        हम आपके किसी भी वित्तीय डेटा (जैसे प्रविष्टियां, ऋण, या इन्वेंट्री) को
+        एकत्र, प्रसारित, संग्रहीत, बेचते या साझा नहीं करते हैं। आपका डेटा 100%
+        स्थानीय रूप से आपके डिवाइस या आपके व्यक्तिगत क्लाउड में रहता है।
+      </div>
 
-        <h2>1. डेटा संग्रह और उपयोग</h2>
-        <p>आपको खाता बनाने की आवश्यकता नहीं है, और आपके वित्तीय रिकॉर्ड <strong>कभी भी</strong> हमारे सर्वर पर अपलोड नहीं किए जाते। यदि आप वैकल्पिक रूप से Google या Huawei से क्लाउड सिंक चालू करते हैं, तो हम आपका नाम, ईमेल और खाता फ़ोटो URL एकत्र करते हैं — खाता प्रबंधन और सूचनाओं के लिए। हम इसे बेचते नहीं। आपका ईमेल केवल सही खाते तक रिमाइंडर पहुँचाने के लिए हमारे सूचना प्रदाता (OneSignal) को भेजा जा सकता है।</p>
-        <p>ऐप खुलने पर हम Firebase पर एक छोटा डिवाइस प्रोफ़ाइल भेजते हैं।</p>
+      <h2>1. डेटा संग्रह और उपयोग</h2>
+      <p>
+        आपको खाता बनाने की आवश्यकता नहीं है, और आपके वित्तीय रिकॉर्ड
+        <strong>कभी भी</strong> हमारे सर्वर पर अपलोड नहीं किए जाते। यदि आप
+        वैकल्पिक रूप से Google या Huawei से क्लाउड सिंक चालू करते हैं, तो हम
+        आपका नाम, ईमेल और खाता फ़ोटो URL एकत्र करते हैं — खाता प्रबंधन और
+        सूचनाओं के लिए। हम इसे बेचते नहीं। आपका ईमेल केवल सही खाते तक रिमाइंडर
+        पहुँचाने के लिए हमारे सूचना प्रदाता (OneSignal) को भेजा जा सकता है।
+      </p>
+      <p>ऐप खुलने पर हम Firebase पर एक छोटा डिवाइस प्रोफ़ाइल भेजते हैं।</p>
 
-        <h2>2. तृतीय-पक्ष सेवाएँ (एनालिटिक्स और सूचनाएं)</h2>
-        <p>ऐप की स्थिरता सुनिश्चित करने के लिए, हम निम्नलिखित सेवाओं का उपयोग करते हैं:</p>
-        <ul>
-            <li><strong>Firebase Crashlytics:</strong> ऐप क्रैश को ठीक करने में हमारी सहायता के लिए अनाम डायग्नोस्टिक डेटा और क्रैश लॉग एकत्र करता है।</li>
-            <li><strong>OneSignal:</strong> आवश्यक सिस्टम सूचनाएं (जैसे बैकअप अनुस्मारक) देने के लिए उपयोग किया जाता है।</li>
-            <li><strong>AI प्रदाता (वैकल्पिक):</strong> AI सहायक केवल तब चलता है जब आप उसका उपयोग करते हैं। उस अनुरोध में आपके चुने प्रदाता — Google Gemini, DeepSeek, OpenAI (ChatGPT), Anthropic (Claude), AgentRouter, या कस्टम एंडपॉइंट — के साथ हम साझा करते हैं (1) ऐप के अंदर की चैट संदेश (प्रॉम्प्ट और हालिया संक्षिप्त इतिहास), (2) जो फ़ोटो आप जोड़ते हैं, (3) जो वॉइस रिकॉर्डिंग आप भेजते हैं, ताकि उत्तर बन सके। आपका बहीखाता डेटाबेस कभी अपलोड नहीं होता; संदर्भ के लिए बही और फ़ील्ड के नाम (राशि नहीं) शामिल हो सकते हैं। चैट आपके डिवाइस पर रहती है और आपकी रिटेंशन सेटिंग के अनुसार हटती है। हम आपके कंटेंट से कोई मॉडल नहीं प्रशिक्षित करते। अपनी API कुंजी देने पर उस प्रदाता की नीति लागू होती है।</li>
-        </ul>
+      <h2>2. तृतीय-पक्ष सेवाएँ (एनालिटिक्स और सूचनाएं)</h2>
+      <p>
+        ऐप की स्थिरता सुनिश्चित करने के लिए, हम निम्नलिखित सेवाओं का उपयोग करते
+        हैं:
+      </p>
+      <ul>
+        <li>
+          <strong>Firebase Crashlytics:</strong> ऐप क्रैश को ठीक करने में हमारी
+          सहायता के लिए अनाम डायग्नोस्टिक डेटा और क्रैश लॉग एकत्र करता है।
+        </li>
+        <li>
+          <strong>OneSignal:</strong> आवश्यक सिस्टम सूचनाएं (जैसे बैकअप
+          अनुस्मारक) देने के लिए उपयोग किया जाता है।
+        </li>
+        <li>
+          <strong>AI प्रदाता (वैकल्पिक):</strong> AI सहायक केवल तब चलता है जब आप
+          उसका उपयोग करते हैं। उस अनुरोध में आपके चुने प्रदाता — Google Gemini,
+          DeepSeek, OpenAI (ChatGPT), Anthropic (Claude), AgentRouter, या कस्टम
+          एंडपॉइंट — के साथ हम साझा करते हैं (1) ऐप के अंदर की चैट संदेश
+          (प्रॉम्प्ट और हालिया संक्षिप्त इतिहास), (2) जो फ़ोटो आप जोड़ते हैं,
+          (3) जो वॉइस रिकॉर्डिंग आप भेजते हैं, ताकि उत्तर बन सके। आपका बहीखाता
+          डेटाबेस कभी अपलोड नहीं होता; संदर्भ के लिए बही और फ़ील्ड के नाम (राशि
+          नहीं) शामिल हो सकते हैं। चैट आपके डिवाइस पर रहती है और आपकी रिटेंशन
+          सेटिंग के अनुसार हटती है। हम आपके कंटेंट से कोई मॉडल नहीं प्रशिक्षित
+          करते। अपनी API कुंजी देने पर उस प्रदाता की नीति लागू होती है।
+        </li>
+      </ul>
 
-        <h2>3. क्लाउड सिंक, Google Drive / Huawei Drive और बैकअप</h2>
-        <p>डिफ़ॉल्ट रूप से, ऐप पूरी तरह से ऑफ़लाइन संचालित होता है। यदि आप "क्लाउड सिंक" सुविधा सक्षम करते हैं, तो ऐप आपके <strong>Google Drive / Huawei Drive</strong> खाते तक पहुंच का अनुरोध करेगा। जब स्वचालित बैकअप सक्षम होता है, तो ऐप पृष्ठभूमि प्रसंस्करण का उपयोग करता है (भले ही ऐप बंद हो) ताकि आपके एन्क्रिप्टेड बैकअप को समय-समय पर अपलोड किया जा सके।</p>
-        <ul>
-            <li>आपकी बैकअप फ़ाइलें <strong>आपके व्यक्तिगत</strong> Google Drive / Huawei Drive खाते में सुरक्षित रूप से अपलोड होने से पहले स्थानीय रूप से एन्क्रिप्ट की जाती हैं।</li>
-            <li>हमारे (डेवलपर्स) पास आपके Google Drive / Huawei Drive खाते, आपकी बैकअप फ़ाइलों या आपके किसी भी डेटा तक <strong>बिल्कुल कोई पहुंच नहीं</strong> है।</li>
-            <li>डेटा सीधे आपके डिवाइस और Google के सर्वर के बीच प्रसारित होता है।</li>
-        </ul>
+      <h2>3. क्लाउड सिंक, Google Drive / Huawei Drive और बैकअप</h2>
+      <p>
+        डिफ़ॉल्ट रूप से, ऐप पूरी तरह से ऑफ़लाइन संचालित होता है। यदि आप "क्लाउड
+        सिंक" सुविधा सक्षम करते हैं, तो ऐप आपके
+        <strong>Google Drive / Huawei Drive</strong> खाते तक पहुंच का अनुरोध
+        करेगा। जब स्वचालित बैकअप सक्षम होता है, तो ऐप पृष्ठभूमि प्रसंस्करण का
+        उपयोग करता है (भले ही ऐप बंद हो) ताकि आपके एन्क्रिप्टेड बैकअप को समय-समय
+        पर अपलोड किया जा सके।
+      </p>
+      <ul>
+        <li>
+          आपकी बैकअप फ़ाइलें <strong>आपके व्यक्तिगत</strong> Google Drive /
+          Huawei Drive खाते में सुरक्षित रूप से अपलोड होने से पहले स्थानीय रूप
+          से एन्क्रिप्ट की जाती हैं।
+        </li>
+        <li>
+          हमारे (डेवलपर्स) पास आपके Google Drive / Huawei Drive खाते, आपकी बैकअप
+          फ़ाइलों या आपके किसी भी डेटा तक
+          <strong>बिल्कुल कोई पहुंच नहीं</strong> है।
+        </li>
+        <li>
+          डेटा सीधे आपके डिवाइस और Google के सर्वर के बीच प्रसारित होता है।
+        </li>
+      </ul>
 
-        <h2>4. आवश्यक अनुमतियाँ</h2>
-        <ul>
-            <li><strong>संग्रहण / फ़ाइलें:</strong> केवल PDF रिपोर्ट निर्यात करने, आपके डेटाबेस बैकअप (.mrecb फ़ाइलें) सहेजने या पुनर्स्थापित करने, और आपकी एंट्री में फ़ाइलें संलग्न करने के लिए उपयोग होती है।</li>
-            <li><strong>बायोमेट्रिक्स (Face ID / Touch ID / फ़िंगरप्रिंट):</strong> "ऐप लॉक" और बैकअप प्राधिकरण के लिए आपके डिवाइस का OS इसे स्थानीय रूप से उपयोग करता है। हम आपका बायोमेट्रिक डेटा न तो देखते हैं न संग्रहित करते हैं।</li>
-            <li><strong>संपर्क:</strong> यदि आप कस्टम "संपर्क" फ़ील्ड उपयोग करते हैं, तो ऐप आपकी फ़ोनबुक तक पहुँच केवल इसलिए माँगता है ताकि आप तेज़ी से कोई नाम चुन सकें। यह डेटा स्थानीय रूप से संसाधित होता है और किसी सर्वर पर कभी अपलोड नहीं होता।</li>
-            <li><strong>माइक्रोफ़ोन और वाक् पहचान:</strong> दो कामों के लिए। (1) आवाज़ नोट: आप जो रिकॉर्डिंग किसी एंट्री में जोड़ते हैं वह उसी एंट्री के हिस्से के रूप में आपके डिवाइस पर सहेजी जाती है, बैकअप चालू होने पर उसमें शामिल होती है, और एंट्री हटाने पर मिट जाती है। (2) AI सहायक के आवाज़ आदेश: आपकी बात टेक्स्ट में बदली जाती है, और वह टेक्स्ट या ऑडियो आपके चुने हुए AI प्रदाता को भेजा जाता है ताकि आपका अनुरोध पूरा हो। हम आपके ऑडियो या टेक्स्ट का उपयोग किसी AI मॉडल को प्रशिक्षित करने के लिए नहीं करते।</li>
-            <li><strong>कैमरा:</strong> केवल तब उपयोग होता है जब आप रसीद या बिल की फ़ोटो लेना चुनते हैं - या तो छवि को एंट्री से जोड़ने के लिए, या AI सहायक द्वारा उसे पढ़कर एंट्री बनाने के लिए। ऐप कभी पृष्ठभूमि में कैमरा उपयोग नहीं करता।</li>
-            <li><strong>फ़ोटो / मीडिया:</strong> केवल तब उपयोग होता है जब आप गैलरी से कोई छवि चुनकर एंट्री में जोड़ते हैं या AI सहायक को भेजते हैं। ऐप को केवल वही आइटम मिलते हैं जो आप चुनते हैं।</li>
-            <li><strong>सूचनाएँ:</strong> दोहराई जाने वाली एंट्री की देय तिथि याद दिलाने, बैकअप अनुस्मारक और सिंक स्थिति के लिए। आप इन्हें कभी भी सिस्टम सेटिंग्स से बंद कर सकते हैं।</li>
-            <li><strong>सटीक अलार्म और स्टार्टअप पर चलना (Android):</strong> आपकी दोहराई जाने वाली एंट्री को निर्धारित समय पर बनाने और डिवाइस पुनः चालू होने के बाद उन शेड्यूल को बहाल करने के लिए।</li>
-        </ul>
+      <h2>4. आवश्यक अनुमतियाँ</h2>
+      <ul>
+        <li>
+          <strong>संग्रहण / फ़ाइलें:</strong> केवल PDF रिपोर्ट निर्यात करने,
+          आपके डेटाबेस बैकअप (.mrecb फ़ाइलें) सहेजने या पुनर्स्थापित करने, और
+          आपकी एंट्री में फ़ाइलें संलग्न करने के लिए उपयोग होती है।
+        </li>
+        <li>
+          <strong>बायोमेट्रिक्स (Face ID / Touch ID / फ़िंगरप्रिंट):</strong>
+          "ऐप लॉक" और बैकअप प्राधिकरण के लिए आपके डिवाइस का OS इसे स्थानीय रूप
+          से उपयोग करता है। हम आपका बायोमेट्रिक डेटा न तो देखते हैं न संग्रहित
+          करते हैं।
+        </li>
+        <li>
+          <strong>संपर्क:</strong> यदि आप कस्टम "संपर्क" फ़ील्ड उपयोग करते हैं,
+          तो ऐप आपकी फ़ोनबुक तक पहुँच केवल इसलिए माँगता है ताकि आप तेज़ी से कोई
+          नाम चुन सकें। यह डेटा स्थानीय रूप से संसाधित होता है और किसी सर्वर पर
+          कभी अपलोड नहीं होता।
+        </li>
+        <li>
+          <strong>माइक्रोफ़ोन और वाक् पहचान:</strong> दो कामों के लिए। (1) आवाज़
+          नोट: आप जो रिकॉर्डिंग किसी एंट्री में जोड़ते हैं वह उसी एंट्री के
+          हिस्से के रूप में आपके डिवाइस पर सहेजी जाती है, बैकअप चालू होने पर
+          उसमें शामिल होती है, और एंट्री हटाने पर मिट जाती है। (2) AI सहायक के
+          आवाज़ आदेश: आपकी बात टेक्स्ट में बदली जाती है, और वह टेक्स्ट या ऑडियो
+          आपके चुने हुए AI प्रदाता को भेजा जाता है ताकि आपका अनुरोध पूरा हो। हम
+          आपके ऑडियो या टेक्स्ट का उपयोग किसी AI मॉडल को प्रशिक्षित करने के लिए
+          नहीं करते।
+        </li>
+        <li>
+          <strong>कैमरा:</strong> केवल तब उपयोग होता है जब आप रसीद या बिल की
+          फ़ोटो लेना चुनते हैं - या तो छवि को एंट्री से जोड़ने के लिए, या AI
+          सहायक द्वारा उसे पढ़कर एंट्री बनाने के लिए। ऐप कभी पृष्ठभूमि में कैमरा
+          उपयोग नहीं करता।
+        </li>
+        <li>
+          <strong>फ़ोटो / मीडिया:</strong> केवल तब उपयोग होता है जब आप गैलरी से
+          कोई छवि चुनकर एंट्री में जोड़ते हैं या AI सहायक को भेजते हैं। ऐप को
+          केवल वही आइटम मिलते हैं जो आप चुनते हैं।
+        </li>
+        <li>
+          <strong>सूचनाएँ:</strong> दोहराई जाने वाली एंट्री की देय तिथि याद
+          दिलाने, बैकअप अनुस्मारक और सिंक स्थिति के लिए। आप इन्हें कभी भी सिस्टम
+          सेटिंग्स से बंद कर सकते हैं।
+        </li>
+        <li>
+          <strong>सटीक अलार्म और स्टार्टअप पर चलना (Android):</strong> आपकी
+          दोहराई जाने वाली एंट्री को निर्धारित समय पर बनाने और डिवाइस पुनः चालू
+          होने के बाद उन शेड्यूल को बहाल करने के लिए।
+        </li>
+      </ul>
 
-        <h2>5. डेटा विलोपन नीति</h2>
-        <p>चूंकि आपका डेटा हमारे सर्वर पर संग्रहीत नहीं है, इसलिए इसे हटाने पर आपका पूर्ण नियंत्रण है:</p>
-        <ul>
-            <li><strong>स्थानीय डेटा:</strong> बस MRE CashBook ऐप को अनइंस्टॉल करें।</li>
-            <li><strong>क्लाउड डेटा:</strong> अपने Google Drive / Huawei Drive खाते पर जाएं, बैकअप फ़ोल्डर का पता लगाएं और फ़ाइलों को हटा दें।</li>
-        </ul>
+      <h2>5. डेटा विलोपन नीति</h2>
+      <p>
+        चूंकि आपका डेटा हमारे सर्वर पर संग्रहीत नहीं है, इसलिए इसे हटाने पर आपका
+        पूर्ण नियंत्रण है:
+      </p>
+      <ul>
+        <li>
+          <strong>स्थानीय डेटा:</strong> बस MRE CashBook ऐप को अनइंस्टॉल करें।
+        </li>
+        <li>
+          <strong>क्लाउड डेटा:</strong> अपने Google Drive / Huawei Drive खाते पर
+          जाएं, बैकअप फ़ोल्डर का पता लगाएं और फ़ाइलों को हटा दें।
+        </li>
+      </ul>
 
-        <h2>6. संपर्क करें</h2>
-        <div class="contact-group">
-            <a href="https://wa.me/201553668845" class="contact-btn" target="_blank">WhatsApp</a>
-            <a href="mailto:mrecode24@gmail.com" class="contact-btn email" target="_blank">Email</a>
-        </div>
+      <h2>6. संपर्क करें</h2>
+      <div class="contact-group">
+        <a href="https://wa.me/201553668845" class="contact-btn" target="_blank"
+          >WhatsApp</a
+        >
+        <a
+          href="mailto:mrecode24@gmail.com"
+          class="contact-btn email"
+          target="_blank"
+          >Email</a
+        >
+      </div>
     </div>
 
     <!-- RUSSIAN -->
     <div id="section-ru" class="lang-section">
-        <h1>Политика конфиденциальности MRE CashBook</h1>
-        <p><strong>Последнее обновление:</strong> Август 2026 г.</p>
-        <p>Приложение <strong>MRE CashBook</strong> разработано командой <strong>MRE Code</strong>. Это персональная цифровая кассовая книга. <strong>Мы НЕ являемся банком или финансовым учреждением.</strong></p>
-        <div class="highlight">Мы НЕ собираем, не передаем, не храним и не продаем ваши финансовые данные (такие как записи, долги или инвентарь). Ваши данные остаются на 100% на вашем устройстве или в вашем личном облаке.</div>
+      <h1>Политика конфиденциальности MRE CashBook</h1>
+      <p><strong>Последнее обновление:</strong> Август 2026 г.</p>
+      <p>
+        Приложение <strong>MRE CashBook</strong> разработано командой
+        <strong>MRE Code</strong>. Это персональная цифровая кассовая книга.
+        <strong>Мы НЕ являемся банком или финансовым учреждением.</strong>
+      </p>
+      <div class="highlight">
+        Мы НЕ собираем, не передаем, не храним и не продаем ваши финансовые
+        данные (такие как записи, долги или инвентарь). Ваши данные остаются на
+        100% на вашем устройстве или в вашем личном облаке.
+      </div>
 
-        <h2>1. Сбор и использование данных</h2>
-        <p>Вам не нужно создавать учетную запись, и ваши финансовые записи <strong>никогда</strong> не загружаются на наши серверы. Если вы дополнительно включите облачную синхронизацию через Google или Huawei, мы соберём имя, эл. почту и URL фото аккаунта для управления аккаунтом на ваших устройствах и уведомлений. Мы не продаём эти данные. Адрес почты может быть передан провайдеру уведомлений (OneSignal) только чтобы напоминания доходили до нужного аккаунта.</p>
-        <p>При запуске мы отправляем в Firebase небольшой профиль устройства.</p>
+      <h2>1. Сбор и использование данных</h2>
+      <p>
+        Вам не нужно создавать учетную запись, и ваши финансовые записи
+        <strong>никогда</strong> не загружаются на наши серверы. Если вы
+        дополнительно включите облачную синхронизацию через Google или Huawei,
+        мы соберём имя, эл. почту и URL фото аккаунта для управления аккаунтом
+        на ваших устройствах и уведомлений. Мы не продаём эти данные. Адрес
+        почты может быть передан провайдеру уведомлений (OneSignal) только чтобы
+        напоминания доходили до нужного аккаунта.
+      </p>
+      <p>При запуске мы отправляем в Firebase небольшой профиль устройства.</p>
 
-        <h2>2. Сторонние сервисы (Аналитика и уведомления)</h2>
-        <p>Мы используем следующие сервисы:</p>
-        <ul>
-            <li><strong>Firebase Crashlytics:</strong> Собирает анонимные данные о сбоях, чтобы помочь нам исправлять ошибки. Эти данные не связаны с вашей личностью.</li>
-            <li><strong>OneSignal:</strong> Используется для доставки важных локальных уведомлений (например, напоминаний о резервном копировании).</li>
-            <li><strong>Поставщики ИИ (необязательно):</strong> ИИ-помощник работает только когда вы им пользуетесь. В этом запросе мы передаём выбранному поставщику — Google Gemini, DeepSeek, OpenAI (ChatGPT), Anthropic (Claude), AgentRouter или вашей точке подключения — (1) сообщения чата в приложении (текст и краткую недавнюю историю), (2) прикреплённое фото и (3) голосовую запись, чтобы сформировать ответ. База книги учёта никогда не загружается; имена книг и полей (не суммы) могут быть контекстом. Чат хранится на устройстве и удаляется по вашему сроку хранения. Мы не обучаем модели на вашем контенте. При своём API-ключе действует политика этого поставщика.</li>
-        </ul>
+      <h2>2. Сторонние сервисы (Аналитика и уведомления)</h2>
+      <p>Мы используем следующие сервисы:</p>
+      <ul>
+        <li>
+          <strong>Firebase Crashlytics:</strong> Собирает анонимные данные о
+          сбоях, чтобы помочь нам исправлять ошибки. Эти данные не связаны с
+          вашей личностью.
+        </li>
+        <li>
+          <strong>OneSignal:</strong> Используется для доставки важных локальных
+          уведомлений (например, напоминаний о резервном копировании).
+        </li>
+        <li>
+          <strong>Поставщики ИИ (необязательно):</strong> ИИ-помощник работает
+          только когда вы им пользуетесь. В этом запросе мы передаём выбранному
+          поставщику — Google Gemini, DeepSeek, OpenAI (ChatGPT), Anthropic
+          (Claude), AgentRouter или вашей точке подключения — (1) сообщения чата
+          в приложении (текст и краткую недавнюю историю), (2) прикреплённое
+          фото и (3) голосовую запись, чтобы сформировать ответ. База книги
+          учёта никогда не загружается; имена книг и полей (не суммы) могут быть
+          контекстом. Чат хранится на устройстве и удаляется по вашему сроку
+          хранения. Мы не обучаем модели на вашем контенте. При своём API-ключе
+          действует политика этого поставщика.
+        </li>
+      </ul>
 
-        <h2>3. Облачная синхронизация, Google Диск и резервные копии</h2>
-        <p>По умолчанию приложение работает полностью в автономном режиме. Если вы включите «Облачную синхронизацию», приложение запросит доступ к вашему <strong>Google Диску</strong>. При включенном автоматическом резервном копировании приложение использует фоновые процессы (даже в закрытом состоянии) для периодической загрузки ваших зашифрованных резервных копий.</p>
-        <ul>
-            <li>Ваши файлы резервных копий шифруются локально перед безопасной загрузкой непосредственно на <strong>ваш личный</strong> аккаунт Google Диск.</li>
-            <li>Мы, разработчики, <strong>НЕ ИМЕЕМ НИКАКОГО ДОСТУПА</strong> к вашему Google Диску или вашим файлам.</li>
-            <li>Данные передаются напрямую между вашим устройством и серверами Google.</li>
-        </ul>
+      <h2>3. Облачная синхронизация, Google Диск и резервные копии</h2>
+      <p>
+        По умолчанию приложение работает полностью в автономном режиме. Если вы
+        включите «Облачную синхронизацию», приложение запросит доступ к вашему
+        <strong>Google Диску</strong>. При включенном автоматическом резервном
+        копировании приложение использует фоновые процессы (даже в закрытом
+        состоянии) для периодической загрузки ваших зашифрованных резервных
+        копий.
+      </p>
+      <ul>
+        <li>
+          Ваши файлы резервных копий шифруются локально перед безопасной
+          загрузкой непосредственно на <strong>ваш личный</strong> аккаунт
+          Google Диск.
+        </li>
+        <li>
+          Мы, разработчики, <strong>НЕ ИМЕЕМ НИКАКОГО ДОСТУПА</strong> к вашему
+          Google Диску или вашим файлам.
+        </li>
+        <li>
+          Данные передаются напрямую между вашим устройством и серверами Google.
+        </li>
+      </ul>
 
-        <h2>4. Необходимые разрешения</h2>
-        <ul>
-            <li><strong>Хранилище / Файлы:</strong> Используется строго для экспорта PDF-отчетов, сохранения или восстановления резервных копий базы данных (файлы .mrecb) и прикрепления файлов к вашим записям.</li>
-            <li><strong>Биометрия (Face ID / Touch ID / отпечаток):</strong> Используется локально операционной системой вашего устройства для «Блокировки приложения» и подтверждения резервного копирования. Мы не получаем доступ к вашим биометрическим данным и не храним их.</li>
-            <li><strong>Контакты:</strong> Если вы используете пользовательское поле «Контакт», приложение запрашивает доступ к телефонной книге только для того, чтобы вы могли быстро выбрать имя. Эти данные обрабатываются локально и НИКОГДА не загружаются на сервер.</li>
-            <li><strong>Микрофон и распознавание речи:</strong> Используются для двух задач. (1) Голосовые заметки: запись, которую вы добавляете к записи учета, сохраняется на вашем устройстве как ее часть, включается в резервные копии, если вы их включили, и удаляется вместе с записью. (2) Голосовые команды ИИ-помощника: ваша речь преобразуется в текст, и этот текст или звук отправляется выбранному вами поставщику ИИ для выполнения запроса. Мы не используем ваш звук или текст для обучения каких-либо моделей ИИ.</li>
-            <li><strong>Камера:</strong> Используется только когда вы решаете сфотографировать чек или счет - чтобы прикрепить изображение к записи или чтобы ИИ-помощник прочитал его и превратил в записи. Приложение никогда не использует камеру в фоновом режиме.</li>
-            <li><strong>Фото / Медиа:</strong> Используется только когда вы выбираете изображение из галереи, чтобы прикрепить его к записи или отправить ИИ-помощнику. Приложение получает только выбранные вами элементы.</li>
-            <li><strong>Уведомления:</strong> Используются, чтобы напомнить о наступлении срока повторяющейся записи, для напоминаний о резервном копировании и для статуса синхронизации. Вы можете отключить их в настройках системы в любой момент.</li>
-            <li><strong>Точные будильники и запуск при загрузке (Android):</strong> Используются, чтобы создавать повторяющиеся записи точно в запланированное время и восстанавливать эти расписания после перезагрузки устройства.</li>
-        </ul>
+      <h2>4. Необходимые разрешения</h2>
+      <ul>
+        <li>
+          <strong>Хранилище / Файлы:</strong> Используется строго для экспорта
+          PDF-отчетов, сохранения или восстановления резервных копий базы данных
+          (файлы .mrecb) и прикрепления файлов к вашим записям.
+        </li>
+        <li>
+          <strong>Биометрия (Face ID / Touch ID / отпечаток):</strong>
+          Используется локально операционной системой вашего устройства для
+          «Блокировки приложения» и подтверждения резервного копирования. Мы не
+          получаем доступ к вашим биометрическим данным и не храним их.
+        </li>
+        <li>
+          <strong>Контакты:</strong> Если вы используете пользовательское поле
+          «Контакт», приложение запрашивает доступ к телефонной книге только для
+          того, чтобы вы могли быстро выбрать имя. Эти данные обрабатываются
+          локально и НИКОГДА не загружаются на сервер.
+        </li>
+        <li>
+          <strong>Микрофон и распознавание речи:</strong> Используются для двух
+          задач. (1) Голосовые заметки: запись, которую вы добавляете к записи
+          учета, сохраняется на вашем устройстве как ее часть, включается в
+          резервные копии, если вы их включили, и удаляется вместе с записью.
+          (2) Голосовые команды ИИ-помощника: ваша речь преобразуется в текст, и
+          этот текст или звук отправляется выбранному вами поставщику ИИ для
+          выполнения запроса. Мы не используем ваш звук или текст для обучения
+          каких-либо моделей ИИ.
+        </li>
+        <li>
+          <strong>Камера:</strong> Используется только когда вы решаете
+          сфотографировать чек или счет - чтобы прикрепить изображение к записи
+          или чтобы ИИ-помощник прочитал его и превратил в записи. Приложение
+          никогда не использует камеру в фоновом режиме.
+        </li>
+        <li>
+          <strong>Фото / Медиа:</strong> Используется только когда вы выбираете
+          изображение из галереи, чтобы прикрепить его к записи или отправить
+          ИИ-помощнику. Приложение получает только выбранные вами элементы.
+        </li>
+        <li>
+          <strong>Уведомления:</strong> Используются, чтобы напомнить о
+          наступлении срока повторяющейся записи, для напоминаний о резервном
+          копировании и для статуса синхронизации. Вы можете отключить их в
+          настройках системы в любой момент.
+        </li>
+        <li>
+          <strong>Точные будильники и запуск при загрузке (Android):</strong>
+          Используются, чтобы создавать повторяющиеся записи точно в
+          запланированное время и восстанавливать эти расписания после
+          перезагрузки устройства.
+        </li>
+      </ul>
 
-        <h2>5. Политика удаления данных</h2>
-        <p>Поскольку данные не хранятся на наших серверах, вы полностью контролируете их удаление:</p>
-        <ul>
-            <li><strong>Локальные данные:</strong> Просто удалите приложение MRE CashBook с вашего устройства.</li>
-            <li><strong>Облачные данные:</strong> Перейдите на свой Google Диск, найдите папку резервных копий и удалите файлы.</li>
-        </ul>
+      <h2>5. Политика удаления данных</h2>
+      <p>
+        Поскольку данные не хранятся на наших серверах, вы полностью
+        контролируете их удаление:
+      </p>
+      <ul>
+        <li>
+          <strong>Локальные данные:</strong> Просто удалите приложение MRE
+          CashBook с вашего устройства.
+        </li>
+        <li>
+          <strong>Облачные данные:</strong> Перейдите на свой Google Диск,
+          найдите папку резервных копий и удалите файлы.
+        </li>
+      </ul>
 
-        <h2>6. Контакты</h2>
-        <div class="contact-group">
-            <a href="https://wa.me/201553668845" class="contact-btn" target="_blank">WhatsApp</a>
-            <a href="mailto:mrecode24@gmail.com" class="contact-btn email" target="_blank">Email</a>
-        </div>
+      <h2>6. Контакты</h2>
+      <div class="contact-group">
+        <a href="https://wa.me/201553668845" class="contact-btn" target="_blank"
+          >WhatsApp</a
+        >
+        <a
+          href="mailto:mrecode24@gmail.com"
+          class="contact-btn email"
+          target="_blank"
+          >Email</a
+        >
+      </div>
     </div>
 
     <!-- TURKISH -->
     <div id="section-tr" class="lang-section">
-        <h1>MRE CashBook Gizlilik Politikası</h1>
-        <p><strong>Son Güncelleme:</strong> Ağustos 2026</p>
-        <p><strong>MRE Code</strong>, <strong>MRE CashBook</strong> uygulamasını geliştirdi. Yalnızca kişisel dijital bir defter olarak tasarlanmıştır. <strong>Biz bir banka veya finans kuruluşu DEĞİLİZ.</strong></p>
-        <div class="highlight">Finansal verilerinizin HİÇBİRİNİ (girişler, borçlar veya envanter gibi) TOPLAMIYORUZ, saklamıyoruz, satmıyoruz veya paylaşmıyoruz. Verileriniz %100 oranında cihazınızda veya kendi bulutunuzda kalır.</div>
+      <h1>MRE CashBook Gizlilik Politikası</h1>
+      <p><strong>Son Güncelleme:</strong> Ağustos 2026</p>
+      <p>
+        <strong>MRE Code</strong>, <strong>MRE CashBook</strong> uygulamasını
+        geliştirdi. Yalnızca kişisel dijital bir defter olarak tasarlanmıştır.
+        <strong>Biz bir banka veya finans kuruluşu DEĞİLİZ.</strong>
+      </p>
+      <div class="highlight">
+        Finansal verilerinizin HİÇBİRİNİ (girişler, borçlar veya envanter gibi)
+        TOPLAMIYORUZ, saklamıyoruz, satmıyoruz veya paylaşmıyoruz. Verileriniz
+        %100 oranında cihazınızda veya kendi bulutunuzda kalır.
+      </div>
 
-        <h2>1. Veri Toplama ve Kullanım</h2>
-        <p>Hesap oluşturmanız gerekmez ve mali kayıtlarınız <strong>asla</strong> sunucularımıza yüklenmez. Google veya Huawei ile isteğe bağlı Bulut Senkronizasyonu açarsanız adınızı, e-postanızı ve hesap fotoğrafı URL'sini toplarız; hesap yönetimi ve bildirimler için. Satmayız. E-postanız yalnızca hatırlatmaların doğru hesaba ulaşması için bildirim sağlayıcımıza (OneSignal) gönderilebilir.</p>
-        <p>Açılışta Firebase'e küçük bir cihaz profili göndeririz.</p>
+      <h2>1. Veri Toplama ve Kullanım</h2>
+      <p>
+        Hesap oluşturmanız gerekmez ve mali kayıtlarınız
+        <strong>asla</strong> sunucularımıza yüklenmez. Google veya Huawei ile
+        isteğe bağlı Bulut Senkronizasyonu açarsanız adınızı, e-postanızı ve
+        hesap fotoğrafı URL'sini toplarız; hesap yönetimi ve bildirimler için.
+        Satmayız. E-postanız yalnızca hatırlatmaların doğru hesaba ulaşması için
+        bildirim sağlayıcımıza (OneSignal) gönderilebilir.
+      </p>
+      <p>Açılışta Firebase'e küçük bir cihaz profili göndeririz.</p>
 
-        <h2>2. Üçüncü Taraf Hizmetleri</h2>
-        <p>Uygulama kararlılığını sağlamak için aşağıdakileri kullanıyoruz:</p>
-        <ul>
-            <li><strong>Firebase Crashlytics:</strong> Hataları düzeltmemize yardımcı olmak için anonim çökme günlükleri toplar.</li>
-            <li><strong>OneSignal:</strong> Önemli sistem bildirimlerini (ör. yedekleme hatırlatıcıları) iletmek için kullanılır.</li>
-            <li><strong>YZ Sağlayıcıları (isteğe bağlı):</strong> YZ Asistanı yalnızca siz kullandığınızda çalışır. O istekte seçtiğiniz sağlayıcıyla — Google Gemini, DeepSeek, OpenAI (ChatGPT), Anthropic (Claude), AgentRouter veya özel uç nokta — (1) uygulama içi sohbet iletilerinizi (metin ve kısa yakın geçmiş), (2) eklediğiniz fotoğrafı ve (3) gönderdiğiniz ses kaydını yanıt üretilmesi için paylaşırız. Defter veritabanınız asla yüklenmez; bağlam için defter ve alan adları (tutarlar değil) eklenebilir. Sohbet cihazınızda kalır ve saklama ayarınıza göre silinir. İçeriğinizle model eğitmeyiz. Kendi API anahtarınızda o sağlayıcının politikası geçerlidir.</li>
-        </ul>
+      <h2>2. Üçüncü Taraf Hizmetleri</h2>
+      <p>Uygulama kararlılığını sağlamak için aşağıdakileri kullanıyoruz:</p>
+      <ul>
+        <li>
+          <strong>Firebase Crashlytics:</strong> Hataları düzeltmemize yardımcı
+          olmak için anonim çökme günlükleri toplar.
+        </li>
+        <li>
+          <strong>OneSignal:</strong> Önemli sistem bildirimlerini (ör.
+          yedekleme hatırlatıcıları) iletmek için kullanılır.
+        </li>
+        <li>
+          <strong>YZ Sağlayıcıları (isteğe bağlı):</strong> YZ Asistanı yalnızca
+          siz kullandığınızda çalışır. O istekte seçtiğiniz sağlayıcıyla —
+          Google Gemini, DeepSeek, OpenAI (ChatGPT), Anthropic (Claude),
+          AgentRouter veya özel uç nokta — (1) uygulama içi sohbet iletilerinizi
+          (metin ve kısa yakın geçmiş), (2) eklediğiniz fotoğrafı ve (3)
+          gönderdiğiniz ses kaydını yanıt üretilmesi için paylaşırız. Defter
+          veritabanınız asla yüklenmez; bağlam için defter ve alan adları
+          (tutarlar değil) eklenebilir. Sohbet cihazınızda kalır ve saklama
+          ayarınıza göre silinir. İçeriğinizle model eğitmeyiz. Kendi API
+          anahtarınızda o sağlayıcının politikası geçerlidir.
+        </li>
+      </ul>
 
-        <h2>3. Bulut Senkronizasyonu, Google Drive / Huawei Drive ve Yedeklemeler</h2>
-        <p>Uygulama tamamen çevrimdışı çalışır. "Bulut Senkronizasyonu"nu etkinleştirirseniz, uygulama veritabanı yedeklemelerinizi güvenli bir şekilde saklamak için <strong>Google Drive / Huawei Drive</strong> hesabınıza erişim ister. Otomatik Yedekleme etkinleştirildiğinde, uygulama şifrelenmiş yedeklemelerinizi periyodik olarak yüklemek için arka plan işlemlerini (kapalıyken bile) kullanır.</p>
-        <ul>
-            <li>Yedekleme dosyalarınız, <strong>kendi kişisel</strong> Google Drive / Huawei Drive hesabınıza güvenli bir şekilde yüklenmeden önce yerel olarak şifrelenir.</li>
-            <li>Biz geliştiricilerin Google Drive / Huawei Drive hesabınıza, yedekleme dosyalarınıza veya defter verilerinize <strong>KESİNLİKLE HİÇBİR ERİŞİMİ YOKTUR</strong>.</li>
-            <li>Veriler doğrudan cihazınız ile Google'ın sunucuları arasında iletilir.</li>
-        </ul>
+      <h2>
+        3. Bulut Senkronizasyonu, Google Drive / Huawei Drive ve Yedeklemeler
+      </h2>
+      <p>
+        Uygulama tamamen çevrimdışı çalışır. "Bulut Senkronizasyonu"nu
+        etkinleştirirseniz, uygulama veritabanı yedeklemelerinizi güvenli bir
+        şekilde saklamak için
+        <strong>Google Drive / Huawei Drive</strong> hesabınıza erişim ister.
+        Otomatik Yedekleme etkinleştirildiğinde, uygulama şifrelenmiş
+        yedeklemelerinizi periyodik olarak yüklemek için arka plan işlemlerini
+        (kapalıyken bile) kullanır.
+      </p>
+      <ul>
+        <li>
+          Yedekleme dosyalarınız, <strong>kendi kişisel</strong> Google Drive /
+          Huawei Drive hesabınıza güvenli bir şekilde yüklenmeden önce yerel
+          olarak şifrelenir.
+        </li>
+        <li>
+          Biz geliştiricilerin Google Drive / Huawei Drive hesabınıza, yedekleme
+          dosyalarınıza veya defter verilerinize
+          <strong>KESİNLİKLE HİÇBİR ERİŞİMİ YOKTUR</strong>.
+        </li>
+        <li>
+          Veriler doğrudan cihazınız ile Google'ın sunucuları arasında iletilir.
+        </li>
+      </ul>
 
-        <h2>4. Gerekli İzinler</h2>
-        <ul>
-            <li><strong>Depolama / Dosyalar:</strong> Yalnızca PDF raporları dışa aktarmak, veritabanı yedeklerinizi (.mrecb dosyaları) kaydetmek veya geri yüklemek ve kayıtlarınıza dosya eklemek için kullanılır.</li>
-            <li><strong>Biyometri (Face ID / Touch ID / Parmak izi):</strong> "Uygulama Kilidi" ve yedekleme onayı için cihazınızın işletim sistemi tarafından yerel olarak kullanılır. Biyometrik verilerinize erişmez ve onları saklamayız.</li>
-            <li><strong>Kişiler:</strong> Özel "Kişi" alanını kullanırsanız, uygulama rehberinize erişimi yalnızca hızlıca bir ad seçebilmeniz için ister. Bu veriler yerel olarak işlenir ve ASLA bir sunucuya yüklenmez.</li>
-            <li><strong>Mikrofon ve Konuşma Tanıma:</strong> İki amaçla kullanılır. (1) Sesli notlar: bir kayda eklediğiniz ses, o kaydın parçası olarak cihazınızda saklanır, yedeklemeyi açtıysanız yedeklerinize dahil edilir ve kaydı sildiğinizde silinir. (2) YZ Asistanı sesli komutları: konuşmanız metne dönüştürülür ve bu metin veya ses, isteğinizi yerine getirmek üzere seçtiğiniz YZ sağlayıcısına gönderilir. Sesinizi veya metninizi herhangi bir YZ modelini eğitmek için kullanmayız.</li>
-            <li><strong>Kamera:</strong> Yalnızca bir fiş veya fatura fotoğraflamayı seçtiğinizde kullanılır; görseli bir kayda eklemek ya da YZ Asistanı'nın okuyup kayda dönüştürmesi için. Uygulama kamerayı asla arka planda kullanmaz.</li>
-            <li><strong>Fotoğraflar / Medya:</strong> Yalnızca galerinizden bir görsel seçip bir kayda eklediğinizde veya YZ Asistanı'na gönderdiğinizde kullanılır. Uygulama sadece seçtiğiniz öğeleri alır.</li>
-            <li><strong>Bildirimler:</strong> Yinelenen bir kaydın vadesi geldiğinde hatırlatmak, yedekleme hatırlatmaları ve senkronizasyon durumu için kullanılır. Sistem ayarlarınızdan istediğiniz zaman kapatabilirsiniz.</li>
-            <li><strong>Tam zamanlı alarmlar ve açılışta çalışma (Android):</strong> Yinelenen kayıtlarınızı planladığınız saatte oluşturmak ve cihaz yeniden başladıktan sonra bu programları geri yüklemek için kullanılır.</li>
-        </ul>
+      <h2>4. Gerekli İzinler</h2>
+      <ul>
+        <li>
+          <strong>Depolama / Dosyalar:</strong> Yalnızca PDF raporları dışa
+          aktarmak, veritabanı yedeklerinizi (.mrecb dosyaları) kaydetmek veya
+          geri yüklemek ve kayıtlarınıza dosya eklemek için kullanılır.
+        </li>
+        <li>
+          <strong>Biyometri (Face ID / Touch ID / Parmak izi):</strong>
+          "Uygulama Kilidi" ve yedekleme onayı için cihazınızın işletim sistemi
+          tarafından yerel olarak kullanılır. Biyometrik verilerinize erişmez ve
+          onları saklamayız.
+        </li>
+        <li>
+          <strong>Kişiler:</strong> Özel "Kişi" alanını kullanırsanız, uygulama
+          rehberinize erişimi yalnızca hızlıca bir ad seçebilmeniz için ister.
+          Bu veriler yerel olarak işlenir ve ASLA bir sunucuya yüklenmez.
+        </li>
+        <li>
+          <strong>Mikrofon ve Konuşma Tanıma:</strong> İki amaçla kullanılır.
+          (1) Sesli notlar: bir kayda eklediğiniz ses, o kaydın parçası olarak
+          cihazınızda saklanır, yedeklemeyi açtıysanız yedeklerinize dahil
+          edilir ve kaydı sildiğinizde silinir. (2) YZ Asistanı sesli komutları:
+          konuşmanız metne dönüştürülür ve bu metin veya ses, isteğinizi yerine
+          getirmek üzere seçtiğiniz YZ sağlayıcısına gönderilir. Sesinizi veya
+          metninizi herhangi bir YZ modelini eğitmek için kullanmayız.
+        </li>
+        <li>
+          <strong>Kamera:</strong> Yalnızca bir fiş veya fatura fotoğraflamayı
+          seçtiğinizde kullanılır; görseli bir kayda eklemek ya da YZ
+          Asistanı'nın okuyup kayda dönüştürmesi için. Uygulama kamerayı asla
+          arka planda kullanmaz.
+        </li>
+        <li>
+          <strong>Fotoğraflar / Medya:</strong> Yalnızca galerinizden bir görsel
+          seçip bir kayda eklediğinizde veya YZ Asistanı'na gönderdiğinizde
+          kullanılır. Uygulama sadece seçtiğiniz öğeleri alır.
+        </li>
+        <li>
+          <strong>Bildirimler:</strong> Yinelenen bir kaydın vadesi geldiğinde
+          hatırlatmak, yedekleme hatırlatmaları ve senkronizasyon durumu için
+          kullanılır. Sistem ayarlarınızdan istediğiniz zaman kapatabilirsiniz.
+        </li>
+        <li>
+          <strong>Tam zamanlı alarmlar ve açılışta çalışma (Android):</strong>
+          Yinelenen kayıtlarınızı planladığınız saatte oluşturmak ve cihaz
+          yeniden başladıktan sonra bu programları geri yüklemek için
+          kullanılır.
+        </li>
+      </ul>
 
-        <h2>5. Veri Silme Politikası</h2>
-        <p>Verileriniz bizim sunucularımızda saklanmadığından, silinmesi tamamen sizin kontrolünüzdedir:</p>
-        <ul>
-            <li><strong>Yerel Veriler:</strong> MRE CashBook uygulamasını cihazınızdan kaldırmanız yeterlidir.</li>
-            <li><strong>Bulut Verileri:</strong> Google Drive / Huawei Drive hesabınıza gidin, MRE CashBook yedekleme klasörünü bulun ve dosyaları silin.</li>
-        </ul>
+      <h2>5. Veri Silme Politikası</h2>
+      <p>
+        Verileriniz bizim sunucularımızda saklanmadığından, silinmesi tamamen
+        sizin kontrolünüzdedir:
+      </p>
+      <ul>
+        <li>
+          <strong>Yerel Veriler:</strong> MRE CashBook uygulamasını cihazınızdan
+          kaldırmanız yeterlidir.
+        </li>
+        <li>
+          <strong>Bulut Verileri:</strong> Google Drive / Huawei Drive
+          hesabınıza gidin, MRE CashBook yedekleme klasörünü bulun ve dosyaları
+          silin.
+        </li>
+      </ul>
 
-        <h2>6. İletişim</h2>
-        <div class="contact-group">
-            <a href="https://wa.me/201553668845" class="contact-btn" target="_blank">WhatsApp</a>
-            <a href="mailto:mrecode24@gmail.com" class="contact-btn email" target="_blank">Email</a>
-        </div>
+      <h2>6. İletişim</h2>
+      <div class="contact-group">
+        <a href="https://wa.me/201553668845" class="contact-btn" target="_blank"
+          >WhatsApp</a
+        >
+        <a
+          href="mailto:mrecode24@gmail.com"
+          class="contact-btn email"
+          target="_blank"
+          >Email</a
+        >
+      </div>
     </div>
 
     <!-- CHINESE -->
     <div id="section-zh" class="lang-section">
-        <h1>MRE CashBook 隐私政策</h1>
-        <p><strong>最后更新：</strong> 2026年8月</p>
-        <p><strong>MRE Code</strong> 开发了 <strong>MRE CashBook</strong> 应用。它仅被设计为个人数字账本。<strong>我们不是银行或金融机构。</strong></p>
-        <div class="highlight">我们绝不收集、传输、存储、出售或共享您的任何财务数据（如条目、债务或库存）。您的数据 100% 完全保存在您的本地设备或您的个人云端。</div>
+      <h1>MRE CashBook 隐私政策</h1>
+      <p><strong>最后更新：</strong> 2026年8月</p>
+      <p>
+        <strong>MRE Code</strong> 开发了
+        <strong>MRE CashBook</strong> 应用。它仅被设计为个人数字账本。<strong
+          >我们不是银行或金融机构。</strong
+        >
+      </p>
+      <div class="highlight">
+        我们绝不收集、传输、存储、出售或共享您的任何财务数据（如条目、债务或库存）。您的数据
+        100% 完全保存在您的本地设备或您的个人云端。
+      </div>
 
-        <h2>1. 数据收集与使用</h2>
-        <p>我们不要求您创建账户，您的财务记录<strong>绝不会</strong>上传到我们的服务器。但若您选择通过 Google 或华为启用云同步，我们会收集姓名、电子邮件和账户头像 URL，用于跨设备账户管理及相关通知。我们不会出售这些数据。电子邮件可能仅会发送给我们的通知服务商（OneSignal），以便提醒送达正确账户。</p>
-        <p>启动时我们会向 Firebase 发送一份简要设备资料。</p>
+      <h2>1. 数据收集与使用</h2>
+      <p>
+        我们不要求您创建账户，您的财务记录<strong>绝不会</strong>上传到我们的服务器。但若您选择通过
+        Google 或华为启用云同步，我们会收集姓名、电子邮件和账户头像
+        URL，用于跨设备账户管理及相关通知。我们不会出售这些数据。电子邮件可能仅会发送给我们的通知服务商（OneSignal），以便提醒送达正确账户。
+      </p>
+      <p>启动时我们会向 Firebase 发送一份简要设备资料。</p>
 
-        <h2>2. 第三方服务 (分析与通知)</h2>
-        <p>为确保应用稳定，我们使用：</p>
-        <ul>
-            <li><strong>Firebase Crashlytics:</strong> 收集匿名崩溃日志，帮助我们修复错误。这与您的身份无关。</li>
-            <li><strong>OneSignal:</strong> 用于发送必要的本地通知（如备份提醒）。</li>
-            <li><strong>AI 服务商（可选）：</strong>AI 助手仅在你使用时运行。该次请求中，我们会与你选择的服务商 — Google Gemini、DeepSeek、OpenAI (ChatGPT)、Anthropic (Claude)、AgentRouter 或自定义接口 — 共享 (1) 应用内聊天消息（本次文本及一小段近期记录），(2) 你附加的照片，(3) 你发送的语音，以便生成回复。账本数据库绝不会上传；可用账本名和字段名（不含金额）作上下文。聊天保存在你的设备上，并按你的保留设置删除。我们不会用你的内容训练模型。若你填入自己的 API 密钥，则适用该服务商的隐私政策。</li>
-        </ul>
+      <h2>2. 第三方服务 (分析与通知)</h2>
+      <p>为确保应用稳定，我们使用：</p>
+      <ul>
+        <li>
+          <strong>Firebase Crashlytics:</strong>
+          收集匿名崩溃日志，帮助我们修复错误。这与您的身份无关。
+        </li>
+        <li>
+          <strong>OneSignal:</strong> 用于发送必要的本地通知（如备份提醒）。
+        </li>
+        <li>
+          <strong>AI 服务商（可选）：</strong>AI
+          助手仅在你使用时运行。该次请求中，我们会与你选择的服务商 — Google
+          Gemini、DeepSeek、OpenAI (ChatGPT)、Anthropic (Claude)、AgentRouter
+          或自定义接口 — 共享 (1)
+          应用内聊天消息（本次文本及一小段近期记录），(2) 你附加的照片，(3)
+          你发送的语音，以便生成回复。账本数据库绝不会上传；可用账本名和字段名（不含金额）作上下文。聊天保存在你的设备上，并按你的保留设置删除。我们不会用你的内容训练模型。若你填入自己的
+          API 密钥，则适用该服务商的隐私政策。
+        </li>
+      </ul>
 
-        <h2>3. 云同步、Google Drive / Huawei Drive 与备份</h2>
-        <p>默认情况下，应用完全离线运行。如果您启用“云同步”，应用将请求访问您的 <strong>Google Drive / Huawei Drive</strong> 帐户。启用自动备份后，应用将使用后台处理（即使在关闭时）定期上传您的加密备份，以确保数据安全。</p>
-        <ul>
-            <li>您的备份文件在被安全地直接上传到<strong>您个人的</strong> Google Drive / Huawei Drive 帐户之前，会在本地进行加密。</li>
-            <li>作为开发者，我们<strong>绝对无权访问</strong>您的 Google Drive / Huawei Drive 帐户或任何备份文件。</li>
-            <li>数据直接在您的设备和 Google 的服务器之间传输。</li>
-        </ul>
+      <h2>3. 云同步、Google Drive / Huawei Drive 与备份</h2>
+      <p>
+        默认情况下，应用完全离线运行。如果您启用“云同步”，应用将请求访问您的
+        <strong>Google Drive / Huawei Drive</strong>
+        帐户。启用自动备份后，应用将使用后台处理（即使在关闭时）定期上传您的加密备份，以确保数据安全。
+      </p>
+      <ul>
+        <li>
+          您的备份文件在被安全地直接上传到<strong>您个人的</strong> Google Drive
+          / Huawei Drive 帐户之前，会在本地进行加密。
+        </li>
+        <li>
+          作为开发者，我们<strong>绝对无权访问</strong>您的 Google Drive /
+          Huawei Drive 帐户或任何备份文件。
+        </li>
+        <li>数据直接在您的设备和 Google 的服务器之间传输。</li>
+      </ul>
 
-        <h2>4. 所需权限</h2>
-        <ul>
-            <li><strong>存储 / 文件：</strong>仅用于导出 PDF 报表、保存或恢复你的数据库备份（.mrecb 文件），以及为记录添加附件。</li>
-            <li><strong>生物识别（Face ID / Touch ID / 指纹）：</strong>由你设备的操作系统在本地用于"应用锁"和备份授权。我们不会访问或存储你的生物识别数据。</li>
-            <li><strong>通讯录：</strong>如果你使用自定义"联系人"字段，应用请求访问通讯录仅是为了让你快速选择一个名字。该数据在本地处理，绝不会上传到任何服务器。</li>
-            <li><strong>麦克风与语音识别：</strong>用于两件事。(1) 语音备注：你添加到某条记录中的录音会作为该记录的一部分保存在你的设备上；若你开启了备份，它会包含在备份中；删除该记录时录音一并删除。(2) AI 助手语音指令：你的语音会转换为文字，该文字或音频会发送给你所选择的 AI 服务商以执行你的请求。我们不会使用你的音频或文字去训练任何 AI 模型。</li>
-            <li><strong>相机：</strong>仅在你选择拍摄票据或发票时使用，用于把图片附加到记录，或让 AI 助手读取并转成记录。应用绝不会在后台使用相机。</li>
-            <li><strong>照片 / 媒体：</strong>仅在你从相册中选择图片以附加到记录或发送给 AI 助手时使用。应用只会收到你选中的项目。</li>
-            <li><strong>通知：</strong>用于在周期记账到期时提醒你、备份提醒以及同步状态。你可以随时在系统设置中关闭。</li>
-            <li><strong>精确闹钟与开机自启（Android）：</strong>用于在你设定的时间创建周期记账，并在设备重启后恢复这些计划。</li>
-        </ul>
+      <h2>4. 所需权限</h2>
+      <ul>
+        <li>
+          <strong>存储 / 文件：</strong>仅用于导出 PDF
+          报表、保存或恢复你的数据库备份（.mrecb 文件），以及为记录添加附件。
+        </li>
+        <li>
+          <strong>生物识别（Face ID / Touch ID / 指纹）：</strong
+          >由你设备的操作系统在本地用于"应用锁"和备份授权。我们不会访问或存储你的生物识别数据。
+        </li>
+        <li>
+          <strong>通讯录：</strong
+          >如果你使用自定义"联系人"字段，应用请求访问通讯录仅是为了让你快速选择一个名字。该数据在本地处理，绝不会上传到任何服务器。
+        </li>
+        <li>
+          <strong>麦克风与语音识别：</strong>用于两件事。(1)
+          语音备注：你添加到某条记录中的录音会作为该记录的一部分保存在你的设备上；若你开启了备份，它会包含在备份中；删除该记录时录音一并删除。(2)
+          AI 助手语音指令：你的语音会转换为文字，该文字或音频会发送给你所选择的
+          AI 服务商以执行你的请求。我们不会使用你的音频或文字去训练任何 AI
+          模型。
+        </li>
+        <li>
+          <strong>相机：</strong
+          >仅在你选择拍摄票据或发票时使用，用于把图片附加到记录，或让 AI
+          助手读取并转成记录。应用绝不会在后台使用相机。
+        </li>
+        <li>
+          <strong>照片 / 媒体：</strong
+          >仅在你从相册中选择图片以附加到记录或发送给 AI
+          助手时使用。应用只会收到你选中的项目。
+        </li>
+        <li>
+          <strong>通知：</strong
+          >用于在周期记账到期时提醒你、备份提醒以及同步状态。你可以随时在系统设置中关闭。
+        </li>
+        <li>
+          <strong>精确闹钟与开机自启（Android）：</strong
+          >用于在你设定的时间创建周期记账，并在设备重启后恢复这些计划。
+        </li>
+      </ul>
 
-        <h2>5. 数据删除政策</h2>
-        <p>由于您的数据未存储在我们的服务器上，您可以完全控制其删除：</p>
-        <ul>
-            <li><strong>本地数据:</strong> 只需从您的设备上卸载 MRE CashBook 应用即可。</li>
-            <li><strong>云端数据:</strong> 转到您的 Google Drive / Huawei Drive 帐户，找到 MRE CashBook 备份文件夹并删除这些文件。</li>
-        </ul>
+      <h2>5. 数据删除政策</h2>
+      <p>由于您的数据未存储在我们的服务器上，您可以完全控制其删除：</p>
+      <ul>
+        <li>
+          <strong>本地数据:</strong> 只需从您的设备上卸载 MRE CashBook
+          应用即可。
+        </li>
+        <li>
+          <strong>云端数据:</strong> 转到您的 Google Drive / Huawei Drive
+          帐户，找到 MRE CashBook 备份文件夹并删除这些文件。
+        </li>
+      </ul>
 
-        <h2>6. 联系我们</h2>
-        <div class="contact-group">
-            <a href="https://wa.me/201553668845" class="contact-btn" target="_blank">WhatsApp</a>
-            <a href="mailto:mrecode24@gmail.com" class="contact-btn email" target="_blank">Email</a>
-        </div>
+      <h2>6. 联系我们</h2>
+      <div class="contact-group">
+        <a href="https://wa.me/201553668845" class="contact-btn" target="_blank"
+          >WhatsApp</a
+        >
+        <a
+          href="mailto:mrecode24@gmail.com"
+          class="contact-btn email"
+          target="_blank"
+          >Email</a
+        >
+      </div>
     </div>
 
     <!-- روابط باقي صفحات الموقع. النصوص تتغير مع اللغة من خلال applyLang،
          والقسم كله يختفي عند فتح الصفحة داخل التطبيق. -->
     <nav class="site-links" id="site-links">
-        <a href="../mre_cashbook_home/" id="nav-home">App home page</a>
-        <a href="../mre_cashbook_privacy_not_important/" id="nav-disclosure">Google API data disclosure</a>
-        <a href="../" id="nav-hub">All MRE Code apps</a>
+      <a href="../mre_cashbook_home/" id="nav-home">App home page</a>
+      <a href="../google_api_data_disclosure/" id="nav-disclosure"
+        >Google API data disclosure</a
+      >
+      <a href="../" id="nav-hub">All MRE Code apps</a>
     </nav>
 
     <script>
-        const ua = navigator.userAgent;
-        const isApp = ua.includes("MRECashBookApp");
-        const supportedLangs = ['ar', 'de', 'en', 'es', 'fr', 'hi', 'ru', 'tr', 'zh'];
+      const ua = navigator.userAgent;
+      const isApp = ua.includes("MRECashBookApp");
+      const supportedLangs = [
+        "ar",
+        "de",
+        "en",
+        "es",
+        "fr",
+        "hi",
+        "ru",
+        "tr",
+        "zh",
+      ];
 
-        // نصوص روابط صفحات الموقع بكل لغة
-        const navText = {
-            ar: ['الصفحة الرئيسية للتطبيق', 'إفصاح بيانات Google API', 'كل تطبيقات MRE Code'],
-            de: ['App-Startseite', 'Google-API-Datenoffenlegung', 'Alle MRE Code Apps'],
-            en: ['App home page', 'Google API data disclosure', 'All MRE Code apps'],
-            es: ['Página principal de la app', 'Divulgación de datos de la API de Google', 'Todas las apps de MRE Code'],
-            fr: ["Page d'accueil de l'app", 'Divulgation des données API Google', 'Toutes les apps MRE Code'],
-            hi: ['ऐप होम पेज', 'Google API डेटा प्रकटीकरण', 'सभी MRE Code ऐप्स'],
-            ru: ['Главная страница приложения', 'Раскрытие данных Google API', 'Все приложения MRE Code'],
-            tr: ['Uygulama ana sayfası', 'Google API veri açıklaması', 'Tüm MRE Code uygulamaları'],
-            zh: ['应用主页', 'Google API 数据披露', '所有 MRE Code 应用']
-        };
+      // نصوص روابط صفحات الموقع بكل لغة
+      const navText = {
+        ar: [
+          "الصفحة الرئيسية للتطبيق",
+          "إفصاح بيانات Google API",
+          "كل تطبيقات MRE Code",
+        ],
+        de: [
+          "App-Startseite",
+          "Google-API-Datenoffenlegung",
+          "Alle MRE Code Apps",
+        ],
+        en: [
+          "App home page",
+          "Google API data disclosure",
+          "All MRE Code apps",
+        ],
+        es: [
+          "Página principal de la app",
+          "Divulgación de datos de la API de Google",
+          "Todas las apps de MRE Code",
+        ],
+        fr: [
+          "Page d'accueil de l'app",
+          "Divulgation des données API Google",
+          "Toutes les apps MRE Code",
+        ],
+        hi: ["ऐप होम पेज", "Google API डेटा प्रकटीकरण", "सभी MRE Code ऐप्स"],
+        ru: [
+          "Главная страница приложения",
+          "Раскрытие данных Google API",
+          "Все приложения MRE Code",
+        ],
+        tr: [
+          "Uygulama ana sayfası",
+          "Google API veri açıklaması",
+          "Tüm MRE Code uygulamaları",
+        ],
+        zh: ["应用主页", "Google API 数据披露", "所有 MRE Code 应用"],
+      };
 
-        let sysLang = navigator.language || navigator.userLanguage;
-        let currentLang = 'en';
+      let sysLang = navigator.language || navigator.userLanguage;
+      let currentLang = "en";
 
-        const shortLang = sysLang.substring(0, 2).toLowerCase();
-        if (supportedLangs.includes(shortLang)) {
-            currentLang = shortLang;
+      const shortLang = sysLang.substring(0, 2).toLowerCase();
+      if (supportedLangs.includes(shortLang)) {
+        currentLang = shortLang;
+      }
+
+      let currentTheme = "light";
+
+      if (!isApp) {
+        const urlParams = new URLSearchParams(window.location.search);
+        const urlLang = urlParams.get("lang");
+        const urlTheme = urlParams.get("theme");
+
+        if (urlLang && supportedLangs.includes(urlLang)) {
+          currentLang = urlLang;
+        } else {
+          const savedLang = localStorage.getItem("mre_lang");
+          if (savedLang && supportedLangs.includes(savedLang))
+            currentLang = savedLang;
         }
 
-        let currentTheme = 'light';
+        if (urlTheme === "dark") {
+          currentTheme = "dark";
+        } else if (urlTheme === "light") {
+          currentTheme = "light";
+        } else if (
+          window.matchMedia &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches
+        ) {
+          currentTheme = "dark";
+        }
+      }
 
-        if (!isApp) {
-            const urlParams = new URLSearchParams(window.location.search);
-            const urlLang = urlParams.get('lang');
-            const urlTheme = urlParams.get('theme');
+      if (isApp) {
+        document.getElementById("top-controls").style.display = "none";
+        document.getElementById("site-links").style.display = "none";
 
-            if (urlLang && supportedLangs.includes(urlLang)) {
-                currentLang = urlLang;
-            } else {
-                const savedLang = localStorage.getItem('mre_lang');
-                if (savedLang && supportedLangs.includes(savedLang)) currentLang = savedLang;
-            }
+        const logos = document.querySelectorAll(".app-logo");
+        logos.forEach((l) => (l.style.display = "none"));
 
-            if (urlTheme === 'dark') {
-                currentTheme = 'dark';
-            } else if (urlTheme === 'light') {
-                currentTheme = 'light';
-            } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                currentTheme = 'dark';
-            }
+        const langMatch = ua.match(/lang=([a-z]{2})/);
+        if (langMatch && supportedLangs.includes(langMatch[1])) {
+          currentLang = langMatch[1];
         }
 
-        if (isApp) {
-            document.getElementById('top-controls').style.display = 'none';
-            document.getElementById('site-links').style.display = 'none';
+        if (ua.includes("theme=dark")) currentTheme = "dark";
+        else if (ua.includes("theme=light")) currentTheme = "light";
+      }
 
-            const logos = document.querySelectorAll('.app-logo');
-            logos.forEach(l => l.style.display = 'none');
+      function applyTheme(theme) {
+        document.documentElement.setAttribute("data-theme", theme);
+        currentTheme = theme;
+      }
 
-            const langMatch = ua.match(/lang=([a-z]{2})/);
-            if (langMatch && supportedLangs.includes(langMatch[1])) {
-                currentLang = langMatch[1];
-            }
+      function applyLang(lang) {
+        currentLang = lang;
+        const isAr = lang === "ar";
 
-            if (ua.includes("theme=dark")) currentTheme = 'dark';
-            else if (ua.includes("theme=light")) currentTheme = 'light';
+        document.documentElement.dir = isAr ? "rtl" : "ltr";
+        document.documentElement.lang = lang;
+
+        supportedLangs.forEach((l) => {
+          const section = document.getElementById(`section-${l}`);
+          if (section) {
+            section.style.display = l === lang ? "block" : "none";
+          }
+        });
+
+        const t = navText[lang] || navText.en;
+        ["nav-home", "nav-disclosure", "nav-hub"].forEach((id, i) => {
+          const a = document.getElementById(id);
+          if (a) a.textContent = t[i];
+        });
+
+        if (!isApp) localStorage.setItem("mre_lang", lang);
+
+        const selectElem = document.getElementById("lang-select");
+        if (selectElem) selectElem.value = lang;
+      }
+
+      function changeLang(val) {
+        if (supportedLangs.includes(val)) {
+          applyLang(val);
         }
+      }
 
-        function applyTheme(theme) {
-            document.documentElement.setAttribute('data-theme', theme);
-            currentTheme = theme;
-        }
-
-        function applyLang(lang) {
-            currentLang = lang;
-            const isAr = lang === 'ar';
-
-            document.documentElement.dir = isAr ? 'rtl' : 'ltr';
-            document.documentElement.lang = lang;
-
-            supportedLangs.forEach(l => {
-                const section = document.getElementById(`section-${l}`);
-                if (section) {
-                    section.style.display = (l === lang) ? 'block' : 'none';
-                }
-            });
-
-            const t = navText[lang] || navText.en;
-            ['nav-home', 'nav-disclosure', 'nav-hub'].forEach((id, i) => {
-                const a = document.getElementById(id);
-                if (a) a.textContent = t[i];
-            });
-
-            if (!isApp) localStorage.setItem('mre_lang', lang);
-            
-            const selectElem = document.getElementById('lang-select');
-            if (selectElem) selectElem.value = lang;
-        }
-
-        function changeLang(val) {
-            if (supportedLangs.includes(val)) {
-                applyLang(val);
-            }
-        }
-
-        applyTheme(currentTheme);
-        applyLang(currentLang);
+      applyTheme(currentTheme);
+      applyLang(currentLang);
     </script>
-</body>
+  </body>
 </html>
