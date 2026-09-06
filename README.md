@@ -5,22 +5,22 @@ next to MRE CashBook without disturbing anything already published.
 
 ## Layout
 
-| Path | Serves | Purpose |
-| --- | --- | --- |
-| `index.html` | `/` | MRE Code hub. Lists the apps and links to each app's pages. |
-| `mre_cashbook_home/index.html` | `/mre_cashbook_home/` | **MRE CashBook landing page.** Canonical URL for the app: features, screenshots, FAQ, store links. |
-| `mre_cashbook_privacy/index.html` | `/mre_cashbook_privacy/` | MRE CashBook Google API data disclosure: the `drive.appdata` scope and the Limited Use commitment. |
-| `privacy_mre_cashbook/` | `/privacy_mre_cashbook/` | MRE CashBook privacy policy in 9 languages, plus the legacy copy of the landing page. See below. |
-| `404.html` | any missing URL | Not-found page. GitHub Pages serves it automatically. |
-| `assets/` | `/assets/` | Shared images — Open Graph image and store screenshots. |
-| `google8a31eb1a392dc463.html` | — | Google Search Console ownership verification. Do not delete or rename. |
-| `robots.txt` | `/robots.txt` | Root robots file — the only one crawlers read for this domain. |
-| `sitemap.xml` | `/sitemap.xml` | Root sitemap covering every public page. |
+| Path                                            | Serves                                 | Purpose                                                                                            |
+| ----------------------------------------------- | -------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `index.html`                                    | `/`                                    | MRE Code hub. Lists the apps and links to each app's pages.                                        |
+| `mre_cashbook_home/index.html`                  | `/mre_cashbook_home/`                  | **MRE CashBook landing page.** Canonical URL for the app: features, screenshots, FAQ, store links. |
+| `mre_cashbook_privacy_not_important/index.html` | `/mre_cashbook_privacy_not_important/` | MRE CashBook Google API data disclosure: the `drive.appdata` scope and the Limited Use commitment. |
+| `privacy_mre_cashbook/`                         | `/privacy_mre_cashbook/`               | MRE CashBook privacy policy in 9 languages, plus the legacy copy of the landing page. See below.   |
+| `404.html`                                      | any missing URL                        | Not-found page. GitHub Pages serves it automatically.                                              |
+| `assets/`                                       | `/assets/`                             | Shared images — Open Graph image and store screenshots.                                            |
+| `google8a31eb1a392dc463.html`                   | —                                      | Google Search Console ownership verification. Do not delete or rename.                             |
+| `robots.txt`                                    | `/robots.txt`                          | Root robots file — the only one crawlers read for this domain.                                     |
+| `sitemap.xml`                                   | `/sitemap.xml`                         | Root sitemap covering every public page.                                                           |
 
 Pages live in a folder as `index.html` so the URL is a clean `/name/` with no `.html`.
 GitHub Pages resolves `/name/` to `/name/index.html` automatically.
 
-`mre_cashbook_home.html` and `mre_cashbook_privacy.html` remain at the root as `noindex`
+`mre_cashbook_home.html` and `mre_cashbook_privacy_not_important.html` remain at the root as `noindex`
 redirect stubs, because those flat URLs were briefly published. They can be deleted once
 Search Console shows no traffic on them.
 
